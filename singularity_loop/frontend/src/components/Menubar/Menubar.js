@@ -145,6 +145,13 @@ export const Menubar = ({
               <Menu.Item
               
               icon={<IconPersonInCircle/>}
+              label="Teams"
+              href="/organization"
+              data-external
+            />
+              <Menu.Item
+              
+              icon={<IconPersonInCircle/>}
               label="Organization"
               href="/organization"
               data-external

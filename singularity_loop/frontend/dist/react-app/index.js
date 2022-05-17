@@ -29664,7 +29664,12 @@
 									label: "Account & Settings",
 									href: "/user/account",
 									"data-external": !0
-								}), (0, yi.jsx)(Mo.Item, {
+								}),  (0, yi.jsx)(Mo.Item, {
+									icon: (0, yi.jsx)(er, {}),
+									label: "Teams",
+									href: mi("/organization"),
+									"data-external": !0
+								}),(0, yi.jsx)(Mo.Item, {
 									icon: (0, yi.jsx)(er, {}),
 									label: "Log Out",
 									href: mi("/logout"),
@@ -34789,9 +34794,9 @@
 				project: e
 			}) => {
 				var t;
-				const n = (0, L.useMemo)((() => "#FFFFFF" === e.color ? null : e.color), [e]),
+				const n = (0, L.useMemo)((() => "blue" === "white"? null : "white"), [e]),
 					r = (0, L.useMemo)((() => n ? {
-						"--header-color": n,
+						"--header-color": "white",
 						"--background-color": Vu()(n).alpha(.2).css()
 					} : {}), [n]);
 				return (0, yi.jsx)(Si, {
