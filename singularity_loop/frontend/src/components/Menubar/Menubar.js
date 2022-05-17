@@ -142,6 +142,13 @@ export const Menubar = ({
                 href="/user/account"
                 data-external
               />
+              <Menu.Item
+              
+              icon={<IconPersonInCircle/>}
+              label="Organization"
+              href="/organization"
+              data-external
+            />
               {/* <Menu.Item label="Dark Mode"/> */}
               <Menu.Item
                 icon={<LsDoor/>}
@@ -180,13 +187,7 @@ export const Menubar = ({
                   data-external
                   exact
                 />
-                <Menu.Item
-                  label="Organization"
-                  to="/organization"
-                  icon={<IconPersonInCircle/>}
-                  data-external
-                  exact
-                />
+           
                 
                 <Menu.Spacer/>
 
