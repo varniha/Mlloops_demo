@@ -18773,8 +18773,8 @@
 									r = e, t.updateQueue = r, null !== r && (t.flags |= 4)
 								} else {
 									switch (u = 9 === o.nodeType ? o : o.ownerDocument, e === de && (e = pe(n)), e === de ? "script" === n ? ((e = u.createElement("div")).innerHTML = "<script><\/script>", e = e.removeChild(e.firstChild)) : "string" == typeof r.is ? e = u.createElement(n, {
-										is: r.is
-									}) : (e = u.createElement(n), "select" === n && (u = e, r.multiple ? u.multiple = !0 : r.size && (u.size = r.size))) : e = u.createElementNS(e, n), e[Xr] = t, e[Kr] = r, Va(e, t), t.stateNode = e, u = Ce(n, r), n) {
+											is: r.is
+										}) : (e = u.createElement(n), "select" === n && (u = e, r.multiple ? u.multiple = !0 : r.size && (u.size = r.size))) : e = u.createElementNS(e, n), e[Xr] = t, e[Kr] = r, Va(e, t), t.stateNode = e, u = Ce(n, r), n) {
 										case "dialog":
 											jr("cancel", e), jr("close", e), o = r;
 											break;
@@ -20352,13 +20352,13 @@
 							i = t.elementType;
 							e: {
 								switch (null !== e && (e.alternate = null, t.alternate = null, t.flags |= 2), e = t.pendingProps, i = (o = i._init)(i._payload), t.type = i, o = t.tag = function(e) {
-									if ("function" == typeof e) return Wl(e) ? 1 : 0;
-									if (null != e) {
-										if ((e = e.$$typeof) === O) return 11;
-										if (e === L) return 14
-									}
-									return 2
-								}(i), e = Yi(i, e), o) {
+										if ("function" == typeof e) return Wl(e) ? 1 : 0;
+										if (null != e) {
+											if ((e = e.$$typeof) === O) return 11;
+											if (e === L) return 14
+										}
+										return 2
+									}(i), e = Yi(i, e), o) {
 									case 0:
 										t = Ha(null, t, i, e, n);
 										break e;
@@ -29665,11 +29665,6 @@
 									href: "/user/account",
 									"data-external": !0
 								}), (0, yi.jsx)(Mo.Item, {
-									icon: (0, yi.jsx)(Vr, {}),
-									label: "Teams",
-									href: "/organization",
-									"data-external": !0
-								}), (0, yi.jsx)(Mo.Item, {
 									icon: (0, yi.jsx)(er, {}),
 									label: "Log Out",
 									href: mi("/logout"),
@@ -33509,12 +33504,10 @@
 				}, {
 					type: "tabs",
 					label: "Drop All Tabs"
-				}, 
-                {
+				}, {
 					type: "project",
 					label: "Delete Project"
-				}
-            ]), [e]);
+				}]), [e]);
 				return (0, yi.jsxs)("div", {
 					style: {
 						width: 480
@@ -33537,7 +33530,7 @@
 								s = o.disabled || r && !a;
 							return !0 !== o.disabled && (0, yi.jsx)(Ni, {
 								look: "danger",
-								disabled,
+								disabled: s,
 								waiting: a,
 								onClick: (l = o.type, () => {
 									Yi({
@@ -33574,8 +33567,7 @@
 					})]
 				})
 			};
-		mu.title = "Danger Zone", mu.path = "/danger-zone";
-		const vu = (0, L.createContext)(),
+		mu.title = "Danger Zone", mu.path = "/danger-zone";const vu = (0, L.createContext)(),
 			{
 				Block: gu,
 				Elem: yu
@@ -33719,7 +33711,8 @@
 							style: {
 								minHeight: 128
 							}
-						}), (0, yi.jsx)(bu, {
+						}),
+							 (0, yi.jsx)(bu, {
 							label: "Task Sampling",
 							labelProps: {
 								size: "large"
@@ -33757,88 +33750,86 @@
 								width: 120
 							},
 							children: "Save"
-						}),]
+						})]
 					})]
 				})
 			})
 		};
 		wu.menuItem = "General", wu.path = "/", wu.exact = !0;
 		const xu = () => {
-			// const {
-			// 	project: e,
-			// 	fetchProject: t
-			// } = (0, L.useContext)(Pc), n = (0, L.useContext)(us), r = (0, L.useRef)();
-			// (0, L.useEffect)((() => {
-			// 	n.setProps({
-			// 		formRef: r
-			// 	})
-			// }), [r]);
-			// const i = (0, L.useCallback)((() => {
-				// t(e.id, !0)
-			// }), [e]);
-			// return (0, yi.jsx)("div", {
-			// 	style: {
-			// 		width: 480
-			// 	},
-				// children: (0, yi.jsxs)(Ys, {
-					// ref: r,
-					// action: "updateProject",
-					// formData: {
-					// 	...e
-					// },
-					// params: {
-					// 	pk: e.id
-					// },
-					// onSubmit: i,
-					// children: [(0, yi.jsxs)(Ys.Row, {
-					// 	columnCount: 1,
-					// 	children: [(0, yi.jsx)(Ps, {
-					// 		text: "Labeling Instructions",
-					// 		large: !0
-					// 	}), (0, yi.jsx)("div", {
-					// 		style: {
-					// 			paddingLeft: 16
-					// 		},
-					// 		children: (0, yi.jsx)(Hs, {
-					// 			label: "Show before labeling",
-					// 			name: "show_instruction"
-					// 		})
-					// 	}), (0, yi.jsx)("div", {
-					// 		style: {
-					// 			color: "rgba(0,0,0,0.4)",
-					// 			paddingLeft: 16
-					// 		},
-					// 		children: "Write instructions to help users complete labeling tasks."
-					// 	})]
-					// }
-                    // ), (0, yi.jsx)(Ys.Row, {
-					// 	columnCount: 1,
-					// 	children: (0, yi.jsx)(Us, {
-					// 		name: "expert_instruction",
-					// 		style: {
-					// 			minHeight: 128
-					// 		}
-					// 	})
-					// }), (0, yi.jsxs)(Ys.Actions, {
-					// 	children: [(0, yi.jsx)(Ys.Indicator, {
-					// 		children: (0, yi.jsx)("span", {
-					// 			case: "success",
-					// 			children: "Saved!"
-					// 		})
-					// 	}), (0, yi.jsx)(Ni, {
-					// 		type: "submit",
-					// 		look: "primary",
-					// 		style: {
-					// 			width: 120
-					// 		},
-					// 		children: "Save"
-					// 	})]
-					// })]
-				// }
-                // )
-			// })
+			const {
+				project: e,
+				fetchProject: t
+			} = (0, L.useContext)(Pc), n = (0, L.useContext)(us), r = (0, L.useRef)();
+			(0, L.useEffect)((() => {
+				n.setProps({
+					formRef: r
+				})
+			}), [r]);
+			const i = (0, L.useCallback)((() => {
+				t(e.id, !0)
+			}), [e]);
+			return (0, yi.jsx)("div", {
+				style: {
+					width: 480
+				},
+				children: (0, yi.jsxs)(Ys, {
+					ref: r,
+					action: "updateProject",
+					formData: {
+						...e
+					},
+					params: {
+						pk: e.id
+					},
+					onSubmit: i,
+					children: [(0, yi.jsxs)(Ys.Row, {
+						columnCount: 1,
+						children: [(0, yi.jsx)(Ps, {
+							text: "Labeling Instructions",
+							large: !0
+						}), (0, yi.jsx)("div", {
+							style: {
+								paddingLeft: 16
+							},
+							children: (0, yi.jsx)(Hs, {
+								label: "Show before labeling",
+								name: "show_instruction"
+							})
+						}), (0, yi.jsx)("div", {
+							style: {
+								color: "rgba(0,0,0,0.4)",
+								paddingLeft: 16
+							},
+							children: "Write instructions to help users complete labeling tasks."
+						})]
+					}), (0, yi.jsx)(Ys.Row, {
+						columnCount: 1,
+						children: (0, yi.jsx)(Us, {
+							name: "expert_instruction",
+							style: {
+								minHeight: 128
+							}
+						})
+					}), (0, yi.jsxs)(Ys.Actions, {
+						children: [(0, yi.jsx)(Ys.Indicator, {
+							children: (0, yi.jsx)("span", {
+								case: "success",
+								children: "Saved!"
+							})
+						}), (0, yi.jsx)(Ni, {
+							type: "submit",
+							look: "primary",
+							style: {
+								width: 120
+							},
+							children: "Save"
+						})]
+					})]
+				})
+			})
 		};
-		// xu.title = "Instructions", xu.path = "/instruction";
+		xu.title = "Instructions", xu.path = "/instruction";
 		const ku = () => {
 			const e = fe(),
 				{
@@ -33898,7 +33889,7 @@
 				onValidate: f
 			}) : null
 		};
-		ku.title = "Labeling Interface", ku.path = "/labeling";
+		ku.title = "Labelling Interface", ku.path = "/labeling";
 		const _u = ({
 				children: e,
 				className: t,
@@ -34311,7 +34302,7 @@
 					})]
 				})
 			};
-		Lu.title = "Machine Learning", Lu.path = "/ml";
+		Lu.title = "ML Connector", Lu.path = "/ml";
 		const Pu = ({
 				storage: e,
 				className: t,
@@ -34721,7 +34712,7 @@
 					})]
 				})
 			};
-		Wu.title = "Cloud Storage", Wu.path = "/storage";
+		Wu.title = "Data Storage", Wu.path = "/storage";
 		const Bu = {
 			title: "Settings",
 			path: "/settings",
@@ -34730,7 +34721,7 @@
 				children: e,
 				...t
 			}) => (0, yi.jsx)(ps, {
-				menuItems: [wu, ku, xu, Lu, Wu, hu, mu],
+				menuItems: [wu, ku, Lu, Wu,  mu],
 				path: t.match.url,
 				children: e
 			}),
@@ -35921,3 +35912,5 @@
 	})()
 })();
 //# sourceMappingURL=index.js.map
+
+
