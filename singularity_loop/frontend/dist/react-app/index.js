@@ -35855,8 +35855,8 @@
 					n = t && "true" === localStorage.getItem("sidebar-opened");
 				return (0, yi.jsx)(fs, {
 					enabled: !0,
-					defaultOpened: n,
-					defaultPinned: t,
+					defaultOpened: !0,
+					defaultPinned: !0,
 					onSidebarToggle: e => localStorage.setItem("sidebar-opened", e),
 					onSidebarPin: e => localStorage.setItem("sidebar-pinned", e),
 					children: (0, yi.jsx)(zc, {
