@@ -29632,13 +29632,13 @@
 					children: [e && (0, yi.jsxs)("div", {
 						className: v,
 						children: [(0, yi.jsx)(jo.Trigger, {
-							dropdown: a,
+							// dropdown: a,
 							closeOnClickOutside: !f,
 							children: (0, yi.jsxs)("div", {
 								className: `${v.elem("trigger")} main-menu-trigger`,
 								children: [(0, yi.jsx)("img", {
 									src: mi("/static/icons/MLloOPs.svg"),
-									alt: "Label Studio Logo",
+									alt: "Singularity-loop Logo",
 									height: "100"
 								}), (0, yi.jsx)(Io, {
 									opened: c
