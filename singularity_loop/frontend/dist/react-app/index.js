@@ -29708,14 +29708,7 @@
 
 										// (0,yi.jsx)(Mo.Item,{label:"Organization",to:"/organization",icon:(0,yi.jsx)(Pr,{}),"data-external":!0,exact:!0}),
 
-										(0, yi.jsx)(Mo.Spacer, {}), (0, yi.jsx)(ls, {
-											showNewVersion: !0
-										}), (0, yi.jsx)(Mo.Item, {
-											label: "API",
-											href: "/docs/api",
-											icon: (0, yi.jsx)(ni, {}),
-											target: "_blank"
-										}), (0, yi.jsx)(Mo.Item, {
+									(0, yi.jsx)(Mo.Item, {
 											label: "Docs",
 											href: "https://labelstud.io/guide",
 											icon: (0, yi.jsx)(Fn, {}),
@@ -29730,8 +29723,6 @@
 											href: "https://slack.labelstudio.heartex.com/?source=product-menu",
 											icon: (0, yi.jsx)(Jr, {}),
 											target: "_blank"
-										}), (0, yi.jsx)(ls, {
-											showCurrentVersion: !0
 										}),
 									]
 								})
@@ -33717,31 +33708,7 @@
 								minHeight: 128
 							}
 						}),
-							 (0, yi.jsx)(bu, {
-							label: "Task Sampling",
-							labelProps: {
-								size: "large"
-							},
-							name: "sampling",
-							simple: !0,
-							children: [{
-								value: "Sequential",
-								label: "Sequential",
-								description: "Tasks are ordered by Data manager ordering"
-							}, {
-								value: "Uniform",
-								label: "Random",
-								description: "Tasks are chosen with uniform random"
-							}].map((({
-								value: e,
-								label: t,
-								description: n
-							}) => (0, yi.jsx)(bu.Button, {
-								value: `${e} sampling`,
-								label: `${t} sampling`,
-								description: n
-							}, e)))
-						})]
+							 ]
 					}), (0, yi.jsxs)(Ys.Actions, {
 						children: [(0, yi.jsx)(Ys.Indicator, {
 							children: (0, yi.jsx)("span", {

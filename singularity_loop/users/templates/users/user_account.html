@@ -123,7 +123,7 @@
         <h1 style="font-size: 24px; margin-top: 0; color: black; ">Your active organization</h1>
       </header>
 
-      <table>
+      <table style="color:black">
         {% with user.get_pretty_role as role %}
           {% if role %}
             <tr><td>Your role</td><td>{{ user.get_pretty_role }}</td></tr>
