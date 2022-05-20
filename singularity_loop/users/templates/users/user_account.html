@@ -39,7 +39,7 @@
         </li>
         <li class="field">
           <label for="">Last Name</label>
-          <input type="text" class="ls-input" value="{{user.last_name}}"/>
+          <input type="text" class="ls-input" value="{{user.first_name}}"/>
         </li>
         <li class="field">
           <label for="">Phone</label>
@@ -48,9 +48,9 @@
           <span class="error">Incorrect phone number!</span> -->
         </li>
       </ul>
-      <div class="user-some-actions">
+      {% comment %} <div class="user-some-actions"> {% endcomment %}
 
-        <div class="user-pic {{ user.avatar|yesno:'can_delete,can_upload' }}">
+        {% comment %} <div class="user-pic {{ user.avatar|yesno:'can_delete,can_upload' }}"> {% endcomment %}
           {% comment %} <div class="userpic userpic--big">
             {% if user.avatar %}
               <img src="{{user.avatar_url}}" alt="User photo" width="92" />
@@ -69,13 +69,13 @@
 
           <input class="file-input" type="file" name="avatar" value="Choose"
                 accept="image/png, image/jpeg, image/jpg"/> {% endcomment %}
-        </div>
+        {% comment %} </div> {% endcomment %}
 
         <!-- <div class="user-activity">
           <p>Inspect all your actions<br/>performed on the platform</p>
           <button type="button">Activity Log<img src="" /></button>
         </div> -->
-      </div>
+      {% comment %} </div> {% endcomment %}
       <footer >
         <p style="color:black"class="secondary">Registered {{ user.date_joined|date:"M j, Y" }}, user ID {{ user.id }}</p>
         <div  style="display:inline-block; align-item:center">

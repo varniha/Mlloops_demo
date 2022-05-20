@@ -37,7 +37,7 @@ const App = ({content}) => {
     dm: {
       scriptSrc: window.DM_JS,
       cssSrc: window.DM_CSS,
-      checkAvailability: () => !!window.DataManager,
+      checkAvailability: () => !!window.,
     },
   };
 

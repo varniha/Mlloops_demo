@@ -256,13 +256,14 @@ class UserSignupForm(forms.Form):
             raise forms.ValidationError('User with this email already exists')
 
         return email
-
+    
     def save(self):
         cleaned = self.cleaned_data
         password = cleaned['password']
         email = cleaned['email'].lower()
         user = User.objects.create_user(email, password)
         return user
+        
 
 
 class UserProfileForm(forms.ModelForm):
