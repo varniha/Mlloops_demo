@@ -239,7 +239,7 @@ class UserSignupForm(forms.Form):
             return password
         else:
             raise forms.ValidationError(PASS_MISMATCH_ERR)
-
+    
 
     def clean_username(self):
         username = self.cleaned_data.get('username')

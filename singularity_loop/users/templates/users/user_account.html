@@ -35,7 +35,7 @@
         </li>
         <li class="field">
           <label for="">First Name</label>
-          <input type="text" class="ls-input" value="{{user.firstname}}" />
+          <input type="text" class="ls-input" value="{{user.username}}" />
         </li>
         <li class="field">
           <label for="">Last Name</label>
@@ -51,7 +51,7 @@
       <div class="user-some-actions">
 
         <div class="user-pic {{ user.avatar|yesno:'can_delete,can_upload' }}">
-          <div class="userpic userpic--big">
+          {% comment %} <div class="userpic userpic--big">
             {% if user.avatar %}
               <img src="{{user.avatar_url}}" alt="User photo" width="92" />
             {% endif %}
@@ -61,14 +61,14 @@
             {% else %}
               <span>{{user.username}}</span>
             {% endif %}
-          </div>
+          </div> {% endcomment %}
 
-          <button class="ls-button ls-button_look_danger" name="delete-avatar" type="button">
+          {% comment %} <button class="ls-button ls-button_look_danger" name="delete-avatar" type="button">
             Delete
           </button>
 
           <input class="file-input" type="file" name="avatar" value="Choose"
-                accept="image/png, image/jpeg, image/jpg"/>
+                accept="image/png, image/jpeg, image/jpg"/> {% endcomment %}
         </div>
 
         <!-- <div class="user-activity">
@@ -81,8 +81,11 @@
         <div  style="display:inline-block; align-item:center">
         <button class="ls-button ls-button_look_primary" onclick="smart_submit()"  style="margin-left:10px;">Save</button>
         
-        <button class="ls-button ls-button_look_primary" onclick=""  style="margin-left:70px;">Back</button>
-        </div>
+        <button class="ls-button ls-button_look_primary" onclick="history.back()"  style="margin-left:70px;">Back</button>
+        
+        <button class="ls-button ls-button_look_primary" onclick=""  style="margin-left:70px;">JSON</button>
+       
+      </div>
       </footer>
     </form>
 

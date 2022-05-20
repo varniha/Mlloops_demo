@@ -29631,20 +29631,7 @@
 					className: b,
 					children: [e && (0, yi.jsxs)("div", {
 						className: v,
-						children: [(0, yi.jsx)(jo.Trigger, {
-							// dropdown: a,
-							closeOnClickOutside: !f,
-							children: (0, yi.jsxs)("div", {
-								className: `${v.elem("trigger")} main-menu-trigger`,
-								children: [(0, yi.jsx)("img", {
-									src: mi("/static/icons/MLloOPs.svg"),
-									alt: "Singularity-loop Logo",
-									height: "100"
-								}), (0, yi.jsx)(Io, {
-									opened: c
-								})]
-							})
-						}), (0, yi.jsxs)("div", {
+						children: [(0, yi.jsxs)("div", {
 							className: g,
 							children: [(0, yi.jsx)(cs, {
 								className: w.mod({
@@ -29660,17 +29647,28 @@
 							align: "right",
 							content: (0, yi.jsxs)(Mo, {
 								children: [(0, yi.jsx)(Mo.Item, {
-									icon: (0, yi.jsx)(Vr, {}),
+									label: "Projects",
+									to: "/projects",
+									// icon: (0, yi.jsx)(pr, {}),
+									"data-external": !0,
+									exact: !0
+								}),(0, yi.jsx)(Mo.Item, {
+									// icon: (0, yi.jsx)(Vr, {}),
 									label: "Account & Settings",
 									href: "/user/account",
 									"data-external": !0
 								}),  (0, yi.jsx)(Mo.Item, {
-									icon: (0, yi.jsx)(er, {}),
+									// icon: (0, yi.jsx)(er, {}),
 									label: "Teams",
 									href: mi("/organization"),
 									"data-external": !0
+								}), (0, yi.jsx)(Mo.Item, {
+									label: "Slack Community",
+									href: "https://slack.labelstudio.heartex.com/?source=product-menu",
+									// icon: (0, yi.jsx)(Jr, {}),
+									target: "_blank"
 								}),(0, yi.jsx)(Mo.Item, {
-									icon: (0, yi.jsx)(er, {}),
+									// icon: (0, yi.jsx)(er, {}),
 									label: "Log Out",
 									href: mi("/logout"),
 									"data-external": !0
@@ -29717,11 +29715,6 @@
 											label: "GitHub",
 											href: "https://github.com/heartexlabs/label-studio",
 											icon: (0, yi.jsx)(yr, {}),
-											target: "_blank"
-										}), (0, yi.jsx)(Mo.Item, {
-											label: "Slack Community",
-											href: "https://slack.labelstudio.heartex.com/?source=product-menu",
-											icon: (0, yi.jsx)(Jr, {}),
 											target: "_blank"
 										}),
 									]
@@ -33497,10 +33490,7 @@
 					type: "predictions",
 					disabled: !0,
 					label: `Delete ${e.total_predictions_number} Predictions`
-				}, {
-					type: "tabs",
-					label: "Drop All Tabs"
-				}, {
+				},  {
 					type: "project",
 					label: "Delete Project"
 				}]), [e]);
@@ -33519,7 +33509,8 @@
 						direction: "vertical",
 						spread: !0,
 						style: {
-							marginTop: 32
+							marginTop: 32,
+							marginLeft:17,
 						},
 						children: o.map((o => {
 							const a = r === o.type,
@@ -33722,11 +33713,12 @@
 								width: 120
 							},
 							children: "Save"
-						})]
-					})]
+						}),]
+					}),]
 				})
 			})
 		};
+		
 		wu.menuItem = "General", wu.path = "/", wu.exact = !0;
 		const xu = () => {
 			const {
@@ -35822,8 +35814,8 @@
 					n = t && "true" === localStorage.getItem("sidebar-opened");
 				return (0, yi.jsx)(fs, {
 					enabled: !0,
-					defaultOpened: !0,
-					defaultPinned: !0,
+					defaultOpened: n,
+					defaultPinned: t,
 					onSidebarToggle: e => localStorage.setItem("sidebar-opened", e),
 					onSidebarPin: e => localStorage.setItem("sidebar-pinned", e),
 					children: (0, yi.jsx)(zc, {
