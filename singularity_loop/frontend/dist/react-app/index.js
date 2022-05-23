@@ -26037,7 +26037,7 @@
 				width: 48,
 				height: 64,
 				viewBox: "0 0 48 64",
-				fill: "#1890FF",
+				fill: "#a90531",
 				xmlns: "http://www.w3.org/2000/svg",
 				ref: t
 			}, e), ii)
@@ -34712,11 +34712,11 @@
 				children: [(0, yi.jsx)(Si, {
 					name: "heidi",
 					tag: "img",
-					src: mi("/static/images/opossum_looking.png")
+					src: mi("/static/icons/MLloOPs.svg")
 				}), (0, yi.jsx)(Si, {
 					name: "header",
 					tag: "h1",
-					children: "Heidi doesn’t see any projects here"
+					children: "No projects found"
 				}), (0, yi.jsx)("p", {
 					children: "Create one and start labeling your data"
 				}), (0, yi.jsx)(Si, {

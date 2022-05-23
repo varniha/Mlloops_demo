@@ -2,6 +2,3 @@ Vision Analytics
 Text Analysis
 Voice Analysis
 Data Analysis
-Conversational AI
-Ranking & Scoring
-Structured Data Parsing

@@ -621,7 +621,7 @@ hotkey i {
 }
 
 .ui.toggle.checkbox input:checked~.box:before, .ui.toggle.checkbox input:checked~label:before {
-    background-color: rgb(24, 144, 255)!important;
+    background-color: #282a28 !important;
 }
 
 .small-breadcrumb {
