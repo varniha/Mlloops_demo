@@ -32377,7 +32377,7 @@
 									size: "compact",
 									onClick: E,
 									waiting: r,
-									children: "Delete"
+									children: "Cancel"
 								}), (0, yi.jsx)(Ni, {
 									look: "primary",
 									size: "compact",
