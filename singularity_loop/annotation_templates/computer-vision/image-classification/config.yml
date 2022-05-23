@@ -1,6 +1,6 @@
 title: Image Classification
 type: community
-group: Computer Vision
+group: Vision Analytics
 image: /static/templates/image-classification.png
 details: <h1>Classify the image</h1>
 config: |

@@ -1,6 +1,6 @@
 title: Video Timeline Segmentation
 type: community
-group: Videos
+group: Vision Analytics
 image: /static/templates/video-timeline-segmentation.png
 details: <h1>Select and classify video segments</h1>
 config: |

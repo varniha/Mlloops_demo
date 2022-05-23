@@ -1,6 +1,6 @@
 title: Intent Classification
 type: community
-group: Audio/Speech Processing
+group: Voice Analysis
 image: /static/templates/intent-classification.png
 details: <h1>Do voice activity segmentation and choose spoken intent</h1>
 config: |

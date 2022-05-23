@@ -1,6 +1,6 @@
 title: Change Point Detection
 type: community
-group: Time Series Analysis
+group: Data Analysis
 image: /static/templates/change-point-detection.png
 details: <h1>Identify changing points on time series signals</h1>
 config: |

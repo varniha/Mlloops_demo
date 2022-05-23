@@ -1,6 +1,6 @@
 title: Optical Character Recognition
 type: community
-group: Computer Vision
+group: Vision Analytics
 image: /static/templates/optical-character-recognition.png
 details: <h1>Draw a bounding box or polygon around region and write down the text found inside</h1>
 config: |

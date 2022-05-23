@@ -1,6 +1,6 @@
 title: Visual Question Answering
 type: community
-group: Computer Vision
+group: Vision Analytics
 image: /static/templates/visual-question-answering.png
 details: <h1>Answer the questions related to what you see on the picture</h1>
 config: |
@@ -41,3 +41,32 @@ config: |
       <TextArea name="answer4" toName="q4" rows="1" maxSubmissions="1"/>
       </View>
   </View>
+  <View>
+    <Video name="video" value="$video"/>
+    <Choices name="choice" toName="video" showInLine="true">
+      <Choice value="Blurry" />
+      <Choice value="Sharp" />
+    </Choices>
+  </View>
+
+  <!-- {
+  "data": {
+     "video": "/static/samples/opossum_snow.mp4"
+  },
+  "annotations": [{"result":
+      [
+          {
+              "value": {
+                  "choices": [
+                      "Blurry"
+                  ]
+              },
+              "id": "vB3U85jSU4",
+              "from_name": "choice",
+              "to_name": "video",
+              "type": "choices"
+          }
+      ]
+    }]
+  }
+  -->

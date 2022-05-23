@@ -1,6 +1,6 @@
 title: Text Summarization
 type: community
-group: Natural Language Processing
+group: Text Analysis
 image: /static/templates/text-summarization.png
 details: <h1>Provide one sentence summary</h1>
 config: |

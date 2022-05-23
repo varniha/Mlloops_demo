@@ -31466,17 +31466,7 @@
 							group: c,
 							onSelectRecipe: i
 						})]
-					}), (0, yi.jsxs)("footer", {
-						children: [(0, yi.jsx)(_r, {
-							className: ul.elem("info-icon"),
-							width: "20",
-							height: "20"
-						}), "See the documentation to ", (0, yi.jsx)("a", {
-							href: "https://labelstud.io/guide",
-							target: "_blank",
-							children: "contribute a template"
-						}), "."]
-					})]
+					}), ]
 				})
 			},
 			pl = e => {
@@ -31923,19 +31913,7 @@
 			}))
 		}
 		const jl = () => (0, yi.jsxs)(Vi.Footer, {
-				children: [(0, yi.jsx)(_r, {
-					className: _l.elem("info-icon"),
-					width: "20",
-					height: "20"
-				}), "See the documentation to ", (0, yi.jsx)("a", {
-					target: "_blank",
-					href: "https://labelstud.io/guide/predictions.html",
-					children: "import preannotated data"
-				}), " ", "or to ", (0, yi.jsx)("a", {
-					target: "_blank",
-					href: "https://labelstud.io/guide/storage.html",
-					children: "sync data from a database or cloud storage"
-				}), "."]
+				children: [ ]
 			}),
 			Tl = ({
 				children: e,

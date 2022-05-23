@@ -1,6 +1,6 @@
 title: Automatic Speech Recognition
 type: community
-group: Audio/Speech Processing
+group: Voice Analysis
 image: /static/templates/automatic-speech-recognition.png
 details: <h1>Provide transcript for the audio</h1>
 config: |

@@ -1,6 +1,6 @@
 title: Image Captioning
 type: community
-group: Computer Vision
+group: Vision Analytics
 image: /static/templates/image-captioning.png
 details: <h1>Write text describing the image</h1>
 config: |
