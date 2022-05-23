@@ -1,4 +1,4 @@
 Vision Analytics
-Text Analysis
-Voice Analysis
-Data Analysis
+Text Analytics
+Voice Analytics
+Data Analytics
