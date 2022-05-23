@@ -7653,10 +7653,10 @@
 
 					function Ea(e, t) {
 						if (a && (!e.state.draggingText || +new Date - Sa < 100)) Ce(t);
-						else if (!ye(e, t) && !$n(e.display, t) && (t.dataTransfer.setData("Text", e.getSelection()), t.dataTransfer.effectAllowed = "copyMove", t.dataTransfer.setDragImage && !f)) {
-							var n = O("img", null, null, "position: fixed; left: 0; top: 0;");
-							n.src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", d && (n.width = n.height = 1, e.display.wrapper.appendChild(n), n._top = n.offsetTop), t.dataTransfer.setDragImage(n, 0, 0), d && n.parentNode.removeChild(n)
-						}
+						// else if (!ye(e, t) && !$n(e.display, t) && (t.dataTransfer.setData("Text", e.getSelection()), t.dataTransfer.effectAllowed = "copyMove", t.dataTransfer.setDragImage && !f)) {
+						// 	var n = O("img", null, null, "position: fixed; left: 0; top: 0;");
+						// 	n.src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", d && (n.width = n.height = 1, e.display.wrapper.appendChild(n), n._top = n.offsetTop), t.dataTransfer.setDragImage(n, 0, 0), d && n.parentNode.removeChild(n)
+						// }
 					}
 
 					function ja(e, t) {
