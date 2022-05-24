@@ -1,6 +1,6 @@
 title: Time Series Forecasting
 type: community
-group: Data Analysis
+group: Data Analytics
 image: /static/templates/time-series-forecasting.png
 details: <h1>Prepare training data for time series forecasting models</h1>
 config: |
