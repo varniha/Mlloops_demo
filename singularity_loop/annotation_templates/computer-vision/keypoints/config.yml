@@ -2,7 +2,7 @@ title: Keypoint Labeling
 type: community
 group: Vision Analytics
 order: 10000
-image: /static/templates/keypoints.png
+image: /static/templates/keypoint.png
 details: <h1>Click the label and then on the canvas</h1>
 config: |
   <View>

@@ -1,7 +1,7 @@
 title: Text Summarization
 type: community
 group: Text Analytics
-image: /static/templates/text-summarization.png
+image: /static/templates/text-summary.png
 details: <h1>Provide one sentence summary</h1>
 config: |
   <View>

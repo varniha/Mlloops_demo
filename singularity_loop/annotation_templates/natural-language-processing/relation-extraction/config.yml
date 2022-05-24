@@ -2,7 +2,7 @@ title: Relation Extraction
 type: community
 group: Text Analytics
 order: 5
-image: /static/templates/relation-extraction.png
+image: /static/templates/relation-extract.png
 details: <h1>Predict attributes and relations for entities in a sentence</h1>
 config: |
   <View>

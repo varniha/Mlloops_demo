@@ -1,7 +1,7 @@
 title: Optical Character Recognition
 type: community
 group: Vision Analytics
-image: /static/templates/optical-character-recognition.png
+image: /static/templates/ocr.png
 details: <h1>Draw a bounding box or polygon around region and write down the text found inside</h1>
 config: |
   <View>

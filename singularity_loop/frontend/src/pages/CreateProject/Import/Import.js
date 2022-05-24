@@ -301,7 +301,7 @@ export const ImportPage = ({
                 <header>Drag & drop files here<br/>or click to browse</header>
                 <IconUpload height="64" className={dropzoneClass.elem("icon")} />
                 <dl>
-                  <dt>Text</dt><dd>txt</dd>
+                  <dt>Text</dt><dd>txt, pdf</dd>
                   <dt>Audio</dt><dd>wav, aiff, mp3, au, flac, m4a, ogg</dd>
                   <dt>Images</dt><dd>jpg, png, gif, bmp, svg, webp</dd>
                   <dt>HTML</dt><dd>html, htm, xml</dd>

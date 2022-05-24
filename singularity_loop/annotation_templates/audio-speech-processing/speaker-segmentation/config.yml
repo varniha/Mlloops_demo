@@ -1,7 +1,7 @@
 title: Speaker Segmentation
 type: community
 group: Voice Analytics
-image: /static/templates/speaker-segmentation.png
+image: /static/templates/speaker-segment.png
 details: <h1>Perform speaker segmentation / diarization task</h1>
 config: |
   <View>

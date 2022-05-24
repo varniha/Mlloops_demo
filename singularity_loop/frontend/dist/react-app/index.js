@@ -32154,7 +32154,7 @@
 										children: [(0, yi.jsx)("dt", {
 											children: "Text"
 										}), (0, yi.jsx)("dd", {
-											children: "txt"
+											children: "txt, pdf"
 										}), (0, yi.jsx)("dt", {
 											children: "Audio"
 										}), (0, yi.jsx)("dd", {

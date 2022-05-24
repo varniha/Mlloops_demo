@@ -2,7 +2,7 @@ title: Semantic Segmentation with Masks
 type: community
 group: Vision Analytics
 order: 2
-image: /static/templates/semantic-segmentation-with-masks.png
+image: /static/templates/semantic-segmentation-masks.png
 details: <h1>Draw masks around the object with the brush tool</h1>
 config: |
   <View>

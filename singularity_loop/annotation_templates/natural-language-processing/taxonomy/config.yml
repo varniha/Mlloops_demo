@@ -2,7 +2,7 @@ title: Taxonomy
 type: community
 group: Text Analytics
 order: 4
-image: /static/templates/taxonomy.png
+image: /static/templates/tax.png
 details: <h1>Do multilabel hierarchical classification</h1>
 config: |
   <View>

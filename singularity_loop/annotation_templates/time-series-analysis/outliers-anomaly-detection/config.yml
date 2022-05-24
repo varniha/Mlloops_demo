@@ -1,7 +1,7 @@
 title: Outliers & Anomaly Detection
 type: community
 group: Data Analytics
-image: /static/templates/outliers-anomaly-detection.png
+image: /static/templates/anomaly.png
 details: <h1>Select time spans identifying outliers or anomalies on time series signals</h1>
 config: |
   <View>

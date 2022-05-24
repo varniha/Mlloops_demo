@@ -2,7 +2,7 @@ title: Question Answering
 type: community
 group: Text Analytics
 order: 1
-image: /static/templates/question-answering.png
+image: /static/templates/question-answer.png
 details: <h1>Select an answer from text</h1>
 config: |
   <View>
