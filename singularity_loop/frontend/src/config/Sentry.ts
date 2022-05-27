@@ -45,6 +45,8 @@ const setTags = () => {
       }
     });
   }
+  // console.log(history);
+
 
   Sentry.setTags(tags);
 };
