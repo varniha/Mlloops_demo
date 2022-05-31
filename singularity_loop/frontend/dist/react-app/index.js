@@ -33772,6 +33772,102 @@
 			})
 		};
 		xu.title = "Instructions", xu.path = "/instruction";
+		
+
+
+		const Mp = () => {
+			const {
+				project: e,
+				fetchProject: t
+			} = (0, L.useContext)(Pc), n = (0, L.useCallback)((() => {
+				e.id && t(e.id, !0)
+			}), [e]);
+			return (0, yi.jsx)("div", {
+				
+				
+			})
+		};
+		Mp.menuItem = "ML Packaging", Mp.path = "/mlpackaging", Mp.exact = !0;
+
+		const MC = () => {
+			const {
+				project: e,
+				fetchProject: t
+			} = (0, L.useContext)(Pc), n = (0, L.useCallback)((() => {
+				e.id && t(e.id, !0)
+			}), [e]);
+			return (0, yi.jsx)("div", {
+				style: {
+					width: 480
+				},
+				children: (0, yi.jsxs)(Ys, {
+					action: "updateProject",
+					formData: {
+						...e
+					},
+					params: {
+						pk: e.id
+					},
+					onSubmit: n,
+					children: []
+				})
+			})
+		};
+		MC.menuItem = "ML Connector", MC.path = "/mlconnector", MC.exact = !0;
+
+		const Md = () => {
+			const {
+				project: e,
+				fetchProject: t
+			} = (0, L.useContext)(Pc), n = (0, L.useCallback)((() => {
+				e.id && t(e.id, !0)
+			}), [e]);
+			return (0, yi.jsx)("div", {
+				style: {
+					width: 480
+				},
+				children: (0, yi.jsxs)(Ys, {
+					action: "updateProject",
+					formData: {
+						...e
+					},
+					params: {
+						pk: e.id
+					},
+					onSubmit: n,
+					children: []
+				})
+			})
+		};
+		Md.menuItem = "ML Deployment", Md.path = "/mldeployment", Md.exact = !0;		
+
+
+		const Mm = () => {
+			const {
+				project: e,
+				fetchProject: t
+			} = (0, L.useContext)(Pc), n = (0, L.useCallback)((() => {
+				e.id && t(e.id, !0)
+			}), [e]);
+			return (0, yi.jsx)("div", {
+				style: {
+					width: 480
+				},
+				children: (0, yi.jsxs)(Ys, {
+					action: "updateProject",
+					formData: {
+						...e
+					},
+					params: {
+						pk: e.id
+					},
+					onSubmit: n,
+					children: []
+				})
+			})
+		};
+		Mm.menuItem = "ML Monitoring", Mm.path = "/mlmonitoring", Mm.exact = !0;
+		
 		const ku = () => {
 			const e = fe(),
 				{
@@ -34154,11 +34250,11 @@
 							marginTop: 0,
 							maxWidth: 680
 						},
-						children: ["Add one or more machine learning models to predict labels for your data. To import predictions without connecting a model,", " ", (0, yi.jsx)("a", {
-							href: "https://labelstud.io/guide/predictions.html",
-							target: "_blank",
-							children: "see the documentation"
-						}), "."]
+						// children: ["Add one or more machine learning models to predict labels for your data. To import predictions without connecting a model,", " ", (0, yi.jsx)("a", {
+						// 	href: "https://labelstud.io/guide/predictions.html",
+						// 	target: "_blank",
+						// 	children: "see the documentation"
+						// }), "."]
 					}), (0, yi.jsx)(Ni, {
 						onClick: () => p(),
 						children: "Add Model"
@@ -34183,10 +34279,10 @@
 								style: {
 									paddingLeft: 16
 								},
-								children: (0, yi.jsx)(Hs, {
-									label: "Start model training after any annotations are submitted or updated",
-									name: "start_training_on_annotation_update"
-								})
+								// children: (0, yi.jsx)(Hs, {
+								// 	label: "Start model training after any annotations are submitted or updated",
+								// 	name: "start_training_on_annotation_update"
+								// })
 							}), (0, yi.jsx)("div", {
 								style: {
 									paddingLeft: 16
@@ -34663,7 +34759,7 @@
 				children: e,
 				...t
 			}) => (0, yi.jsx)(ps, {
-				menuItems: [wu, ku, Lu, Wu,  mu],
+				menuItems: [wu, ku, Wu, Lu, Mp, Md,Mm,  mu],
 				path: t.match.url,
 				children: e
 			}),
@@ -34673,6 +34769,7 @@
 				LabelingSettings: ku,
 				MachineLearningSettings: Lu,
 				StorageSettings: Wu,
+				MLPackage: Mp,
 				WebhookPage: hu,
 				DangerZone: mu
 			}
