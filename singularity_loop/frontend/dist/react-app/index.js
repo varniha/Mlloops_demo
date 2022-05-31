@@ -34759,7 +34759,7 @@
 				children: e,
 				...t
 			}) => (0, yi.jsx)(ps, {
-				menuItems: [wu, ku, Wu, Lu, Mp, Md,Mm,  mu],
+				menuItems: [wu, ku, Wu, Lu, Mp, Md, Mm,  mu],
 				path: t.match.url,
 				children: e
 			}),
