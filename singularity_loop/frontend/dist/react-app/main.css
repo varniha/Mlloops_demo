@@ -31,7 +31,7 @@
 }
 
 .ls-button:focus {
-	box-shadow: 0 0 0 6px rgba(0, 153, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .15), inset 0 0 0 1px rgba(0, 153, 255, .2);
+	box-shadow: 0 0 0 6px #a90531, inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .15), inset 0 0 0 1px #a90531;
 	outline: none
 }
 
@@ -98,9 +98,9 @@
 
 .ls-button_look_primary {
 	--button-color: #fff;
-	background-color: #282e48;
+	background-color: #a90531;
 	box-shadow: none;
-	box-shadow: inset 0 -1px 0 #282e48
+	box-shadow: inset 0 -1px 0 #a90531
 }
 
 .ls-button_look_primary:disabled {
@@ -109,17 +109,17 @@
 }
 
 .ls-button_look_primary:hover:not(:disabled) {
-	background: linear-gradient(0, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), #282e48;
-	box-shadow: 0 2px 4px rgba(0, 153, 255, .3), inset 0 -1px 0 rgba(0, 0, 0, .1)
+	background: linear-gradient(0, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), #a90531;
+	box-shadow: 0 2px 4px #a90531, inset 0 -1px 0 rgba(0, 0, 0, .1)
 }
 
 .ls-button_look_primary:active:not(:disabled) {
-	background: linear-gradient(0, rgba(0, 0, 0, .04), rgba(0, 0, 0, .04)), #282e48;
+	background: linear-gradient(0, rgba(0, 0, 0, .04), rgba(0, 0, 0, .04)), #a90531;
 	box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1)
 }
 
 .ls-button_look_primary:focus:not(:disabled) {
-	box-shadow: 0 0 0 6px rgba(0, 153, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .1)
+	box-shadow: 0 0 0 6px #a90531, inset 0 -1px 0 rgba(0, 0, 0, .1)
 }
 
 .ls-button_look_danger {
@@ -202,7 +202,7 @@
 }
 
 .ls-button_waiting.ls-button_look_primary {
-	background-color: #282e48;
+	background-color: #a90531;
 	background-image: repeating-linear-gradient(-63.43deg, rgba(255, 255, 255, .2) 1px, transparent 2px, transparent 6px, rgba(255, 255, 255, .2) 7px, rgba(255, 255, 255, .2) 12px)
 }
 
@@ -546,8 +546,8 @@
 }
 
 .ls-dropdown {
-	background-color: #282e48;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0);
+	background-color: #a90531;
+	box-shadow: 0 5px 20px #c5a1aa;
 	box-sizing: border-box;
 	display: none;
 	position: absolute;
@@ -620,7 +620,7 @@
 .ls-main-menu__item {
 	align-items: center;
 	border-radius: 3px;
-	color: grey;
+	color: black;
 	cursor: pointer;
 	font-family: Roboto;
 	font-size: 16px;
@@ -645,7 +645,7 @@
 }
 
 .ls-main-menu__item:not(.ls-main-menu__item_look_danger):hover {
-	color: #a90531
+	color: #c5a1aa
 }
 
 .ls-main-menu__item:not(.ls-main-menu__item_active):hover {
@@ -653,8 +653,8 @@
 }
 
 .ls-main-menu__item_active {
-	background-color: #282e48;
-	color: #a90531;
+	background-color: #a90531;
+	color: #000000;
 }
 
 .ls-main-menu__item_active:not(.ls-sidebar__pin) {

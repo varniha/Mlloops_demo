@@ -33501,7 +33501,7 @@
 									Yi({
 										title: "Action confirmation",
 										body: "You're about to delete all things. This action cannot be undone.",
-										okText: "Proceed",
+										okText: "Delete",
 										buttonLook: "destructive",
 										onOk: async () => {
 											i(l), "annotations" === l || "tasks" === l || "predictions" === l || ("tabs" === l ? await t.callApi("deleteTabs", {

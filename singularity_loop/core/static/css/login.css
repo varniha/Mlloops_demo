@@ -49,14 +49,14 @@
   border-top: 2px solid transparent;
 }
 .login_page .toggle > *.active {
-  border-color: #282e48;
-  color: #282e48;
-  border-bottom: #282e48;
+  border-color: #a90531;
+  color: #a90531;
+  border-bottom: #a90531;
 }
 .login_page .toggle > *:hover {
-  color: #282e48;
-  border-color: #282e48;
-  border-bottom: #282e48;
+  color: #a90531;
+  border-color: #a90531;
+  border-bottom: #a90531;
 }
 .login_page form {
   display: grid;
