@@ -143,7 +143,7 @@
 }
 
 .ls-button_size_compact {
-	font-size: 14px;
+	font-size: 18px;
 	height: 36px
 }
 
@@ -159,7 +159,7 @@
 }
 
 .ls-button_size_large {
-	font-size: 16px;
+	font-size: 20px;
 	height: 40px
 }
 
@@ -547,7 +547,7 @@
 
 .ls-dropdown {
 	background-color: #a90531;
-	box-shadow: 0 5px 20px #c5a1aa;
+	box-shadow: 0 5px 20px transparent;
 	box-sizing: border-box;
 	display: none;
 	position: absolute;
@@ -622,7 +622,7 @@
 	border-radius: 3px;
 	color: black;
 	cursor: pointer;
-	font-family: Roboto;
+	font-family: Palatino Linotype;
 	font-size: 16px;
 	height: 48px;
 	padding: 0 13px;
@@ -645,7 +645,7 @@
 }
 
 .ls-main-menu__item:not(.ls-main-menu__item_look_danger):hover {
-	color: #c5a1aa
+	color: #000000
 }
 
 .ls-main-menu__item:not(.ls-main-menu__item_active):hover {
@@ -728,8 +728,8 @@
 
 .ls-breadcrumbs__item {
 	cursor: default;
-	font-family: Roboto;
-	font-size: 16px;
+	font-family: Palatino Linotype;
+	font-size: 24px;
 	line-height: 22px;
 	position: relative
 }
@@ -1014,7 +1014,7 @@
 .ls-userpic__username {
 	color: white;
 	display: block;
-	font-family: Roboto;
+	font-family: Palatino Linotype;
 	font-weight: 700;
 	line-height: 22px;
 	opacity: 100
@@ -4260,7 +4260,7 @@ body {
 .ls-project-card__title {
 	align-items: center;
 	display: flex;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 500;
 	line-height: 22px;
 	margin-bottom: 5px
@@ -4410,7 +4410,7 @@ body {
 	border: none;
 	color: #000;
 	display: flex;
-	font: 16px/normal Roboto;
+	font: 16px/normal Palatino Linotype;
 	height: 48px;
 	padding: 0 10px;
 	position: relative;

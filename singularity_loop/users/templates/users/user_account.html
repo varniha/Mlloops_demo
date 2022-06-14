@@ -42,9 +42,20 @@
           <label for="">Last Name</label>
           <input type="text" class="ls-input" value="{{user.first_name}}"/>
         </li>
-        <li class="field">
+        {% comment %} <li class="field">
           <label for="">Phone</label>
           <input type="text" class="ls-input" name="phone" value="{{user.phone}}" />
+          <!-- <span>We'll send you sms with code if you change your number</span>
+          <span class="error">Incorrect phone number!</span> -->
+        </li> {% endcomment %}
+        <li class="field">
+          <label for="">Access Token</label>
+          <input id="access_token" class="ls-input" name="access_token" type="text" value="{{token}}" readonly />
+          <p><label for="access_token">Use this token to authenticate with our API</label></p>
+          <p class="actions">
+            <button type="button" class="blinking-status ls-button" data-copy="access_token">Copy</button>
+            <button type="button" class="blinking-status ls-button" name="renew">Renew</button>
+          </p>
           <!-- <span>We'll send you sms with code if you change your number</span>
           <span class="error">Incorrect phone number!</span> -->
         </li>
@@ -80,9 +91,9 @@
       <footer >
         <p style="color:black"class="secondary">Registered {{ user.date_joined|date:"M j, Y" }}, user ID {{ user.id }}</p>
         <div  style="display:inline-block; align-item:center">
-        <button class="ls-button ls-button_look_primary" onclick="smart_submit()"  style="margin-left:10px;">Save</button>
+        <button class="ls-button ls-button_look_primary" onclick="smart_submit()"  style="margin-left:40px;">Save</button>
         
-        <button class="ls-button ls-button_look_primary" onclick="history.back()"  style="margin-left:70px;">Back</button>
+        <button class="ls-button ls-button_look_primary" onclick="history.back()"  style="margin-left:10px;">Back</button>
         
         {% comment %} <button class="ls-button ls-button_look_primary" onclick=""  style="margin-left:70px;">JSON</button> {% endcomment %}
        
@@ -90,8 +101,8 @@
       </footer>
     </form>
 
-    <!-- Token -->
-    <form style="color:black" action="" class="access_token__info">
+    {% comment %} <!-- Token --> {% endcomment %}
+    {% comment %} <form style="color:black" action="" class="access_token__info">
       <header>Access Token</header>
       <div class="field field--wide">
         <label for="access_token">Use this token to authenticate with our API:</label>
@@ -101,7 +112,8 @@
           <button type="button" class="blinking-status ls-button" name="renew">Renew</button>
         </p>
       </div>
-      <!-- Example -->
+    </form> {% endcomment %}
+      {% comment %} <!-- Example -->
       <div class="field field--wide">
         <label for="example_fetch">Example fetch projects data:</label>
         <textarea id="example_fetch" class="example_code ls-textarea" type="text" readonly
@@ -116,8 +128,8 @@
           <button type="button" class="blinking-status ls-button" data-copy="example_fetch">Copy</button>
           <a class="ls-button" href="https://labelstud.io/guide/api.html" target="_blank">Documentation</a>
         </p>
-      </div>
-    </form>
+      </div> {% endcomment %}
+   
 
 
    <!-- Organization -->

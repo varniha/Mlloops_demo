@@ -1,7 +1,7 @@
-title: Relation Extraction
+title: Extraction
 type: community
 group: Text Analytics
-order: 5
+order: 3
 image: /static/templates/relation-extract.png
 details: <h1>Predict attributes and relations for entities in a sentence</h1>
 config: |

@@ -1,15 +1,15 @@
-title: Image Classification
+title: Classification
 type: community
 group: Vision Analytics
+order: 1
 image: /static/templates/image-classify.png
 details: <h1>Classify the image</h1>
 config: |
   <View>
     <Image name="image" value="$image"/>
     <Choices name="choice" toName="image">
-      <Choice value="Adult content"/>
-      <Choice value="Weapons" />
-      <Choice value="Violence" />
+      <Choice value="Dog"/>
+      <Choice value="Cat" />
     </Choices>
   </View>
 

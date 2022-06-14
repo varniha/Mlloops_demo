@@ -18,10 +18,10 @@
 </View>
 
 <!-- {"data": {
-    "query_image": "/static/templates/semantic-segmentation-with-polygons.png"",
-    "image1": "/static/templates/semantic-segmentation-with-polygons.png"",
-    "image2": "/static/templates/semantic-segmentation-with-polygons.png"",
-    "image3": "/static/templates/semantic-segmentation-with-polygons.png""
+    "query_image": "/static/templates/Sample Image.png"",
+    "image1": "/static/templates/Sample Image.png"",
+    "image2": "/static/templates/Sample Image.png"",
+    "image3": "/static/templates/Sample Image.png""
 },
 "annotations": [{"result":
 [

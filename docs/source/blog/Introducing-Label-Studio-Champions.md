@@ -15,7 +15,7 @@ At Heartex, we’re putting community at the heart of everything we do, because 
 
 As part of our ongoing efforts to provide value to our users and foster a healthy growing community, and to celebrate our approach to 3000 Label Studio Slack Community users, today we’re launching [Label Studio Champions](/community/champions), where you can get rewarded for doing things you may already be inclined to do, and that are helpful to Label Studio and the community!
 
-Now you can earn points towards fun and exclusive prizes such as custom swag, [Label Studio Teams](https://heartex.com/company/introducing-heartex-label-studio-teams) usage time and even a pair of solar-recharging headphones. We’ll be adding more Rewards and more Activities every week as well, so be sure to check back often!
+Now you can earn points towards fun and exclusive prizes such as custom swag, [Label Studio Teams](https://join.slack.com/t/slack-vix2609/shared_invite/zt-1afeod8w2-2Ain40g4RGmLF67Wu8dM6Q) usage time and even a pair of solar-recharging headphones. We’ll be adding more Rewards and more Activities every week as well, so be sure to check back often!
 
 You will earn points for Activities as simple as liking our [Github repo](https://github.com/heartexlabs/label-studio), as complex as answering a technically difficult question [from the community](https://slack.labelstudio.heartex.com/?source=ls-champ-blog), and everything in between.
 

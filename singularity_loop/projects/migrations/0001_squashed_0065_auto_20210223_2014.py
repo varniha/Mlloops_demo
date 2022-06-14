@@ -535,7 +535,7 @@ class Migration(migrations.Migration):
             name='Storage',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='Data IO title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('type', models.CharField(choices=[('s3', 'AWS S3 storage')], default='s3', max_length=32)),
                 ('path', models.TextField(blank=True, help_text='Cloud storage path (e.g. bucket name)', null=True, verbose_name='path')),

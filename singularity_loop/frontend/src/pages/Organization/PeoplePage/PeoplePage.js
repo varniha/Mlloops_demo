@@ -23,8 +23,7 @@ const InvitationModal = ({ link }) => {
         readOnly
       />
 
-      <Description style={{ width: '70%', marginTop: 16 }}>
-        Invite people to join your Label Studio instance. People that you invite have full access to all of your projects. <a href="https://labelstud.io/guide/signup.html">Learn more</a>.
+      <Description style={{ width: '70%', marginTop: 8 }}>
       </Description>
     </Block>
   );
@@ -58,7 +57,7 @@ export const PeoplePage = () => {
 
   const inviteModalProps = useCallback((link) => ({
     title: "Invite people",
-    style: { width: 640, height: 472 },
+    style: { width: 590, height: 250 },
     body: () => (
       <InvitationModal link={link}/>
     ),

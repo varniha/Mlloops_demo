@@ -13,51 +13,51 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='azureblobexportstorage',
             name='title',
-            field=models.CharField(blank=True, help_text='Cloud storage title', max_length=256, null=True, verbose_name='title'),
+            field=models.CharField(blank=True, help_text='Data IO title', max_length=256, null=True, verbose_name='title'),
         ),
         migrations.AlterField(
             model_name='azureblobimportstorage',
             name='title',
-            field=models.CharField(blank=True, help_text='Cloud storage title', max_length=256, null=True, verbose_name='title'),
+            field=models.CharField(blank=True, help_text='Data IO title', max_length=256, null=True, verbose_name='title'),
         ),
         migrations.AlterField(
             model_name='gcsexportstorage',
             name='title',
-            field=models.CharField(blank=True, help_text='Cloud storage title', max_length=256, null=True, verbose_name='title'),
+            field=models.CharField(blank=True, help_text='Data IO title', max_length=256, null=True, verbose_name='title'),
         ),
         migrations.AlterField(
             model_name='gcsimportstorage',
             name='title',
-            field=models.CharField(blank=True, help_text='Cloud storage title', max_length=256, null=True, verbose_name='title'),
+            field=models.CharField(blank=True, help_text='Data IO title', max_length=256, null=True, verbose_name='title'),
         ),
         migrations.AlterField(
             model_name='localfilesexportstorage',
             name='title',
-            field=models.CharField(blank=True, help_text='Cloud storage title', max_length=256, null=True, verbose_name='title'),
+            field=models.CharField(blank=True, help_text='Data IO title', max_length=256, null=True, verbose_name='title'),
         ),
         migrations.AlterField(
             model_name='localfilesimportstorage',
             name='title',
-            field=models.CharField(blank=True, help_text='Cloud storage title', max_length=256, null=True, verbose_name='title'),
+            field=models.CharField(blank=True, help_text='Data IO title', max_length=256, null=True, verbose_name='title'),
         ),
         migrations.AlterField(
             model_name='redisexportstorage',
             name='title',
-            field=models.CharField(blank=True, help_text='Cloud storage title', max_length=256, null=True, verbose_name='title'),
+            field=models.CharField(blank=True, help_text='Data IO title', max_length=256, null=True, verbose_name='title'),
         ),
         migrations.AlterField(
             model_name='redisimportstorage',
             name='title',
-            field=models.CharField(blank=True, help_text='Cloud storage title', max_length=256, null=True, verbose_name='title'),
+            field=models.CharField(blank=True, help_text='Data IO title', max_length=256, null=True, verbose_name='title'),
         ),
         migrations.AlterField(
             model_name='s3exportstorage',
             name='title',
-            field=models.CharField(blank=True, help_text='Cloud storage title', max_length=256, null=True, verbose_name='title'),
+            field=models.CharField(blank=True, help_text='Data IO title', max_length=256, null=True, verbose_name='title'),
         ),
         migrations.AlterField(
             model_name='s3importstorage',
             name='title',
-            field=models.CharField(blank=True, help_text='Cloud storage title', max_length=256, null=True, verbose_name='title'),
+            field=models.CharField(blank=True, help_text='Data IO title', max_length=256, null=True, verbose_name='title'),
         ),
     ]

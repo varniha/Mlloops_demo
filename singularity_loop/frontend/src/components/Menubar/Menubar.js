@@ -216,7 +216,7 @@ export const Menubar = ({
                 />
                 <Menu.Item
                   label="Slack Community"
-                  href="https://slack.labelstudio.heartex.com/?source=product-menu"
+                  href="https://join.slack.com/t/slack-vix2609/shared_invite/zt-1afeod8w2-2Ain40g4RGmLF67Wu8dM6Q"
                   icon={<LsSlack/>}
                   target="_blank"
                 />

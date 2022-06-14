@@ -32,5 +32,5 @@ export const StorageSettings = () => {
   );
 };
 
-StorageSettings.title = "Cloud Storage";
+StorageSettings.title = "Data IO";
 StorageSettings.path = "/storage";

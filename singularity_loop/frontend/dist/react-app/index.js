@@ -25632,17 +25632,17 @@
 			}).apply(this, arguments)
 		}
 		var nr = L.createElement("path", {
-			fillRule: "evenodd",
-			clipRule: "evenodd",
-			d: "M2 7a2 2 0 100 4 2 2 0 000-4zm5 2a2 2 0 114 0 2 2 0 01-4 0zm7 0a2 2 0 114 0 2 2 0 01-4 0z",
-			fill: "currentColor"
+			// fillRule: "evenodd",
+			// clipRule: "evenodd",
+			d: "M13.8199 22H10.1799C9.71003 22 9.30347 21.673 9.20292 21.214L8.79592 19.33C8.25297 19.0921 7.73814 18.7946 7.26092 18.443L5.42392 19.028C4.97592 19.1709 4.48891 18.9823 4.25392 18.575L2.42992 15.424C2.19751 15.0165 2.27758 14.5025 2.62292 14.185L4.04792 12.885C3.98312 12.2961 3.98312 11.7019 4.04792 11.113L2.62292 9.816C2.27707 9.49837 2.19697 8.98372 2.42992 8.576L4.24992 5.423C4.48491 5.0157 4.97192 4.82714 5.41992 4.97L7.25692 5.555C7.50098 5.37416 7.75505 5.20722 8.01792 5.055C8.27026 4.91269 8.52995 4.78385 8.79592 4.669L9.20392 2.787C9.30399 2.32797 9.71011 2.00049 10.1799 2H13.8199C14.2897 2.00049 14.6958 2.32797 14.7959 2.787L15.2079 4.67C15.4887 4.79352 15.7622 4.93308 16.0269 5.088C16.2742 5.23078 16.5132 5.38736 16.7429 5.557L18.5809 4.972C19.0286 4.82967 19.515 5.01816 19.7499 5.425L21.5699 8.578C21.8023 8.98548 21.7223 9.49951 21.3769 9.817L19.9519 11.117C20.0167 11.7059 20.0167 12.3001 19.9519 12.889L21.3769 14.189C21.7223 14.5065 21.8023 15.0205 21.5699 15.428L19.7499 18.581C19.515 18.9878 19.0286 19.1763 18.5809 19.034L16.7429 18.449C16.5103 18.6203 16.2687 18.7789 16.0189 18.924C15.7567 19.0759 15.4863 19.2131 15.2089 19.335L14.7959 21.214C14.6954 21.6726 14.2894 21.9996 13.8199 22ZM11.9959 8C9.78678 8 7.99592 9.79086 7.99592 12C7.99592 14.2091 9.78678 16 11.9959 16C14.2051 16 15.9959 14.2091 15.9959 12C15.9959 9.79086 14.2051 8 11.9959 8Z",
+			fill: "black"
 		});
 
 		function rr(e, t) {
 			return L.createElement("svg", tr({
-				width: 18,
-				height: 18,
-				viewBox: "0 0 18 18",
+				width: 6,
+				height: 6,
+				viewBox: "0 0 24 24",
 				fill: "none",
 				xmlns: "http://www.w3.org/2000/svg",
 				ref: t
@@ -29664,7 +29664,7 @@
 									"data-external": !0
 								}), (0, yi.jsx)(Mo.Item, {
 									label: "Slack Community",
-									href: "https://slack.labelstudio.heartex.com/?source=product-menu",
+									href: "https://join.slack.com/t/slack-vix2609/shared_invite/zt-1afeod8w2-2Ain40g4RGmLF67Wu8dM6Q",
 									// icon: (0, yi.jsx)(Jr, {}),
 									target: "_blank"
 								}),(0, yi.jsx)(Mo.Item, {
@@ -32366,7 +32366,8 @@
 						className: x,
 						children: [(0, yi.jsxs)(Vi.Header, {
 							children: [(0, yi.jsx)("h1", {
-								children: "Create Project"
+								icon: (0, yi.jsx)(Hr, {}),
+								children: "New Project"
 							}), (0, yi.jsx)(ms, {
 								items: _,
 								active: t,
@@ -33500,7 +33501,7 @@
 								onClick: (l = o.type, () => {
 									Yi({
 										title: "Action confirmation",
-										body: "You're about to delete all things. This action cannot be undone.",
+										body: "You're about to delete all things. This action cannot be undone. Please type the project name to confirm.",
 										okText: "Delete",
 										buttonLook: "destructive",
 										onOk: async () => {
@@ -33787,7 +33788,7 @@
 				
 			})
 		};
-		Mp.menuItem = "ML Packaging", Mp.path = "/mlpackaging", Mp.exact = !0;
+		Mp.menuItem = "ML Monitor", Mp.path = "/mlpackaging", Mp.exact = !0;
 
 		const MC = () => {
 			const {
@@ -33813,7 +33814,7 @@
 				})
 			})
 		};
-		MC.menuItem = "ML Connector", MC.path = "/mlconnector", MC.exact = !0;
+		MC.menuItem = "ML Learn", MC.path = "/mlconnector", MC.exact = !0;
 
 		const Md = () => {
 			const {
@@ -33839,7 +33840,7 @@
 				})
 			})
 		};
-		Md.menuItem = "ML Deployment", Md.path = "/mldeployment", Md.exact = !0;		
+		Md.menuItem = "ML Package", Md.path = "/mldeployment", Md.exact = !0;		
 
 
 		const Mm = () => {
@@ -33866,7 +33867,7 @@
 				})
 			})
 		};
-		Mm.menuItem = "ML Monitoring", Mm.path = "/mlmonitoring", Mm.exact = !0;
+		Mm.menuItem = "ML Deploy", Mm.path = "/mlmonitoring", Mm.exact = !0;
 		
 		const ku = () => {
 			const e = fe(),
@@ -33927,7 +33928,7 @@
 				onValidate: f
 			}) : null
 		};
-		ku.title = "Labelling Interface", ku.path = "/labeling";
+		ku.title = "Annotations", ku.path = "/labeling";
 		const _u = ({
 				children: e,
 				className: t,
@@ -34340,7 +34341,7 @@
 					})]
 				})
 			};
-		Lu.title = "ML Connector", Lu.path = "/ml";
+		Lu.title = "ML Learn", Lu.path = "/ml";
 		const Pu = ({
 				storage: e,
 				className: t,
@@ -34485,244 +34486,249 @@
 				})
 			},
 			Uu = (0, L.forwardRef)((({
-				onSubmit: e,
-				target: t,
-				project: n,
-				rootClass: r,
-				storage: i,
-				storageTypes: o
-			}, a) => {
-				var s, l, u, c;
-				const d = (0, L.useContext)(Ji),
-					f = null != a ? a : (0, L.useRef)(),
-					[p, h] = (0, L.useState)(null !== (s = null !== (l = null == i ? void 0 : i.type) && void 0 !== l ? l : null == o || null === (u = o[0]) || void 0 === u ? void 0 : u.name) && void 0 !== s ? s : "s3"),
-					[m, v] = (0, L.useState)(!1),
-					[g, y] = (0, L.useState)(null),
-					[b, w] = (0, L.useState)([]);
-				(0, L.useEffect)((() => {
-					d.callApi("storageForms", {
-						params: {
-							target: t,
-							type: p
-						}
-					}).then((e => w(null != e ? e : [])))
-				}), [p]);
-				const x = {
-						columnCount: 1,
-						fields: [{
-							skip: !0,
-							type: "select",
-							name: "storage_type",
-							label: "Storage Type",
-							disabled: !!i,
-							options: o.map((({
-								name: e,
-								title: t
-							}) => ({
-								value: e,
-								label: t
-							}))),
-							value: null !== (c = null == i ? void 0 : i.type) && void 0 !== c ? c : p,
-							onChange: e => {
-								h(e.target.value)
-							}
-						}]
-					},
-					k = (0, L.useCallback)((async () => {
-						v(!0), y(null);
-						const e = f.current;
-						if (e && e.validateFields()) {
-							const n = e.assembleFormData({
-									asJSON: !0
-								}),
-								r = e.getField("storage_type").value;
-							fi(null == i ? void 0 : i.id) && (n.id = i.id);
-							const o = await e.api.callApi("validateStorage", {
-								params: {
-									target: t,
-									type: r
-								},
-								body: n
-							});
-							y(null !== o)
-						}
-						v(!1)
-					}), [f, t, p, i]),
-					_ = (0, L.useMemo)((() => i ? "updateStorage" : "createStorage"), [i]);
-				return (0, yi.jsxs)(Ys.Builder, {
-					ref: f,
-					action: _,
-					params: {
-						target: t,
-						type: p,
-						project: n,
-						pk: null == i ? void 0 : i.id
-					},
-					fields: [x, ...null != b ? b : []],
-					formData: {
-						...null != i ? i : {}
-					},
+                onSubmit: e,
+                target: t,
+                project: n,
+                rootClass: r,
+                storage: i,
+                storageTypes: o
+            }, a) => {
+                var s, l, u, c;
+                const d = (0, L.useContext)(Ji),
+                    f = null != a ? a : (0, L.useRef)(),
+                    [p, h] = (0, L.useState)(null !== (s = null !== (l = null == i ? void 0 : i.type) && void 0 !== l ? l : null == o || null === (u = o[0]) || void 0 === u ? void 0 : u.name) && void 0 !== s ? s : "s3"),
+                    [m, v] = (0, L.useState)(!1),
+                    [g, y] = (0, L.useState)(null),
+                    [b, w] = (0, L.useState)([]);
+                (0, L.useEffect)((() => {
+                    d.callApi("storageForms", {
+                        params: {
+                            target: t,
+                            type: p
+                        }
+                    }).then((e => w(null != e ? e : [])))
+                }), [p]);
+                const x = {
+                        columnCount: 1,
+                        fields: [{
+                            skip: !0,
+                            type: "select",
+                            name: "storage_type",
+                            label: "Storage Type",
+                            disabled: !!i,
+                            options: o.map((({
+                                name: e,
+                                title: t
+                            }) => ({
+                                value: e,
+                                label: t
+                            }))),
+                            value: null !== (c = null == i ? void 0 : i.type) && void 0 !== c ? c : p,
+                            onChange: e => {
+                                h(e.target.value)
+                            }
+                        }]
+                    },
+                    k = (0, L.useCallback)((async () => {
+                        v(!0), y(null);
+                        const e = f.current;
+                        if (e && e.validateFields()) {
+                            const n = e.assembleFormData({
+                                    asJSON: !0
+                                }),
+                                r = e.getField("storage_type").value;
+                            fi(null == i ? void 0 : i.id) && (n.id = i.id);
+                            const o = await e.api.callApi("validateStorage", {
+                                params: {
+                                    target: t,
+                                    type: r
+                                },
+                                body: n
+                            });
+                            y(null !== o)
+                        }
+                        v(!1)
+                    }), [f, t, p, i]),
+                    _ = (0, L.useMemo)((() => i ? "updateStorage" : "createStorage"), [i]);
+                return (0, yi.jsxs)(Ys.Builder, {
+                    ref: f,
+                    action: _,
+                    params: {
+                        target: t,
+                        type: p,
+                        project: n,
+                        pk: null == i ? void 0 : i.id
+                    },
+                    fields: [x, ...null != b ? b : []],
+                    formData: {
+                        ...null != i ? i : {}
+                    },
+					
 					skipEmpty: !1,
-					onSubmit: e,
-					autoFill: "off",
-					autoComplete: "off",
-					children: [(0, yi.jsx)(Fs, {
-						type: "hidden",
-						name: "project",
-						value: n
-					}), (0, yi.jsxs)(Ys.Actions, {
-						valid: g,
-						extra: null !== g && (0, yi.jsx)(_i, {
-							name: "form-indicator",
-							children: (0, yi.jsxs)(js, {
-								value: g,
-								children: [(0, yi.jsx)(Si, {
-									tag: "span",
-									mod: {
-										type: "success"
-									},
-									name: "item",
-									case: !0,
-									children: "Successfully connected!"
-								}), (0, yi.jsx)(Si, {
-									tag: "span",
-									mod: {
-										type: "fail"
-									},
-									name: "item",
-									case: !1,
-									children: "Connection failed"
-								})]
-							})
-						}),
-						children: [(0, yi.jsx)(Fs, {
-							type: "hidden",
-							name: "project",
-							value: n
-						}), (0, yi.jsxs)(Ni.Group, {
-							className: r.elem("buttons"),
-							children: [(0, yi.jsx)(Ni, {
-								type: "button",
-								waiting: m,
-								onClick: k,
-								children: "Check Connection"
-							}), (0, yi.jsx)(Ni, {
-								type: "submit",
-								look: "primary",
-								children: i ? "Save" : "Add Storage"
-							})]
-						})]
-					}), (0, yi.jsx)(Cu, {})]
-				})
-			})),
-			Hu = ({
-				title: e,
-				target: t,
-				rootClass: n,
-				buttonLabel: r
-			}) => {
-				const i = (0, L.useContext)(Ji),
-					{
-						project: o
-					} = Rc(),
-					[a, s] = (0, L.useState)([]),
-					[l, u] = (0, L.useState)(!1),
-					[c, d] = (0, L.useState)(!1),
-					[f, p] = (0, L.useState)([]);
-				(0, L.useEffect)((() => {
-					i.callApi("storageTypes", {
-						params: {
-							target: t
-						}
-					}).then((e => {
-						p(e)
-					}))
-				}), []);
-				const h = (0, L.useCallback)((async () => {
-						if (!o.id) return void console.warn("Project ID not provided");
-						u(!0);
-						const e = await i.callApi("listStorages", {
-								params: {
-									project: o.id,
-									target: t
-								}
-							}),
-							n = await i.callApi("storageTypes", {
-								params: {
-									target: t
-								}
-							});
-						p(n), null !== e && (s(e), d(!0)), u(!1)
-					}), [o]),
-					m = (0, L.useCallback)((e => {
-						const r = Gi({
-							title: `${e?"Edit":"Add"} ${"export"===t?"Target":"Source"} Storage`,
-							closeOnClickOutside: !1,
-							style: {
-								width: 760
-							},
-							body: (0, yi.jsx)(Uu, {
-								target: t,
-								storage: e,
-								project: o.id,
-								rootClass: n,
-								storageTypes: f,
-								onSubmit: async () => {
-									await h(), r.close()
-								}
-							}),
-							footer: (0, yi.jsxs)(yi.Fragment, {
-								children: ["Save completed annotations to Amazon S3, Google Cloud, Microsoft Azure, or Redis.", (0, yi.jsx)("br", {}), (0, yi.jsx)("a", {
-									href: "https://labelstud.io/guide/storage.html",
-									children: "See more in the documentation"
-								}), "."]
-							})
-						})
-					}), [o, h, t, n]),
-					v = (0, L.useCallback)((async e => {
-						m(e)
-					}), [m]),
-					g = (0, L.useCallback)((async e => {
-						Yi({
-							title: "Deleting storage",
-							body: "This action cannot be undone. Are you sure?",
-							buttonLook: "destructive",
-							onOk: async () => {
-								null !== await i.callApi("deleteStorage", {
-									params: {
-										type: e.type,
-										pk: e.id,
-										target: t
-									}
-								}) && h()
-							}
-						})
-					}), [h]);
-				return (0, L.useEffect)((() => {
-					h()
-				}), [h]), (0, yi.jsxs)(Ro.Column, {
-					title: e,
-					children: [(0, yi.jsx)("div", {
-						className: n.elem("controls"),
-						children: (0, yi.jsx)(Ni, {
-							onClick: () => m(),
-							children: r
-						})
-					}), l && !c ? (0, yi.jsx)("div", {
-						className: n.elem("empty"),
-						children: (0, yi.jsx)(hs, {
-							size: 32
-						})
-					}) : 0 === a.length ? null : a.map((e => (0, yi.jsx)(zu, {
-						storage: e,
-						target: t,
-						rootClass: n,
-						storageTypes: f,
-						onEditStorage: v,
-						onDeleteStorage: g
-					}, e.id)))]
-				})
-			},
+                    onSubmit: e,
+                    autoFill: "off",
+                    autoComplete: "off",
+                    children: [(0, yi.jsx)(Fs, {
+                        type: "hidden",
+                        name: "project",
+                        value: n
+                    }), (0, yi.jsxs)(Ys.Actions, {
+                        valid: g,
+                        extra: null !== g && (0, yi.jsx)(_i, {
+                            name: "form-indicator",
+                            children: (0, yi.jsxs)(js, {
+                                value: g,
+                                children: [(0, yi.jsx)(Si, {
+                                    tag: "span",
+                                    mod: {
+                                        type: "success"
+                                    },
+                                    name: "item",
+                                    case: !0,
+                                    children: "Successfully connected!"
+                                }), (0, yi.jsx)(Si, {
+                                    tag: "span",
+                                    mod: {
+                                        type: "fail"
+                                    },
+                                    name: "item",
+                                    case: !1,
+                                    children: "Connection failed"
+                                })]
+                            })
+                        }),
+                        children: [(0, yi.jsx)(Fs, {
+                            type: "hidden",
+                            name: "project",
+                            value: n
+                        }), (0, yi.jsxs)(Ni.Group, {
+                            className: r.elem("buttons"),
+                            children: [(0, yi.jsx)(Ni, {
+                                type: "button",
+                                waiting: m,
+                                onClick: k,
+                                children: "Check Connection"
+                            }), (0, yi.jsx)(Ni, {
+                                type: "submit",
+                                look: "primary",
+                                children: i ? "Save" : "Add Storage"
+                            })]
+                        })]
+                    }), (0, yi.jsx)(Cu, {})]
+                })
+            })),
+            Hu = ({
+                title: e,
+                target: t,
+                rootClass: n,
+                buttonLabel: r
+            }) => {
+                const i = (0, L.useContext)(Ji),
+                    {
+                        project: o
+                    } = Rc(),
+                    [a, s] = (0, L.useState)([]),
+                    [l, u] = (0, L.useState)(!1),
+                    [c, d] = (0, L.useState)(!1),
+                    [f, p] = (0, L.useState)([]);
+                (0, L.useEffect)((() => {
+                    i.callApi("storageTypes", {
+                        params: {
+                            target: t
+                        }
+                    }).then((e => {
+                        p(e)
+                    }))
+                }), []);
+                const h = (0, L.useCallback)((async () => {
+                        if (!o.id) return void console.warn("Project ID not provided");
+                        u(!0);
+                        const e = await i.callApi("listStorages", {
+                                params: {
+                                    project: o.id,
+                                    target: t
+                                }
+                            }),
+                            n = await i.callApi("storageType", {
+                                params: {
+                                    target: t
+                                }
+                            });
+                        p(n), null !== e && (s(e), d(!0)), u(!1)
+                    }), [o]),
+                    m = (0, L.useCallback)((e => {
+                        const r = Gi({
+                            title: `${e?"Edit":"Add"} ${"export"===t?"Target":"Source"} Storage`,
+                            closeOnClickOutside: !1,
+                            style: {
+                                width: 760
+                            },
+                            body: (0, yi.jsx)(Uu, {
+                                target: t,
+                                storage: e,
+                                project: o.id,
+                                rootClass: n,
+                                storageTypes: f,
+                                onSubmit: async () => {
+                                    await h(), r.close()
+                                }
+                            }),
+                            footer: (0, yi.jsxs)(yi.Fragment, {
+                                children: ["Save completed annotations to Amazon S3, Google Cloud, Microsoft Azure, or Redis.", (0, yi.jsx)("br", {}), (0, yi.jsx)("a", {
+                                    href: "https://labelstud.io/guide/storage.html",
+                                    children: "See more in the documentation"
+                                }), "."]
+                            })
+                        })
+                    }), [o, h, t, n]),
+                    v = (0, L.useCallback)((async e => {
+                        m(e)
+                    }), [m]),
+                    g = (0, L.useCallback)((async e => {
+                        Yi({
+                            title: "Deleting storage",
+                            body: "This action cannot be undone. Are you sure?",
+                            buttonLook: "destructive",
+                            onOk: async () => {
+                                null !== await i.callApi("deleteStorage", {
+                                    params: {
+                                        type: e.type,
+                                        pk: e.id,
+                                        target: t
+                                    }
+                                }) && h()
+                            }
+                        })
+                    }), [h]);
+                return (0, L.useEffect)((() => {
+                    h()
+                }), [h]), (0, yi.jsxs)(Ro.Column, {
+                    title: e,
+                    children: [(0, yi.jsx)("div", {
+                            className: n.elem("controls"),
+                            children: (0, yi.jsx)(Ni, {
+                                onClick: () => m(),
+                                children: r
+                            })
+                        }),
+                        l && !c ? (0, yi.jsx)("div", {
+                            className: n.elem("empty"),
+                            children: (0, yi.jsx)(hs, {
+                                size: 32
+                            })
+                        }) : 0 === a.length ? null : a.map((e => (0, yi.jsx)
+                            (zu, {
+                                storage: e,
+                                target: t,
+                                rootClass: n,
+                                storageTypes: f,
+                                onEditStorage: v,
+                                onDeleteStorage: g
+                            }, e.id)))
+                    ]
+                })
+            },
+
 			Wu = () => {
 				const e = xi("storage-settings");
 				return (0, yi.jsxs)(_i, {
@@ -34750,7 +34756,7 @@
 					})]
 				})
 			};
-		Wu.title = "Data Storage", Wu.path = "/storage";
+		Wu.title = "Data IO", Wu.path = "/storage";
 		const Bu = {
 			title: "Settings",
 			path: "/settings",
@@ -34821,7 +34827,8 @@
 					tag: Ni,
 					onClick: e,
 					look: "primary",
-					children: "Create Project"
+					icon: (0, yi.jsx)(Hr, {}),
+					children: "New Project"
 				})]
 			}),
 			Yu = ({
@@ -34857,18 +34864,10 @@
 										e.stopPropagation(), e.preventDefault()
 									},
 									children: (0, yi.jsx)(jo.Trigger, {
-										content: (0, yi.jsxs)(Mo, {
-											children: [(0, yi.jsx)(Mo.Item, {
-												href: `/projects/${e.id}/settings`,
-												children: "Settings"
-											}), (0, yi.jsx)(Mo.Item, {
-												href: `/projects/${e.id}/data?labeling=1`,
-												children: "Label"
-											})]
-										}),
 										children: (0, yi.jsx)(Ni, {
 											size: "small",
 											type: "text",
+											href: `/projects/${e.id}/settings`,
 											icon: (0, yi.jsx)(ir, {})
 										})
 									})
@@ -35025,7 +35024,8 @@
 			onClick: e,
 			look: "primary",
 			size: "compact",
-			children: "Create",
+			icon: (0, yi.jsx)(Hr, {}),
+			children: "New Project",
 		}) : null;
 
 		function Ku(e, t) {
@@ -35382,12 +35382,8 @@
 				}), (0, yi.jsxs)(_u, {
 					style: {
 						width: "70%",
-						marginTop: 16
-					},
-					children: ["Invite people to join your Label Studio instance. People that you invite have full access to all of your projects. ", (0, yi.jsx)("a", {
-						href: "https://labelstud.io/guide/signup.html",
-						children: "Learn more"
-					}), "."]
+						marginTop: 8
+					}
 				})]
 			}),
 			hc = () => {
@@ -35413,8 +35409,8 @@
 					c = (0, L.useCallback)((e => ({
 						title: "Invite people",
 						style: {
-							width: 640,
-							height: 472
+							width: 590,
+							height: 250
 						},
 						body: () => (0, yi.jsx)(pc, {
 							link: e

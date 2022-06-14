@@ -1,5 +1,5 @@
 ---
-title: Template Gallery - Computer Vision
+title: Template Gallery - Vision Analytics
 type: templates
 order: 1000
 meta_title: Gallery of Computer Vision Labeling Templates
@@ -22,21 +22,46 @@ meta_description: Gallery of templates available to perform data labeling and an
   }
 </style>
 
-
-<div class="blog-body">
-  <div class="grid">
-
-    <div class="column">
-      <a href="/templates/image_polygons.html">
-        <div class="card">
-          <div class="image-wrap">
-            <div style="background-image: url(/images/templates/semantic-segmentation-with-polygons.png); background-size:cover" class="image"></div>
-          </div>
-          <div class="category">semantic segmentation</div>
-          <div class="title">Semantic Segmentation with Polygons</div>
-        </div>
-      </a>
+<div class="column">
+  <a href="/templates/image_classification.html">
+    <div class="card">
+      <div class="image-wrap">
+        <div class="image" style="background-image: url(/images/templates/image-classification.png)"></div>
+      </div>
+      <div class="category">classification</div>
+      <div class="title">Image Classification</div>
     </div>
+  </a>
+</div>
+
+
+    {% comment %} <div class="blog-body">
+      <div class="grid">
+    
+        <div class="column">
+          <a href="/templates/video_classification.html">
+            <div class="card">
+              <div class="image-wrap">
+                <div style="background-image: url(/images/templates/video-classification.png); background-size:cover" class="image"></div>
+              </div>
+              <div class="category">classification</div>
+              <div class="desc"></div>
+              <div class="title">Video Classification</div>
+            </div>
+          </a>
+        </div> {% endcomment %}
+
+        <div class="column">
+          <a href="/templates/image_bbox.html">
+            <div class="card">
+              <div class="image-wrap">
+                <div style="background-image: url(/images/templates/object-detection-with-bounding-boxes.png); background-size:cover" class="image"></div>
+              </div>
+              <div class="category">object detection</div>
+              <div class="title">Object Detection with Bounding Boxes</div>
+            </div>
+          </a>
+        </div>
 
     <div class="column">
       <a href="/templates/image_segmentation.html">
@@ -50,19 +75,37 @@ meta_description: Gallery of templates available to perform data labeling and an
       </a>
     </div>
 
-    <div class="column">
-      <a href="/templates/image_bbox.html">
-        <div class="card">
-          <div class="image-wrap">
-            <div style="background-image: url(/images/templates/object-detection-with-bounding-boxes.png); background-size:cover" class="image"></div>
-          </div>
-          <div class="category">object detection</div>
-          <div class="title">Object Detection with Bounding Boxes</div>
+    <div class="blog-body">
+      <div class="grid">
+    
+        <div class="column">
+          <a href="/templates/image_polygons.html">
+            <div class="card">
+              <div class="image-wrap">
+                <div style="background-image: url(/images/templates/semantic-segmentation-with-polygons.png); background-size:cover" class="image"></div>
+              </div>
+              <div class="category">semantic segmentation</div>
+              <div class="title">Semantic Segmentation with Polygons</div>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
 
-    <div class="column">
+        <div class="column">
+          <a href="/templates/optical_character_recognition.html">
+            <div class="card">
+              <div class="image-wrap">
+                <div class="image" style="background-image: url(/images/templates/optical-character-recognition.png)"></div>
+              </div>
+              <div class="category">ocr</div>
+              <div class="title">Optical Character Recognition</div>
+            </div>
+          </a>
+        </div>
+    
+
+
+
+    {% comment %} <div class="column">
       <a href="/templates/image_keypoints.html">
         <div class="card">
           <div class="image-wrap">
@@ -72,9 +115,9 @@ meta_description: Gallery of templates available to perform data labeling and an
           <div class="title">Keypoint Labeling</div>
         </div>
       </a>
-    </div>
+    </div> {% endcomment %}
 
-    <div class="column">
+    {% comment %} <div class="column">
       <a href="/templates/image_captioning.html">
         <div class="card">
           <div class="image-wrap">
@@ -84,34 +127,14 @@ meta_description: Gallery of templates available to perform data labeling and an
           <div class="title">Image Captioning</div>
         </div>
       </a>
-    </div>
-
-    <div class="column">
-      <a href="/templates/optical_character_recognition.html">
-        <div class="card">
-          <div class="image-wrap">
-            <div class="image" style="background-image: url(/images/templates/optical-character-recognition.png)"></div>
-          </div>
-          <div class="category">ocr</div>
-          <div class="title">Optical Character Recognition</div>
-        </div>
-      </a>
-    </div>
+    </div> {% endcomment %}
 
 
-    <div class="column">
-      <a href="/templates/image_classification.html">
-        <div class="card">
-          <div class="image-wrap">
-            <div class="image" style="background-image: url(/images/templates/image-classification.png)"></div>
-          </div>
-          <div class="category">classification</div>
-          <div class="title">Image Classification</div>
-        </div>
-      </a>
-    </div>
 
-    <div class="column">
+
+
+
+    {% comment %} <div class="column">
       <a href="/templates/visual_question_answering.html">
         <div class="card">
           <div class="image-wrap">
@@ -121,10 +144,10 @@ meta_description: Gallery of templates available to perform data labeling and an
           <div class="title">Visual Question Answering</div>
         </div>
       </a>
-    </div>
+    </div> {% endcomment %}
 
 
-    <div class="column">
+    {% comment %} <div class="column">
       <a href="/templates/image_ellipse.html">
         <div class="card">
           <div class="image-wrap">
@@ -134,9 +157,9 @@ meta_description: Gallery of templates available to perform data labeling and an
           <div class="title">Object Detection with Ellipses</div>
         </div>
       </a>
-    </div>
+    </div> {% endcomment %}
 
-    <div class="column">
+    {% comment %} <div class="column">
       <a href="/templates/multi-image_classification.html">
         <div class="card">
           <div class="image-wrap">
@@ -146,7 +169,7 @@ meta_description: Gallery of templates available to perform data labeling and an
           <div class="title">Multi-Image Classification</div>
         </div>
       </a>
-    </div>
+    </div> {% endcomment %}
 
 
 </div>

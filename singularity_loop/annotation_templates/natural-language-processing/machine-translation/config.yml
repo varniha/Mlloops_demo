@@ -1,6 +1,7 @@
-title: Machine Translation
+title: Translation
 type: community
 group: Text Analytics
+order: 5
 image: /static/templates/machine-translation.png
 details: <h1>Translate text from one language to another</h1>
 config: |

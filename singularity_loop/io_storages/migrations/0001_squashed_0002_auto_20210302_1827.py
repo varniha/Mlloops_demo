@@ -56,7 +56,7 @@ class Migration(migrations.Migration):
             name='S3ExportStorage',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='Data IO title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('created_at', models.DateTimeField(auto_now_add=True, help_text='Creation time', verbose_name='created at')),
                 ('bucket', models.TextField(blank=True, help_text='S3 bucket name', null=True, verbose_name='bucket')),
@@ -78,7 +78,7 @@ class Migration(migrations.Migration):
             name='S3ImportStorage',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='DAta IO title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('created_at', models.DateTimeField(auto_now_add=True, help_text='Creation time', verbose_name='created at')),
                 ('bucket', models.TextField(blank=True, help_text='S3 bucket name', null=True, verbose_name='bucket')),
@@ -102,7 +102,7 @@ class Migration(migrations.Migration):
             name='AzureBlobExportStorage',
             fields=[
                 ('azureblobstoragemixin_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='io_storages.azureblobstoragemixin')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='Data IO title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('created_at', models.DateTimeField(auto_now_add=True, help_text='Creation time', verbose_name='created at')),
                 ('project', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='io_storages_azureblobexportstorages', to='projects.project')),
@@ -116,7 +116,7 @@ class Migration(migrations.Migration):
             name='AzureBlobImportStorage',
             fields=[
                 ('azureblobstoragemixin_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='io_storages.azureblobstoragemixin')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='Data IO title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('created_at', models.DateTimeField(auto_now_add=True, help_text='Creation time', verbose_name='created at')),
                 ('presign', models.BooleanField(default=True, help_text='Generate presigned URLs', verbose_name='presign')),
@@ -132,7 +132,7 @@ class Migration(migrations.Migration):
             name='GCSExportStorage',
             fields=[
                 ('gcsstoragemixin_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='io_storages.gcsstoragemixin')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='Data IO title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('created_at', models.DateTimeField(auto_now_add=True, help_text='Creation time', verbose_name='created at')),
                 ('project', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='io_storages_gcsexportstorages', to='projects.project')),
@@ -146,7 +146,7 @@ class Migration(migrations.Migration):
             name='GCSImportStorage',
             fields=[
                 ('gcsstoragemixin_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='io_storages.gcsstoragemixin')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='Data IO title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('created_at', models.DateTimeField(auto_now_add=True, help_text='Creation time', verbose_name='created at')),
                 ('presign', models.BooleanField(default=True, help_text='Generate presigned URLs', verbose_name='presign')),
@@ -162,7 +162,7 @@ class Migration(migrations.Migration):
             name='RedisExportStorage',
             fields=[
                 ('redisstoragemixin_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='io_storages.redisstoragemixin')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='Data IO title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('created_at', models.DateTimeField(auto_now_add=True, help_text='Creation time', verbose_name='created at')),
                 ('db', models.PositiveSmallIntegerField(default=2, help_text='Server Database', verbose_name='db')),
@@ -177,7 +177,7 @@ class Migration(migrations.Migration):
             name='RedisImportStorage',
             fields=[
                 ('redisstoragemixin_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='io_storages.redisstoragemixin')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='Data Io title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('created_at', models.DateTimeField(auto_now_add=True, help_text='Creation time', verbose_name='created at')),
                 ('db', models.PositiveSmallIntegerField(default=1, help_text='Server Database', verbose_name='db')),

@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
             name='LocalFilesExportStorage',
             fields=[
                 ('localfilesmixin_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='io_storages.localfilesmixin')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='Data IO title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('created_at', models.DateTimeField(auto_now_add=True, help_text='Creation time', verbose_name='created at')),
                 ('last_sync', models.DateTimeField(blank=True, help_text='Last sync finished time', null=True, verbose_name='last sync')),
@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
             name='LocalFilesImportStorage',
             fields=[
                 ('localfilesmixin_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='io_storages.localfilesmixin')),
-                ('title', models.CharField(help_text='Cloud storage title', max_length=256, null=True, verbose_name='title')),
+                ('title', models.CharField(help_text='Data IO title', max_length=256, null=True, verbose_name='title')),
                 ('description', models.TextField(blank=True, help_text='Cloud storage description', null=True, verbose_name='description')),
                 ('created_at', models.DateTimeField(auto_now_add=True, help_text='Creation time', verbose_name='created at')),
                 ('last_sync', models.DateTimeField(blank=True, help_text='Last sync finished time', null=True, verbose_name='last sync')),

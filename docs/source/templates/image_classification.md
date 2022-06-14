@@ -22,9 +22,10 @@ If you want to train a model to identify the type of content in images, for exam
 <View>
   <Image name="image" value="$image"/>
   <Choices name="choice" toName="image">
-    <Choice value="Adult content"/>
-    <Choice value="Weapons" />
-    <Choice value="Violence" />
+    <Choice value="Truck and cars"/>
+    <Choice value="Road" />
+    <Choice value="Trees" />
+    <Choice value="Sky" />
   </Choices>
 </View>
 ```
@@ -41,9 +42,10 @@ Use the [Image](/tags/image.html) object tag to specify the image to classify:
 Use the [Choices](/tags/choices.html) control tag to display the choices available to classify the image:
 ```xml
   <Choices name="choice" toName="image">
-    <Choice value="Adult content"/>
-    <Choice value="Weapons" />
-    <Choice value="Violence" />
+    <Choice value="Truck and cars"/>
+    <Choice value="Road" />
+    <Choice value="Trees" />
+    <Choice value="Sky" />
   </Choices>
 ```
 You can modify the values of the [Choice](/tags/choice.html) tag to provide different classification options. Review the available arguments for the Choices tag for customization options. 
@@ -61,9 +63,10 @@ If you want the classification choices to appear to the left of the image, you c
   <View style="padding: 0em 1em; background: #f1f1f1; margin-right: 1em; border-radius: 3px">
     <View style="position: sticky; top: 0">
     <Choices name="choice" toName="image">
-        <Choice value="Adult content"/>
-        <Choice value="Weapons" />
-        <Choice value="Violence" />
+      <Choice value="Truck and cars"/>
+      <Choice value="Road" />
+      <Choice value="Trees" />
+      <Choice value="Sky" />
     </Choices>
     </View>
   </View>

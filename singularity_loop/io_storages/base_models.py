@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 class Storage(models.Model):
     url_scheme = ''
 
-    title = models.CharField(_('title'), null=True, blank=True, max_length=256, help_text='Cloud storage title')
+    title = models.CharField(_('title'), null=True, blank=True, max_length=256, help_text='Data IO title')
     description = models.TextField(_('description'), null=True, blank=True, help_text='Cloud storage description')
     project = models.ForeignKey('projects.Project', related_name='%(app_label)s_%(class)ss', on_delete=models.CASCADE,
                                 help_text='A unique integer value identifying this project.')

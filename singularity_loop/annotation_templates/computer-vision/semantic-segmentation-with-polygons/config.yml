@@ -1,7 +1,7 @@
-title: Semantic Segmentation with Polygons
+title: Segmentation
 type: community
 group: Vision Analytics
-order: 1
+order: 3
 image: /static/templates/semantic-segmentation-with-polygons.png
 details: <h1>Draw a polygon around object</h1>
 config: |
@@ -13,8 +13,9 @@ config: |
     <PolygonLabels name="label" toName="image"
                    strokeWidth="3" pointSize="small"
                    opacity="0.9">
-      <Label value="Car" background="red"/>
-      <Label value="Humane" background="blue"/>
+      <Label value="Cat" background="blue"/>
+      <Label value="Dog" background="yellow"/>
+      <Label value="Floor" background="red"/>
     </PolygonLabels>
 
   </View>

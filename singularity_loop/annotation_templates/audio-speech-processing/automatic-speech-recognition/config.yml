@@ -1,6 +1,7 @@
-title: Automatic Speech Recognition
+title: Transcriber
 type: community
 group: Voice Analytics
+order: 1
 image: /static/templates/automatic-speech-recognition.png
 details: <h1>Provide transcript for the audio</h1>
 config: |

@@ -8,7 +8,7 @@ body {
 }
 
 body, a, li, p, h1, h2, h3, h4, h5, h6, input, button, textarea, select {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Palatino Linotype', 'Book Antiqua', 'Palatino';
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
@@ -42,7 +42,7 @@ table td {
 }
 
 .label, .value {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', 'Palatino' !important;
 }
 
 .team-header {
@@ -461,18 +461,18 @@ hotkey i {
     font-weight: 400 !important;
 }
 .ui .button.primary {
-    background:#b12d51;
-    border-color:#b12d51;
+    background:transparent;
+    border-color:transparent;
     color: #fff;
 }
 .ui .button.primary:hover {
-    background: #b12d51;
-    border-color: #b12d51;
+    background: transparent;
+    border-color: transparent;
     color: #fff;
 }
 .ui .button.primary:focus {
-    background: #b12d51;
-    border-color: #b12d51;
+    background: transparent;
+    border-color: transparent;
     color: #fff;
 }
 .ui .button.positive {
@@ -704,10 +704,10 @@ hotkey i {
 }
 
 .button.light-blue {
-    background: #b12d51 !important;
+    background: transparent !important;
     border-color: #a90531 !important;
     color: #fff !important;
 }
 .button.light-blue:hover {
-    background: #b12d51 !important;
+    background: transparent !important;
 }

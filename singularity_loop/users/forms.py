@@ -169,13 +169,13 @@ USERNAME_MAX_LENGTH = 30
 DISPLAY_NAME_LENGTH = 100
 OTP_LENGTH = 4
 
-FIRST_NAME_LENGTH_ERR = 'PLease enter a valid first name'
-LAST_NAME_LENGTH_ERR = 'PLease enter a valid last name'
+FIRST_NAME_LENGTH_ERR = 'Please enter a valid first name'
+LAST_NAME_LENGTH_ERR = 'Please enter a valid last name'
 USERNAME_LENGTH_ERR = 'Please enter a username 30 characters or fewer in length'
 DISPLAY_NAME_LENGTH_ERR = 'Please enter a display name 100 characters or fewer in length'
 PASS_LENGTH_ERR = 'Please enter a password 8-12 characters in length'
 CON_PASS_LENGTH_ERR = 'Please enter a password 8-12 characters in length'
-INVALID_USER_ERROR = 'The email and password you entered don\'t match.'
+INVALID_USER_ERROR = 'The email and password you entered do not match'
 PASS_MISMATCH_ERR = 'Password and confirm password do not match'
 OTP_LENGTH_ERR = 'Enter a valid OTP'
 OTP_MISMATCH_ERR = 'OTP entered is incorrect'
