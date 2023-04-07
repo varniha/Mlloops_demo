@@ -1,37 +1,157 @@
 /* Login / Signup pages*/
+body{
+  overflow-x: hidden!important;
+}
+.signup_page {
+  width: auto;
+  height: 500px;
+  font-weight: 400;
+  margin: 0px 0px 0px 0px;
+}
+.signup_page h1 {
+  font-size: 45px;
+  float: right;
+  font-weight: 400;
+  text-align: Justify;
+  margin: -111px 231px 10px 31px;
+}
+.signup_page h2 {
+  font-size: 28px;
+  font-weight: 400;
+  text-align: Justify;
+  margin: 29px 0px 0px 50px;
+  color: #2c2c2c;
+}
 
-.login_page h1 {
-  font-size: 24px;
-  font-weight: 400;
-  text-align: center;
-  margin-top: 50px;
-}
-.login_page {
-  font-weight: 400;
-}
-.login_page h2 {
-  font-size: 16px;
-  font-weight: 400;
-  text-align: center;
-  margin-top: 24px;
-  color: #8C8C8C;
-}
-.login_page img {
-  margin: 20px auto 0px auto;
+.signup_page img {
+  margin: -4px 0px -10px 176px;
   display: block;
 }
+
+.signup_page .link a {
+  border-color: #4285f4;
+  color: #4285f4;
+}
+.signup_page .link a:hover {
+  color: #b12d51;
+  border-color: #b12d51;
+}
+.signup_page .toggle,
+.signup_page form {
+  width: 280px;
+  margin: -46px 301px auto -1px;
+}
+.signup_page .toggle {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: stretch;
+}
+
+.signup_page .toggle > * {
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #8c8c8c;
+  border-top: 2px solid transparent;
+}
+.signup_page .toggle > *.active {
+  border-color: #0f9d58;
+  border-bottom: #0f9d58;
+  color: #0f9d58;
+}
+.signup_page .toggle > *:hover {
+  color: #0f9d58;
+  border-color: #0f9d58;
+  border-bottom: #0f9d58;
+}
+.signup_page form {
+  float: right;
+  display: block;
+  flex-direction: row;
+  grid-auto-flow: row;
+  grid-gap: 6px;
+  box-sizing: border-box;
+}
+.signup_page form > * {
+  position: relative;
+}
+.signup_page form p {
+  margin: 5px auto 5px 10px;
+}
+.signup_page form .error {
+  color: #f5222d;
+}
+.signup_page form input,
+.signup_page form button {
+  width: 100%;
+}
+.signup_page form input::placeholder {
+  text-transform: uppercase;
+}
+.signup_page form button {
+  text-transform: uppercase;
+}
+.signup_page .field_errors {
+  color: #332728;
+  top: 25%;
+  position: absolute;
+  list-style: none;
+  left: 36%;
+  font-size: 14px;
+  line-height: 16px;
+  width: 400px;
+}
+.signup_page .field_errors li {
+  margin-top: 31px;
+}
+
+.login_page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: #e57171;
+  width: 100%;
+  min-height: 100vh;
+}
+.login_page  .container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login_page .container {
+  font-size: 45px;
+  font-weight: 200;
+  padding: 0 10%;
+}
+
+.login_page h1 {
+  font-size: 96px;
+  font-weight: 400;
+text-align: left;
+width: 100%;
+text-shadow: 5px 5px 5px rgba(0 ,0 ,0 ,0.2);
+
+  color: #fff;
+  margin: 0;
+}
+
+
+
 .login_page .link a {
-  border-color: #a90531;
-  color: #a90531;
+  border-color: #0f9d58;
+  color: #0f9d58;
 }
 .login_page .link a:hover {
   color: #b12d51;
   border-color: #b12d51;
 }
-.login_page .toggle, .login_page form {
-  width: 272px;
-  margin: 24px auto;
-}
+
 .login_page .toggle {
   padding: 0;
   list-style: none;
@@ -45,61 +165,123 @@
   padding: 10px 0;
   text-transform: uppercase;
   font-size: 16px;
-  color: #8C8C8C;
+  color: #8c8c8c;
   border-top: 2px solid transparent;
 }
 .login_page .toggle > *.active {
-  border-color: #a90531;
-  color: #a90531;
-  border-bottom: #a90531;
+  border-color: #0f9d58;
+  border-bottom: #0f9d58;
+  color: #0f9d58;
 }
 .login_page .toggle > *:hover {
-  color: #a90531;
-  border-color: #a90531;
-  border-bottom: #a90531;
+  color: #0f9d58;
+  border-color: #0f9d58;
+  border-bottom: #0f9d58;
 }
 .login_page form {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
   flex-direction: column;
-  grid-auto-flow: rows;
-  grid-gap: 24px;
+  height: 100vh;
 }
-.login_page form > * {
+/* form conatiner */
+.login_page form .form-container {
+  width: 650px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(245,245,245);
+  border-radius: 8px;
+}
+.form-container h1{
+  color: #333;
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 10px;
+  text-shadow: 5px 5px 5px rgba(0 ,0 ,0 ,0.2);
+}
+/* change done */
+.login_page form .form-row{
+  display: flex;
+  width: 450px;
+  color: #333;
   position: relative;
+  margin-bottom: 20px;
+  justify-content: space-between;
 }
-.login_page form p {
-  margin: 0;
+.login_page form label {
+  color: #333;
 }
+
 .login_page form .error {
-  color: #F5222D;
+  color: #f5222d;
+  text-align: center;
 }
-.login_page form input,
-.login_page form button {
-  width: 100%;
+.login_page form input
+{
+  padding: 10px;
+
+  border: none;
+  width: 250px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  background: #D9D9D9;
+  color:#8c8c8c;
+
 }
+.login_page form input:placeholder-shown{
+  color: #fff;
+}
+
+
 .login_page form input::placeholder {
   text-transform: uppercase;
 }
 .login_page form button {
-text-transform: uppercase;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  background: #B03F3F;
 }
 .login_page .field_errors {
+  color: #f5222d;
+  top: 25%;
   position: absolute;
-  left: 272px;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  padding-left: 16px;
   list-style: none;
-  text-align: left;
+left: 36%;
   font-size: 14px;
   line-height: 16px;
-  color: #F5222D;
-  width: 300px;
-  max-width: calc(50vw - 152px); /* 272/2 + 16 right margin */
+  width: 250px;
 }
 .login_page .field_errors li {
   margin-top: 12px;
+}
+
+.footer {
+  width: auto;
+  height: 190px;
+}
+
+.footer h1 {
+  position: relative;
+  font-size: larger;
+  text-align: center;
+}
+
+.footer h2 {
+  font-size: medium;
+  text-align: center;
+}
+
+.footer p {
+  font-size: small;
+  text-align: center;
 }
 
 .auto-generated form {
@@ -114,7 +296,7 @@ text-transform: uppercase;
   background: #fafafa;
   font-size: 16px;
   line-height: 22px;
-  border: 1px solid rgba(0,0,0,0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   border-radius: 5px;
   padding: 0 16px;

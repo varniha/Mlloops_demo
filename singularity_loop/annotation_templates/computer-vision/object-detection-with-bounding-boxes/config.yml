@@ -8,7 +8,8 @@ config: |
   <View>
     <Image name="image" value="$image"/>
     <RectangleLabels name="label" toName="image">
-      <Label value="Cat" background="skyblue"/>
-      <Label value="Dog" background="yellow"/>
+      <Label value="Cat" background="#62a5d0"/>
+      <Label value="Dog" background="#e3df70"/>
+      <Label value="Floor" background="#e0645c"/>
     </RectangleLabels>
   </View>

@@ -73,7 +73,7 @@ const WebhookList = ({ onSelectActive, onAddWebhook, webhooks, fetchWebhooks }) 
                     icon={<LsCross />}
                   >Delete</Button>
                 </Elem>
-              </Elem>,
+              </Elem>
             )
           }
         </Block>}

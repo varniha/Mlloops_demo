@@ -31,7 +31,7 @@
     "$respone": "Sure, no problem!",
     "$resptwo": "Sorry, it's too early. May be we can change the time?",
     "$respthree": "Don't eat junk food man, it's bad for you...",
-    "$ocr": "<HOSTNAME>/static/templates/ocr.png",
+    "$ocr": "<HOSTNAME>/static/templates/Sample Image.png",
     "$ner": "A Florida restaurant paid 10,925 pounds ($16,935) for the draft of \\\"Ain't no telling\\\", which Hendrix penned on a piece of London hotel stationery in late 1966.",
     "$captioning": "<HOSTNAME>/static/samples/trees_in_snow.jpg",
     "$pairText1": "Look at this! It's a brand new product",

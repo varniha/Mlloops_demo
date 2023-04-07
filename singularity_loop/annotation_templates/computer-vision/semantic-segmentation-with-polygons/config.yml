@@ -13,9 +13,10 @@ config: |
     <PolygonLabels name="label" toName="image"
                    strokeWidth="3" pointSize="small"
                    opacity="0.9">
-      <Label value="Cat" background="blue"/>
-      <Label value="Dog" background="yellow"/>
-      <Label value="Floor" background="red"/>
+      <Label value="Cat" background="#62a5d0"/>
+      <Label value="Dog" background="#e3df70"/>
+      <Label value="Floor" background="#e0645c"/>
+      <Label value="Text" background="#72e684"/>
     </PolygonLabels>
 
   </View>

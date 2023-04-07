@@ -5,6 +5,7 @@ import { DangerZone } from './DangerZone';
 import { GeneralSettings } from './GeneralSettings';
 import { InstructionsSettings } from './InstructionsSettings';
 import { LabelingSettings } from './LabelingSettings';
+import{MLmonitorsettings} from './MLmonitorsettings'
 import { MachineLearningSettings } from './MachineLearningSettings/MachineLearningSettings';
 import { StorageSettings } from './StorageSettings/StorageSettings';
 
@@ -17,6 +18,7 @@ export const MenuLayout = ({children, ...routeProps}) => {
         LabelingSettings,
         InstructionsSettings,
         MachineLearningSettings,
+        MLmonitorsettings,
         StorageSettings,
         WebhookPage,
         DangerZone,
@@ -37,6 +39,7 @@ export const SettingsPage = {
     InstructionsSettings,
     LabelingSettings,
     MachineLearningSettings,
+    MLmonitorsettings,
     StorageSettings,
     WebhookPage,
     DangerZone,

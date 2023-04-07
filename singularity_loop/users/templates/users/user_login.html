@@ -1,19 +1,61 @@
 {% extends 'users/user_base.html' %}
 
 {% block user_content %}
-  <form id="login-form" action="{% url 'user-login' %}{% if next %}?next={{ next }}{% endif %}" method="post">
-    {% csrf_token %}
-    <p><input type="text" class="ls-input" name="email" id="email" placeholder="Email" value="{{ form.data.email }}"></p>
-    <p><input type="password" class="ls-input" name="password" id="password" placeholder="Password"></p>
-    <h4 onclick="location.href='https://www.google.com'" style="cursor:pointer">Forgot Password ?</h4>
-    {% if form.non_field_errors %}
+
+  <form
+    id="login-form"
+    action="{% url 'user-login' %}{% if next %}?next={{ next }}{% endif %}"
+    method="post"
+    class="conatiner"
+  >
+    <div class="form-container">
+      {% csrf_token %}
+  <h1>Login</h1>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          class="form-input"
+          name="email"
+          id="email"
+          value="{{ form.data.email }}"
+          placeholder="{% trans 'Email' %}"
+        />
+      </div>
+      <div class="form-row">
+        <label for="email">Password</label>
+
+        <input
+          type="password"
+          class="form-input"
+          name="password"
+          id="password"
+          placeholder="{% trans 'Password' %}"
+        />
+      </div>
+        <button
+          type="submit"
+          aria-label="{% trans 'Log In' %}"
+          class="form-button"
+        >
+          {% trans 'Log In' %}
+        </button>
+      {% if form.non_field_errors %} 
       {% for error in form.non_field_errors %}
-        <p class="error">
-          {{ error }}
+      <p class="error">{{ error }}</p>
+      {% endfor %} 
+      {% endif %}
+      <div class="form-row">
+        <p>
+          {% trans 'Don\'t have an account?' %}
+          <a
+            href="{% url 'user-signup' %}{% if next %}?next={{ next }}{% endif %}"
+            >{% trans 'Create Account' %}</a
+          >
         </p>
-      {% endfor %}
-    {% endif %}
-    <p><button style="background-color:#a90531;box-shadow:none"type="submit" aria-label="Log In" class="ls-button ls-button_look_primary">Log in</button></p>
+      </div>
+    </div>
   </form>
 
 {% endblock %}

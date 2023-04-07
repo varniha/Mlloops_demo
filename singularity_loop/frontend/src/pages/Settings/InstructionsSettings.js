@@ -26,7 +26,7 @@ export const InstructionsSettings = () => {
             <Toggle label="Show before labeling" name="show_instruction"/>
           </div>
           <div style={{color: "rgba(0,0,0,0.4)", paddingLeft: 16}}>
-            Write instructions to help users complete labeling tasks.
+            Write instructions to help users complete labeling tasks. Lets assign a task.
           </div>
         </Form.Row>
 

@@ -25763,7 +25763,7 @@
 				fillRule: "evenodd",
 				clipRule: "evenodd",
 				d: "M16 2c2.702 0 5.158.655 7.232 1.828a13.01 13.01 0 014.94 4.94C29.345 10.842 30 13.298 30 16s-.655 5.158-1.828 7.232a13.01 13.01 0 01-4.94 4.94C21.158 29.345 18.702 30 16 30s-5.158-.655-7.232-1.828a13.01 13.01 0 01-4.94-4.94C2.655 21.158 2 18.702 2 16s.655-5.158 1.828-7.232a13.009 13.009 0 014.94-4.94C10.842 2.655 13.298 2 16 2z",
-				fill: "#09F"
+				fill: "#0F9D58"
 			}),
 			xr = L.createElement("path", {
 				fillRule: "evenodd",
@@ -26037,7 +26037,7 @@
 				width: 48,
 				height: 64,
 				viewBox: "0 0 48 64",
-				fill: "#a90531",
+				fill: "#0F9D58",
 				xmlns: "http://www.w3.org/2000/svg",
 				ref: t
 			}, e), ii)
@@ -26395,7 +26395,7 @@
 							name: "action-slack",
 							target: "_blank",
 							icon: (0, yi.jsx)(Jr, {}),
-							href: "https://slack.labelstudio.heartex.com/?source=product-error-msg",
+							href: "https://join.slack.com/t/slack-vix2609/shared_invite/zt-1afeod8w2-2Ain40g4RGmLF67Wu8dM6Q",
 							children: "Ask on Slack"
 						}), (0, yi.jsxs)(Li, {
 							size: "small",
@@ -31449,12 +31449,14 @@
 								}),
 								children: [e, (0, yi.jsx)(cl, {})]
 							}, e)))
-						}), (0, yi.jsx)("button", {
-							type: "button",
-							onClick: n,
-							className: ul.elem("custom-template"),
-							children: "Custom template"
-						})]
+						}), 
+						// (0, yi.jsx)("button", {
+						// 	type: "button",
+						// 	onClick: n,
+						// 	className: ul.elem("custom-template"),
+						// 	children: "Custom template"
+						// })
+					]
 					}), (0, yi.jsxs)("main", {
 						children: [!s && (0, yi.jsx)(hs, {
 							style: {
@@ -31487,15 +31489,15 @@
 			ml = xi("configure"),
 			vl = () => (0, yi.jsxs)("div", {
 				className: ml.elem("empty-config"),
-				children: [(0, yi.jsx)("p", {
-					children: "Your labeling configuration is empty. It is required to label your data."
-				}), (0, yi.jsxs)("p", {
-					children: ["Start from one of our predefined templates or create your own config on the Code panel. The labeling config is XML-based and you can ", (0, yi.jsx)("a", {
-						href: "https://labelstud.io/tags/",
-						target: "_blank",
-						children: "read about the available tags in our documentation"
-					}), "."]
-				})]
+				// children: [(0, yi.jsx)("p", {
+				// 	children: "Your labeling configuration is empty. It is required to label your data."
+				// }), (0, yi.jsxs)("p", {
+				// 	children: ["Start from one of our predefined templates or create your own config on the Code panel. The labeling config is XML-based and you can ", (0, yi.jsx)("a", {
+				// 		href: "https://labelstud.io/tags/",
+				// 		target: "_blank",
+				// 		children: "read about the available tags in our documentation"
+				// 	}), "."]
+				// })]
 			}),
 			gl = ({
 				label: e,
@@ -31565,7 +31567,7 @@
 							name: "labels",
 							id: "",
 							cols: "30",
-							rows: "5",
+							rows: "1",
 							ref: n,
 							onKeyPress: e => {
 								"Enter" === e.key && e.ctrlKey && (e.preventDefault(), o())
@@ -31650,14 +31652,14 @@
 				}));
 				return n.filter(Boolean).length ? (0, yi.jsx)("ul", {
 					className: ml.elem("settings"),
-					children: (0, yi.jsxs)("li", {
-						children: [(0, yi.jsx)("h4", {
-							children: "Configure settings"
-						}), (0, yi.jsx)("ul", {
-							className: ml.elem("object-settings"),
-							children: n
-						})]
-					})
+					// children: (0, yi.jsxs)("li", {
+					// 	children: [(0, yi.jsx)("h4", {
+					// 		children: "Configure settings"
+					// 	}), (0, yi.jsx)("ul", {
+					// 		className: ml.elem("object-settings"),
+					// 		children: n
+					// 	})]
+					// })
 				}) : null
 			},
 			wl = ({
@@ -31671,29 +31673,31 @@
 				return t.objects.length ? (0, yi.jsxs)("div", {
 					className: ml.elem("object"),
 					children: [(0, yi.jsx)("h4", {
-						children: "Configure data"
+						// children: "Configure data"
 					}), t.objects.length > 1 && (null == e ? void 0 : e.length) > 0 && e.length < t.objects.length && (0, yi.jsx)("p", {
 						className: ml.elem("object-error"),
-						children: "This template requires more data then you have for now"
+						// children: "This template requires more data then you have for now"
 					}), 0 === (null == e ? void 0 : e.length) && (0, yi.jsx)("p", {
 						className: ml.elem("object-error"),
-						children: "To select which field(s) to label you need to upload the data. Alternatively, you can provide it using Code mode."
-					}), t.objects.map((r => {
-						var i, o;
-						return (0, yi.jsxs)("p", {
-							children: ["Use ", r.tagName.toLowerCase(), t.objects > 1 && ` for ${r.getAttribute("name")}`, " from ", (null == e ? void 0 : e.length) > 0 && e[0] !== il && "field ", (0, yi.jsxs)("select", {
-								onChange: n(r),
-								value: null === (i = r.getAttribute("value")) || void 0 === i ? void 0 : i.replace(/^\$/, ""),
-								children: [null == e ? void 0 : e.map((e => (0, yi.jsx)("option", {
-									value: e,
-									children: e === il ? "<imported file>" : `$${e}`
-								}, e))), !(null != e && e.length) && (0, yi.jsx)("option", {
-									value: null === (o = r.getAttribute("value")) || void 0 === o ? void 0 : o.replace(/^\$/, ""),
-									children: "<imported file>"
-								})]
-							})]
-						}, r.getAttribute("name"))
-					}))]
+						// children: "To select which field(s) to label you need to upload the data. Alternatively, you can provide it using Code mode."
+					}), 
+					// t.objects.map((r => {
+					// 	var i, o;
+					// 	return (0, yi.jsxs)("p", {
+					// 		children: ["Use ", r.tagName.toLowerCase(), t.objects > 1 && ` for ${r.getAttribute("name")}`, " from ", (null == e ? void 0 : e.length) > 0 && e[0] !== il && "field ", (0, yi.jsxs)("select", {
+					// 			onChange: n(r),
+					// 			value: null === (i = r.getAttribute("value")) || void 0 === i ? void 0 : i.replace(/^\$/, ""),
+					// 			children: [null == e ? void 0 : e.map((e => (0, yi.jsx)("option", {
+					// 				value: e,
+					// 				children: e === il ? "<imported file>" : `$${e}`
+					// 			}, e))), !(null != e && e.length) && (0, yi.jsx)("option", {
+					// 				value: null === (o = r.getAttribute("value")) || void 0 === o ? void 0 : o.replace(/^\$/, ""),
+					// 				children: "<imported file>"
+					// 			})]
+					// 		})]
+					// 	}, r.getAttribute("name"))
+					// }))
+				]
 				}) : null
 			},
 			xl = ({
@@ -31736,11 +31740,11 @@
 				}), [r, t]);
 				const _ = (0, yi.jsxs)("p", {
 					className: ml.elem("tags-link"),
-					children: ["Configure the labeling interface with tags.", (0, yi.jsx)("br", {}), (0, yi.jsx)("a", {
-						href: "https://labelstud.io/tags/",
-						target: "_blank",
-						children: "See all available tags"
-					}), "."]
+					// children: ["Configure the labeling interface with tags.", (0, yi.jsx)("br", {}), (0, yi.jsx)("a", {
+					// 	href: "https://labelstud.io/tags/",
+					// 	target: "_blank",
+					// 	children: "See all available tags"
+					// }), "."]
 				});
 				return (0, yi.jsxs)("div", {
 					className: ml,
@@ -32271,11 +32275,11 @@
 					className: "field field--wide",
 					children: [(0, yi.jsx)("label", {
 						htmlFor: "project_description",
-						children: "Description"
-					}), (0, yi.jsx)("textarea", {
-						name: "description",
-						id: "project_description",
-						placeholder: "Optional description of your project",
+						children: "URL"
+					}), (0, yi.jsx)("input", {
+						name: "url1",
+						id: "url1",
+						placeholder: "Mention the URL here",
 						rows: "4",
 						value: o,
 						onChange: e => a(e.target.value)
@@ -32367,7 +32371,6 @@
 						children: [(0, yi.jsxs)(Vi.Header, {
 							children: [(0, yi.jsx)("h1", {
 								icon: (0, yi.jsx)(Hr, {}),
-								children: "New Project"
 							}), (0, yi.jsx)(ms, {
 								items: _,
 								active: t,
@@ -33501,7 +33504,20 @@
 								onClick: (l = o.type, () => {
 									Yi({
 										title: "Action confirmation",
-										body: "You're about to delete all things. This action cannot be undone. Please type the project name to confirm.",
+										body:(0, yi.jsx)("p", {
+                                            children: ["You're about to delete all things. This action cannot be undone. Please type the project name to confirm",
+                                            (0, yi.jsxs)(Ys.Row, {
+                                            columnCount: 1,
+                                            rowGap: "32px",
+                                            children: [(0, yi.jsx)(Us, {
+                                                name: "title",
+                                                labelProps: {
+                                                    large: !0
+                                                }
+                                            })
+                                            ]
+                                        }),]
+                                    }),
 										okText: "Delete",
 										buttonLook: "destructive",
 										onOk: async () => {
@@ -33670,12 +33686,9 @@
 							}
 						}), (0, yi.jsx)(Us, {
 							name: "description",
-							label: "Description",
+							label: "URL",
 							labelProps: {
 								large: !0
-							},
-							style: {
-								minHeight: 128
 							}
 						}),
 							 ]
@@ -33726,27 +33739,7 @@
 						pk: e.id
 					},
 					onSubmit: i,
-					children: [(0, yi.jsxs)(Ys.Row, {
-						columnCount: 1,
-						children: [(0, yi.jsx)(Ps, {
-							text: "Labeling Instructions",
-							large: !0
-						}), (0, yi.jsx)("div", {
-							style: {
-								paddingLeft: 16
-							},
-							children: (0, yi.jsx)(Hs, {
-								label: "Show before labeling",
-								name: "show_instruction"
-							})
-						}), (0, yi.jsx)("div", {
-							style: {
-								color: "rgba(0,0,0,0.4)",
-								paddingLeft: 16
-							},
-							children: "Write instructions to help users complete labeling tasks."
-						})]
-					}), (0, yi.jsx)(Ys.Row, {
+					children: [ (0, yi.jsx)(Ys.Row, {
 						columnCount: 1,
 						children: (0, yi.jsx)(Us, {
 							name: "expert_instruction",
@@ -33754,28 +33747,12 @@
 								minHeight: 128
 							}
 						})
-					}), (0, yi.jsxs)(Ys.Actions, {
-						children: [(0, yi.jsx)(Ys.Indicator, {
-							children: (0, yi.jsx)("span", {
-								case: "success",
-								children: "Saved!"
-							})
-						}), (0, yi.jsx)(Ni, {
-							type: "submit",
-							look: "primary",
-							style: {
-								width: 120
-							},
-							children: "Save"
-						})]
 					})]
 				})
 			})
 		};
 		xu.title = "Instructions", xu.path = "/instruction";
 		
-
-
 		const Mp = () => {
 			const {
 				project: e,
@@ -33784,11 +33761,23 @@
 				e.id && t(e.id, !0)
 			}), [e]);
 			return (0, yi.jsx)("div", {
-				
-				
+				style: {
+					width: 480
+				},
+				children: (0, yi.jsxs)(Ys, {
+					action: "updateProject",
+					formData: {
+						...e
+					},
+					params: {
+						pk: e.id
+					},
+					onSubmit: n,
+					children: []
+				})
 			})
 		};
-		Mp.menuItem = "ML Monitor", Mp.path = "/mlpackaging", Mp.exact = !0;
+		Mp.menuItem = "ML Monitor", Mp.path = "/instruction", Mp.exact = !0;
 
 		const MC = () => {
 			const {
@@ -33867,7 +33856,7 @@
 				})
 			})
 		};
-		Mm.menuItem = "ML Deploy", Mm.path = "/mlmonitoring", Mm.exact = !0;
+		Mm.menuItem = "ML Deploy", Mm.path = "/ml", Mm.exact = !0;
 		
 		const ku = () => {
 			const e = fe(),
@@ -34675,9 +34664,8 @@
                             }),
                             footer: (0, yi.jsxs)(yi.Fragment, {
                                 children: ["Save completed annotations to Amazon S3, Google Cloud, Microsoft Azure, or Redis.", (0, yi.jsx)("br", {}), (0, yi.jsx)("a", {
-                                    href: "https://labelstud.io/guide/storage.html",
-                                    children: "See more in the documentation"
-                                }), "."]
+                                   
+                                })]
                             })
                         })
                     }), [o, h, t, n]),
@@ -34775,7 +34763,7 @@
 				LabelingSettings: ku,
 				MachineLearningSettings: Lu,
 				StorageSettings: Wu,
-				MLPackage: Mp,
+				MLmonitorsettings: Mp,
 				WebhookPage: hu,
 				DangerZone: mu
 			}
@@ -35024,8 +35012,7 @@
 			onClick: e,
 			look: "primary",
 			size: "compact",
-			icon: (0, yi.jsx)(Hr, {}),
-			children: "New Project",
+			icon: (0, yi.jsx)(Hr, {})
 		}) : null;
 
 		function Ku(e, t) {

@@ -9,7 +9,7 @@ config: |
     <Image name="image" value="$ocr"/>
 
     <Labels name="label" toName="image">
-      <Label value="Text" background="pink"/>
+      <Label value="Text" background="#72e684"/>
     </Labels>
 
     <Rectangle name="bbox" toName="image" strokeWidth="3"/>

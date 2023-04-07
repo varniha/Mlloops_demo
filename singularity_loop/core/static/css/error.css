@@ -16,7 +16,7 @@
   color: var(--red-6);
 }
 .ls-global-error__details {
-  background:#a90531;
+  background:#0F9D58;
   max-height: 320px;
   overflow-y: auto;
   white-space: pre-wrap;
@@ -55,7 +55,7 @@ body > .ls-global-error .button {
   cursor: pointer;
   padding: 0 16px;
   display: inline-flex;
-  background-color: #a90531;
+  background-color: #0F9D58;
   align-items: center;
   border-radius: 5px;
   text-align: center;

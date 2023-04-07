@@ -60,6 +60,7 @@ button,
 textarea {
   border: 1px solid var(--border-color);
   padding: 9px 16px;
+  background:#f0fff0;
 }
 
 input[type=text][disabled] {
@@ -93,8 +94,8 @@ input[type=button].primary,
 input[type=submit].primary,
 input[type=reset].primary,
 button.primary {
-  background: #a90531;
-  border: 1px solid #a90531;
+  background: #0F9D58;
+  border: 1px solid #0F9D58;
   color: white;
 }
 

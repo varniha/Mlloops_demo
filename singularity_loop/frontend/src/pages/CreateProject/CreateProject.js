@@ -20,11 +20,11 @@ const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, 
       {error && <span className="error">{error}</span>}
     </div>
     <div className="field field--wide">
-      <label htmlFor="project_description">Description</label>
+      <label htmlFor="project_description">URL</label>
       <textarea
-        name="description"
-        id="project_description"
-        placeholder="Optional description of your project"
+        name="url1"
+        id="url1"
+        placeholder="Mention the URL here"
         rows="4"
         value={description}
         onChange={e => setDescription(e.target.value)}
@@ -117,7 +117,7 @@ export const CreateProject = ({ onClose }) => {
     <Modal onHide={onDelete} fullscreen visible bare closeOnClickOutside={false}>
       <div className={rootClass}>
         <Modal.Header>
-          <h1>New Project</h1>
+          <Button icon={<LsPlus/>} primary onClick={showInvitationModal}>New Project</Button>;
           <ToggleItems items={steps} active={step} onSelect={setStep} />
 
           <Space>
