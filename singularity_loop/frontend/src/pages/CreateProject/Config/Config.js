@@ -66,7 +66,7 @@ const Label = ({ label, template, color }) => {
       </label>
       <span>{value}</span>
       <button type="button" className={configClass.elem("delete-label")} onClick={() => template.removeLabel(label)}>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="red" strokeWidth="2" strokeLinecap="square" xmlns="http://www.w3.org/2000/svg">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#b03f3f" strokeWidth="2" strokeLinecap="square" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 12L12 2"/>
           <path d="M12 12L2 2"/>
         </svg>
@@ -97,7 +97,7 @@ const ConfigureControl = ({ control, template }) => {
     <div className={configClass.elem("labels")}>
       <form className={configClass.elem("add-labels")} action="">
         <h4>{tagname === "Choices" ? "Add choices" : "Add label names"}</h4>
-        <textarea name="labels" id="" cols="30" rows="1" ref={refLabels} onKeyPress={onKeyPress}></textarea>
+        <textarea name="labels" id="" cols="30" rows="5" ref={refLabels} onKeyPress={onKeyPress}></textarea>
         <input type="button" value="Add" onClick={onAddLabels} />
       </form>
       <div className={configClass.elem("current-labels")}>
@@ -318,7 +318,7 @@ const Configurator = ({ columns, config, project, template, setTemplate, onBrows
     <div className={configClass}>
       <div className={configClass.elem("container")}>
         <header>
-          <button onClick={onBrowse}>Browse Templates</button>
+          <button onClick={onBrowse}></button>
           <ToggleItems items={{ code: "Code", visual: "Visual" }} active={configure} onSelect={onSelect} />
         </header>
         <div className={configClass.elem('editor')}>
