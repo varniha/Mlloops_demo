@@ -25577,7 +25577,7 @@
 		}
 		var Yn = L.createElement("path", {
 			d: "M14 2L2 14M2 2l12 12",
-			stroke: "currentColor",
+			stroke: "#fff",
 			strokeWidth: 2,
 			strokeLinecap: "square"
 		});
@@ -25587,7 +25587,7 @@
 				width: 16,
 				height: 16,
 				viewBox: "0 0 16 16",
-				fill: "none",
+				fill: "#b03f3f",
 				xmlns: "http://www.w3.org/2000/svg",
 				ref: t
 			}, e), Yn)
@@ -26037,7 +26037,7 @@
 				width: 48,
 				height: 64,
 				viewBox: "0 0 48 64",
-				fill: "#0F9D58",
+				fill: "#f5a1a1",
 				xmlns: "http://www.w3.org/2000/svg",
 				ref: t
 			}, e), ii)
@@ -31118,32 +31118,32 @@
 			Zs = {
 				Image: {
 					type: "Image",
-					settings: {
-						strokeWidth: {
-							title: "Width of region borders",
-							type: Number,
-							param: (e, t) => e.$controls.forEach((e => e.setAttribute("strokeWidth", t))),
-							value: e => {
-								var t, n;
-								return null !== (t = null === (n = e.$controls[0]) || void 0 === n ? void 0 : n.getAttribute("strokeWidth")) && void 0 !== t ? t : 1
-							}
-						},
-						zoom: {
-							title: "Allow image zoom (ctrl+wheel)",
-							type: Boolean,
-							param: "zoom"
-						},
-						zoomControl: {
-							title: "Show controls to zoom in and out",
-							type: Boolean,
-							param: "zoomControl"
-						},
-						rotateControl: {
-							title: "Show controls to rotate image",
-							type: Boolean,
-							param: "rotateControl"
-						}
-					}
+					// settings: {
+					// 	strokeWidth: {
+					// 		title: "Width of region borders",
+					// 		type: Number,
+					// 		param: (e, t) => e.$controls.forEach((e => e.setAttribute("strokeWidth", t))),
+					// 		value: e => {
+					// 			var t, n;
+					// 			return null !== (t = null === (n = e.$controls[0]) || void 0 === n ? void 0 : n.getAttribute("strokeWidth")) && void 0 !== t ? t : 1
+					// 		}
+					// 	},
+					// 	zoom: {
+					// 		title: "Allow image zoom (ctrl+wheel)",
+					// 		type: Boolean,
+					// 		param: "zoom"
+					// 	},
+					// 	zoomControl: {
+					// 		title: "Show controls to zoom in and out",
+					// 		type: Boolean,
+					// 		param: "zoomControl"
+					// 	},
+					// 	rotateControl: {
+					// 		title: "Show controls to rotate image",
+					// 		type: Boolean,
+					// 		param: "rotateControl"
+					// 	}
+					// }
 				},
 				Text: {
 					type: "Text",
@@ -31489,15 +31489,15 @@
 			ml = xi("configure"),
 			vl = () => (0, yi.jsxs)("div", {
 				className: ml.elem("empty-config"),
-				// children: [(0, yi.jsx)("p", {
-				// 	children: "Your labeling configuration is empty. It is required to label your data."
-				// }), (0, yi.jsxs)("p", {
-				// 	children: ["Start from one of our predefined templates or create your own config on the Code panel. The labeling config is XML-based and you can ", (0, yi.jsx)("a", {
-				// 		href: "https://labelstud.io/tags/",
-				// 		target: "_blank",
-				// 		children: "read about the available tags in our documentation"
-				// 	}), "."]
-				// })]
+				children: [(0, yi.jsx)("p", {
+					children: "Your labeling configuration is empty. It is required to label your data."
+				}), (0, yi.jsxs)("p", {
+					children: ["Start from one of our predefined templates or create your own config on the Code panel. The labeling config is XML-based and you can ", (0, yi.jsx)("a", {
+						href: "https://labelstud.io/tags/",
+						target: "_blank",
+						children: "read about the available tags in our documentation"
+					}), "."]
+				})]
 			}),
 			gl = ({
 				label: e,
@@ -31532,7 +31532,7 @@
 							height: "14",
 							viewBox: "0 0 14 14",
 							fill: "none",
-							stroke: "red",
+							stroke: "#b03f3f",
 							strokeWidth: "2",
 							strokeLinecap: "square",
 							xmlns: "http://www.w3.org/2000/svg",
@@ -31652,14 +31652,16 @@
 				}));
 				return n.filter(Boolean).length ? (0, yi.jsx)("ul", {
 					className: ml.elem("settings"),
-					// children: (0, yi.jsxs)("li", {
-					// 	children: [(0, yi.jsx)("h4", {
-					// 		children: "Configure settings"
-					// 	}), (0, yi.jsx)("ul", {
-					// 		className: ml.elem("object-settings"),
-					// 		children: n
-					// 	})]
-					// })
+					children:
+					 (0, yi.jsxs)("li", {
+						children: [(0, yi.jsx)("h4", {
+							// children: "Configure settings"
+						}),
+						 (0, yi.jsx)("ul", {
+							className: ml.elem("object-settings"),
+							children: n
+						})]
+					})
 				}) : null
 			},
 			wl = ({
@@ -31740,11 +31742,11 @@
 				}), [r, t]);
 				const _ = (0, yi.jsxs)("p", {
 					className: ml.elem("tags-link"),
-					// children: ["Configure the labeling interface with tags.", (0, yi.jsx)("br", {}), (0, yi.jsx)("a", {
-					// 	href: "https://labelstud.io/tags/",
-					// 	target: "_blank",
-					// 	children: "See all available tags"
-					// }), "."]
+					children: ["Configure the labeling interface with tags.", (0, yi.jsx)("br", {}), (0, yi.jsx)("a", {
+						href: "https://labelstud.io/tags/",
+						target: "_blank",
+						children: "See all available tags"
+					}), "."]
 				});
 				return (0, yi.jsxs)("div", {
 					className: ml,
@@ -31754,16 +31756,18 @@
 							children: [(0, yi.jsx)("button", {
 								onClick: o,
 								children: "Browse Templates"
-							}), (0, yi.jsx)(ms, {
-								items: {
-									code: "Code",
-									visual: "Visual"
-								},
-								active: u,
-								onSelect: e => {
-									c(e), "visual" === e && f(!0)
-								}
-							})]
+							}), 
+							// (0, yi.jsx)(ms, {
+							// 	items: {
+							// 		code: "Code",
+							// 		visual: "Visual"
+							// 	},
+							// 	active: u,
+							// 	onSelect: e => {
+							// 		c(e), "visual" === e && f(!0)
+							// 	}
+							// })
+						]
 						}), (0, yi.jsxs)("div", {
 							className: ml.elem("editor"),
 							children: ["code" === u && (0, yi.jsx)("div", {
