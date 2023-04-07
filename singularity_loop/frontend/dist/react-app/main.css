@@ -1,12 +1,13 @@
 .ls-button {
-	--button-color: #f5f5f5;
+	--button-color: #efb1b1;
 	align-items: center;
-	background-color: #0F9D58;
+	background-color: #b03f3f;
 	border: none;
 	border-radius: 5px;
-	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px #0F9D58;
-	color: var(--button-color) !important;
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px ;
+	color: white;
 	cursor: pointer;
+	box-shadow: inset 0 -1px 0 #f2c1c1;
 	display: inline-flex;
 	font-size: 16px;
 	font-weight: 500;
@@ -20,18 +21,19 @@
 }
 
 .ls-button:hover:not(:disabled):not(.ls-button_waiting) {
-	box-shadow: 0 2px 4px rgb(251, 251, 251), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .2);
-	color: var(--button-color)
+	box-shadow: 0 2px 4px #e57171(0, 49%, 82%)(251, 251, 251), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .2);
+	/* color: var(--button-color); */
+	background: linear-gradient(0, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), #e57171;
 }
 
 .ls-button:active {
-	background: linear-gradient(0, rgba(0, 0, 0, .02), rgba(0, 0, 0, .02)), #0F9D58;
+	background: linear-gradient(0, rgba(0, 0, 0, .02), rgba(0, 0, 0, .02));
 	box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .2);
 	color: var(--button-color)
 }
 
 .ls-button:focus {
-	box-shadow: 0 0 0 6px #0F9D58, inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .15), inset 0 0 0 1px #0F9D58;
+	box-shadow: 0 0 0 6px #e57171, inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .15), inset 0 0 0 1px;
 	outline: none
 }
 
@@ -92,15 +94,15 @@
 }
 
 .ls-button_type_link {
-	--button-color: #0F9D58;
+	--button-color: #e57171;
 	text-decoration: underline
 }
 
 .ls-button_look_primary {
 	--button-color: #fff;
-	background-color: #0F9D58;
+	background-color: #b03f3f;
 	box-shadow: none;
-	box-shadow: inset 0 -1px 0 #0F9D58
+	box-shadow: inset 0 -1px 0 #f2c1c1;
 }
 
 .ls-button_look_primary:disabled {
@@ -109,17 +111,17 @@
 }
 
 .ls-button_look_primary:hover:not(:disabled) {
-	background: linear-gradient(0, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), #0F9D58;
-	box-shadow: 0 2px 4px #0F9D58, inset 0 -1px 0 rgba(0, 0, 0, .1)
+	background: linear-gradient(0, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), #e57171;
+	box-shadow: 0 2px 4px #f2c1c1(0, 28%, 45%), inset 0 -1px 0 rgba(0, 0, 0, .1)
 }
 
 .ls-button_look_primary:active:not(:disabled) {
-	background: linear-gradient(0, rgba(0, 0, 0, .04), rgba(0, 0, 0, .04)), #0F9D58;
+	background: linear-gradient(0, rgba(0, 0, 0, .04), rgba(0, 0, 0, .04)), #e57171;
 	box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1)
 }
 
 .ls-button_look_primary:focus:not(:disabled) {
-	box-shadow: 0 0 0 6px #0F9D58, inset 0 -1px 0 rgba(0, 0, 0, .1)
+	box-shadow: 0 0 0 6px #e57171, inset 0 -1px 0 rgba(0, 0, 0, .1)
 }
 
 .ls-button_look_danger {
@@ -128,7 +130,7 @@
 
 .ls-button_look_destructive {
 	--button-color: #fff;
-	background-color: #0f9d58
+	background-color: #b03f3f
 }
 
 .ls-button_look_danger.ls-button_waiting,
@@ -139,7 +141,7 @@
 .ls-button_look_destructive.ls-button_waiting,
 .ls-button_look_destructive:disabled {
 	--button-color: rgba(255, 255, 255, 0.5);
-	background-color: #0f9d58
+	background-color: #b03f3f
 }
 
 .ls-button_size_compact {
@@ -186,7 +188,8 @@
 }
 
 .ls-button_withIcon:not(.ls-button_type_link) {
-	padding: 0 14px
+	padding: 0 14px;
+	background-color: #b03f3f;
 }
 
 .ls-button_withIcon.ls-button_size_small {
@@ -204,7 +207,7 @@
 }
 
 .ls-button_waiting.ls-button_look_primary {
-	background-color: #0F9D58;
+	background-color: #b03f3f;
 	background-image: repeating-linear-gradient(-63.43deg, rgba(255, 255, 255, .2) 1px, transparent 2px, transparent 6px, rgba(255, 255, 255, .2) 7px, rgba(255, 255, 255, .2) 12px)
 }
 
@@ -488,7 +491,7 @@
 }
 
 .ls-modal__close {
-	--button-color: #0F9D58
+	--button-color: #b03f3f;
 }
 
 .ls-modal_fullscreen .ls-modal__content {
@@ -651,11 +654,11 @@
 }
 
 .ls-main-menu__item:not(.ls-main-menu__item_active):hover {
-	background-color: #f0fff0;
+	background-color: #f2c1c1;
 }
 
 .ls-main-menu__item_active {
-	background-color: #f0fff0;
+	background-color: #ed8f8f;
 	color: #000000;
 }
 
@@ -1059,10 +1062,10 @@
 
 .ls-userpic {
 	align-items: center;
-    background: #0F9D58;
+    background: #b03f3f;
 	color: white;
     border-radius: 100%;
-    box-shadow: inset 0 0 0 1px #0f9d58;
+    box-shadow: inset 0 0 0 1px black;
     color: white(255, 255, 255);
     display: flex;
     font-size: 15px;
@@ -1650,7 +1653,8 @@
 }
 
 .ls-label__field {
-	line-height: 0
+	line-height: 0;
+	background-color: ;
 }
 
 .ls-label_size_large .ls-label__text {
@@ -1779,8 +1783,9 @@
 .ls-input,
 .ls-select,
 .ls-textarea {
-	background: #f0fff0;
-	border: 1px solid #d9d9d9;
+	background: #fafafa;
+	border: 1px solid black;
+	color: #8c8c8c;
 	border-radius: 5px;
 	box-sizing: border-box;
 	font-size: 16px;
@@ -1893,7 +1898,7 @@ input.ls-input[type=radio] {
 }
 
 .ls-toggle_checked .ls-toggle__indicator:before {
-	background: #0F9D58;
+	background: #ab5151;
 	box-shadow: 0 5px 10px rgba(0, 153, 255, .3), inset 0 -1px 0 rgba(0, 0, 0, .1);
 	height: 16px;
 	width: 16px
@@ -2757,7 +2762,7 @@ span.CodeMirror-selectedtext {
 
 .ls-templates-list__template:hover,
 .ls-templates-list__template_active {
-	box-shadow: 0 0 0 2px #0F9D58
+	box-shadow: 0 0 0 2px #b03f3f;
 }
 
 .ls-templates-list__template:hover {
@@ -2768,7 +2773,7 @@ span.CodeMirror-selectedtext {
 	border-top: 1px solid #d9d9d9;
 	font-size: 14px;
 	font-weight: 500;
-	background-color: #f0fff0;
+	background-color: #ed8f8f;
 	margin: 0;
 	padding: 12px
 }
@@ -2829,7 +2834,7 @@ span.CodeMirror-selectedtext {
 }
 
 .ls-wizard h1 a[name=config]:hover {
-	background: #0F9D58
+	background: #f9d2d2
 }
 
 .ls-wizard h1 a[name=config]:hover:before {
@@ -2839,14 +2844,28 @@ span.CodeMirror-selectedtext {
 .ls-wizard a.ls-button,
 .ls-wizard button,
 .ls-wizard input[type=button] {
-	line-height: 1
+	line-height: 1;
+	background-color: #b03f3f;
+    color: white;
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px ;
+}
+
+.ls-wizard button:hover{
+    background-color: #f7c1c1;
+	box-shadow: 0 2px 4px #e57171(0, 49%, 82%)(251, 251, 251), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .2);
+	/* color: var(--button-color); */
+	background: linear-gradient(0, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), #e57171;
+}
+
+.ls-wizard input[type=button]:hover{
+	background-color: #f7c1c1;
 }
 
 .ls-configure__container>header {
 	align-items: center;
-	display: flex;
-	justify-content: flex-end;
-	margin-bottom: 16px
+    display: block;
+    justify-content: flex-end;
+    margin-bottom: 16px;
 }
 
 .ls-configure__editor {
@@ -2867,7 +2886,17 @@ span.CodeMirror-selectedtext {
 
 .ls-configure__tags-link {
 	line-height: 21px;
-	margin: -6px 0 0
+	margin: -6px 0 0;
+	color: #b03f3f;
+}
+
+a {
+    background-color: initial;
+    color: #b03f3f;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .ls-configure__container>header .ls-toggle-items {
@@ -2897,9 +2926,8 @@ span.CodeMirror-selectedtext {
 }
 
 .ls-wizard .ls-configure__visual>* {
-	border-top: 1px solid white;
 	margin-bottom: 16px;
-	padding-top: 16px
+	padding-top: 0px
 }
 
 .ls-wizard .ls-configure__object h4 {
@@ -2953,6 +2981,7 @@ span.CodeMirror-selectedtext {
 .ls-wizard .ls-configure__add-labels textarea {
 	border-color: #dededf;
 	flex-grow: 1;
+	background-color: #fafafa;
 	font: inherit;
 	margin: 8px 0
 }
@@ -3114,6 +3143,7 @@ span.CodeMirror-selectedtext {
 	border: 1px solid rgba(0, 0, 0, .1);
 	border-radius: 4px;
 	font: inherit;
+	background-color: #fedcdc6e;
 	line-height: 1.2em;
 	padding: 4px 8px
 }
@@ -3260,7 +3290,13 @@ body {
 }
 
 .ls-upload_page button {
-	line-height: 1em
+	line-height: 1em;
+	background-color: #b03f3f;
+    color: white;
+}
+
+.ls-upload_page button:hover{
+	background-color: #efb1b1;
 }
 
 .ls-upload_page>header {
@@ -3282,12 +3318,19 @@ body {
 .ls-upload_page__url-form input {
 	border-radius: 5px 0 0 5px;
 	line-height: 1em;
+	background-color: #e9e9e9;
 	width: 320px
 }
 
 .ls-upload_page__url-form button {
 	border-radius: 0 5px 5px 0;
-	margin-left: -1px
+	margin-left: -1px;
+	color: white;
+    background: #b03f3f;
+}
+
+.ls-upload_page__url-form button:hover{
+	background-color: #e57171;
 }
 
 .ls-upload_page__url-form+span {
@@ -3315,8 +3358,8 @@ body {
 }
 
 .ls-upload_page__file-status {
-	background: #95de64;
-	border: 1px solid #52c41a;
+	background: #b03f3f;
+    border: 1px solid #b42437;
 	display: block;
 	height: 6px;
 	width: 160px
@@ -3324,12 +3367,12 @@ body {
 
 .ls-upload_page__file-status_uploading {
 	animation: ls-status-uploading 1s linear infinite;
-	background-color: #0F9D58;
+	background-color: #b03f3f;
 	background-image: repeating-linear-gradient(-63.43deg, rgba(255, 255, 255, .2) 1px, #efefef 2px, #efefef 6px, rgba(255, 255, 255, .2) 7px, rgba(255, 255, 255, .2) 12px);
 	background-position: 40px;
 	background-repeat: repeat;
 	background-size: 37px 100%;
-	border: 1px solid #0F9D58
+	border: 1px solid #b03f3f
 }
 
 .ls-upload_page__spinner {
@@ -3410,7 +3453,7 @@ body {
 }
 
 .ls-dropzone_hovered:before {
-	border: 2px dashed #0F9D58;
+	border: 2px dashed #b03f3f;
 	border-radius: 10px;
 	bottom: 8px;
 	content: "";
@@ -3614,7 +3657,7 @@ body {
 }
 
 .ls-formats__item_selected {
-	background-color: #0F9D58;
+	background-color: #f7caca;
 	pointer-events: none
 }
 
@@ -3640,7 +3683,7 @@ body {
 }
 
 .ls-formats__item_selected:after {
-	background-color: #0F9D58;
+	background-color: #b03f3f;
 	height: 14px;
 	left: 12px;
 	width: 14px
@@ -3653,7 +3696,7 @@ body {
 }
 
 .ls-formats__tag {
-	background-color: #0F9D58;
+	background-color: #f7caca;
 	border-radius: 2px;
 	font-size: 12px;
 	font-weight: 400;
@@ -4447,6 +4490,7 @@ body {
 	color: rgba(0, 0, 0, .6);
 	display: -webkit-box;
 	flex: 1;
+	background-color: #ec8a8a;
 	font-size: 16px;
 	line-height: 22px;
 	opacity: .6;
@@ -4460,7 +4504,8 @@ body {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
-	padding: 16px 16px 10px
+	padding: 16px 16px 10px;
+	background-color: #fab8bb;
 }
 
 .ls-project-card__created-date {
@@ -4679,7 +4724,7 @@ body {
 .ls-user-info__project-link {
 	align-items: center;
 	border-radius: 4px;
-	color: #0F9D58;
+	color: #b03f3f;
 	display: flex;
 	font-size: 16px;
 	height: 36px;
@@ -4688,7 +4733,7 @@ body {
 }
 
 .ls-user-info__project-link:hover {
-	background-color: #f1f1f1
+	background-color: #180d0d;
 }
 
 body {
