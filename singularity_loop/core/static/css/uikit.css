@@ -42,7 +42,13 @@ body {
 }
 .field.error input {
   color: var(--color-error);
+  background-color: #fafafa;
 }
+
+.field.input{
+  background-color: #fafafa;
+}
+
 span.error {
   background: unset;
   color: var(--color-error);
@@ -94,8 +100,8 @@ input[type=button].primary,
 input[type=submit].primary,
 input[type=reset].primary,
 button.primary {
-  background: #0F9D58;
-  border: 1px solid #0F9D58;
+  background: #b03f3f;
+  border: 1px solid #b03f3f;
   color: white;
 }
 
