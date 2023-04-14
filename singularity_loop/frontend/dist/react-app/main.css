@@ -4,17 +4,16 @@
 	background-color: #b03f3f;
 	border: none;
 	border-radius: 5px;
-	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px ;
 	color: white;
 	cursor: pointer;
 	box-shadow: inset 0 -1px 0 #f2c1c1;
 	display: inline-flex;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 400;
 	height: 40px;
 	justify-content: center;
 	outline: none;
-	padding: 0 16px;
+	padding: 0 20px;
 	text-align: center;
 	text-decoration: none;
 	transition: all .1s ease
@@ -147,7 +146,7 @@
 .ls-button_size_compact {
 	width: 55px;
 	height: 55px;
-	border-radius: 50%;
+	/* border-radius: 50%; */
 
 }
 

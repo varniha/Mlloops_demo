@@ -43,8 +43,8 @@
    font-feature-settings: "tnum";
    background-color: #fff;
    color: rgba(0, 0, 0, 0.85);
-   font-family: Palatino Linotype;
    font-size: 14px;
+   font-family: 'Poppins',sans-serif;
    font-variant: tabular-nums;
    line-height: 1.5715;
    margin: 0;
