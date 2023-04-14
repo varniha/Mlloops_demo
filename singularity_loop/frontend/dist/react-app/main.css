@@ -145,9 +145,10 @@
 }
 
 .ls-button_size_compact {
-	font-size: 15px;
-    width: 55px;	
-    height: 50px;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+
 }
 
 .ls-button_size_medium {
@@ -187,10 +188,6 @@
 	justify-content: space-between
 }
 
-.ls-button_withIcon:not(.ls-button_type_link) {
-	padding: 0 14px;
-	background-color: #b03f3f;
-}
 
 .ls-button_withIcon.ls-button_size_small {
 	padding: 0 10px
@@ -627,11 +624,9 @@
 	border-radius: 3px;
 	color: black;
 	cursor: pointer;
-	font-family: Palatino Linotype;
 	font-size: 16px;
 	height: 48px;
 	padding: 0 13px;
-	font-weight: bold;
 	text-decoration: none;
 	white-space: nowrap
 }
@@ -658,7 +653,7 @@
 }
 
 .ls-main-menu__item_active {
-	background-color: #ed8f8f;
+	background-color: #e57171;
 	color: #000000;
 }
 
@@ -733,8 +728,8 @@
 
 .ls-breadcrumbs__item {
 	cursor: default;
-	font-family: Palatino Linotype;
 	font-size: 24px;
+	font-weight: 400;
 	line-height: 22px;
 	position: relative
 }
@@ -1063,10 +1058,8 @@
 .ls-userpic {
 	align-items: center;
     background: #b03f3f;
-	color: white;
+	color: #dededf;
     border-radius: 100%;
-    box-shadow: inset 0 0 0 1px black;
-    color: white(255, 255, 255);
     display: flex;
     font-size: 15px;
     height: 40px;
@@ -1089,8 +1082,6 @@
 .ls-userpic__username {
 	color: white;
 	display: block;
-	font-family: Palatino Linotype;
-	font-weight: 700;
 	line-height: 22px;
 	opacity: 100
 }
@@ -1187,7 +1178,7 @@
 	display: flex;
 	height: var(--header-height);
 	justify-content: space-evenly;
-	position: sticky;
+	/* position: sticky; */
 	top: 0;
 	z-index: 1000
 }
@@ -1214,7 +1205,9 @@
     align-items: stretch;
     display: -webkit-inline-box;
     height: 20px;
-    margin: 1235px -55px 0px 0px;
+    position: absolute;
+	top: 90vh;
+	left: 50%;
 }
 
 .ls-menu-header__trigger {
@@ -1281,7 +1274,8 @@
 .ls-content-wrapper {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh
+	min-height: 100vh;
+	position: relative;
 }
 
 .ls-content-wrapper__body {
@@ -1654,7 +1648,6 @@
 
 .ls-label__field {
 	line-height: 0;
-	background-color: ;
 }
 
 .ls-label_size_large .ls-label__text {
@@ -4490,7 +4483,7 @@ body {
 	color: rgba(0, 0, 0, .6);
 	display: -webkit-box;
 	flex: 1;
-	background-color: #ec8a8a;
+	background-color: #e57171;
 	font-size: 16px;
 	line-height: 22px;
 	opacity: .6;
@@ -4505,7 +4498,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding: 16px 16px 10px;
-	background-color: #fab8bb;
+	background-color: #e57171;
 }
 
 .ls-project-card__created-date {
@@ -4573,7 +4566,7 @@ body {
 	border: none;
 	color: #000;
 	display: flex;
-	font: 16px/normal  Palatino Linotype;
+	font: 16px/normal ;
 	height: 48px;
 	padding: 0 10px;
 	position: relative;

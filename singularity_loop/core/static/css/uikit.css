@@ -42,13 +42,7 @@ body {
 }
 .field.error input {
   color: var(--color-error);
-  background-color: #fafafa;
 }
-
-.field.input{
-  background-color: #fafafa;
-}
-
 span.error {
   background: unset;
   color: var(--color-error);
@@ -66,7 +60,7 @@ button,
 textarea {
   border: 1px solid var(--border-color);
   padding: 9px 16px;
-  background:#f0fff0;
+  background:rgb(229 113 113 / 50%);
 }
 
 input[type=text][disabled] {
@@ -100,8 +94,8 @@ input[type=button].primary,
 input[type=submit].primary,
 input[type=reset].primary,
 button.primary {
-  background: #b03f3f;
-  border: 1px solid #b03f3f;
+  background: #0F9D58;
+  border: 1px solid #0F9D58;
   color: white;
 }
 
@@ -167,6 +161,7 @@ ul.toggle li.active {
 
   font-size: 12px;
   font-weight: bold;
+  font-family: Roboto;
   color: rgba(0, 0, 0, 0.4);
 }
 
