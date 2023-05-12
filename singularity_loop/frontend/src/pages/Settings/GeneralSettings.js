@@ -48,6 +48,12 @@ export const GeneralSettings = () => {
             label="URL"
             labelProps={{large: true}}
           />
+          <TextArea
+            name="description"
+            label="URL"
+            labelProps={{large: true}}
+          />
+     
 
           <RadioGroup name="color" label="Color" size="large" labelProps={{size: "large"}}>
             {colors.map(color => (

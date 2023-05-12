@@ -19,6 +19,7 @@
 	transition: all .1s ease
 }
 
+
 .ls-button:hover:not(:disabled):not(.ls-button_waiting) {
 	box-shadow: 0 2px 4px #e57171(0, 49%, 82%)(251, 251, 251), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .2);
 	/* color: var(--button-color); */
@@ -146,7 +147,7 @@
 .ls-button_size_compact {
 	width: 55px;
 	height: 55px;
-	/* border-radius: 50%; */
+	border-radius: 50%;
 
 }
 

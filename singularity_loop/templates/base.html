@@ -91,7 +91,7 @@
       initials: "{{user.get_initials}}",
       email: "{{user.email}}",
       {% if user.avatar %}
-      avatar: "{{user.avatar_url|safe}}",
+      avatar: "{{user.avatar_url|safe}}"
       {% endif %}
     },
     debug: {{settings.DEBUG|yesno:"true,false"}},
@@ -127,7 +127,6 @@
   {% block bottomjs %}
   {% endblock %}
 
-  {% try_include 'checks.html' %}
 
 </div>
 

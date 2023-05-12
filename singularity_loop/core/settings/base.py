@@ -66,6 +66,10 @@ logger.info('=> Database and media directory: %s', BASE_DATA_DIR)
 
 # Databases
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+# Databases
+# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+# Databases
+# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 DJANGO_DB_MYSQL = 'mysql'
 DJANGO_DB_SQLITE = 'sqlite'
 DJANGO_DB_POSTGRESQL = 'postgresql'
@@ -76,8 +80,8 @@ DATABASES_ALL = {
     DJANGO_DB_POSTGRESQL: {
         'ENGINE': 'django.db.backends.postgresql',
         'USER': get_env('POSTGRE_USER', 'postgres'),
-        'PASSWORD': get_env('POSTGRE_PASSWORD', 'postgres'),
-        'NAME': get_env('POSTGRE_NAME', 'postgres'),
+        'PASSWORD': get_env('POSTGRE_PASSWORD', '12345'),
+        'NAME': get_env('POSTGRE_NAME', 'RBG'),
         'HOST': get_env('POSTGRE_HOST', 'localhost'),
         'PORT': int(get_env('POSTGRE_PORT', '5432')),
     },
@@ -97,8 +101,10 @@ DATABASES_ALL = {
         },
     },
 }
-DATABASES_ALL['default'] = DATABASES_ALL[DJANGO_DB_POSTGRESQL]
+DJANGO_DB = 'postgresql'
+DATABASES_ALL['default'] = DATABASES_ALL[DJANGO_DB]
 DATABASES = {'default': DATABASES_ALL.get(get_env('DJANGO_DB', 'default'))}
+
 
 LOGGING = {
     'version': 1,
