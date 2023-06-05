@@ -64,5 +64,5 @@ export const MLmonitorsettings = () => {
     </div>
   );
 };
-DangerZone.title = "ML Monitor";
-DangerZone.path = "/mlmonitor";
+MLmonitorsettings.title = "ML Monitor";
+MLmonitorsettings.path = "/mlmonitor";

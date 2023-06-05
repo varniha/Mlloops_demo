@@ -73,6 +73,7 @@ def user_login(request):
     """ Login page
     """
     user = request.user
+    
     next_page = request.GET.get('next')
     next_page = next_page if next_page else reverse('projects:project-index')
     login_form = load_func(settings.USER_LOGIN_FORM)

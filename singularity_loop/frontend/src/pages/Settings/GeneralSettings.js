@@ -43,14 +43,15 @@ export const GeneralSettings = () => {
             labelProps={{large: true}}
           />
 
+          
           <TextArea
-            name="description"
-            label="URL"
+            name="description1"
+            label="URL1"
             labelProps={{large: true}}
           />
-          <TextArea
-            name="description"
-            label="URL"
+           <TextArea
+            name="description2"
+            label="URL2"
             labelProps={{large: true}}
           />
      

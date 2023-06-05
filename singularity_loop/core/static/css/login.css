@@ -1,6 +1,6 @@
 /* Login / Signup pages*/
-body{
-  overflow-x: hidden!important;
+body {
+  overflow-x: hidden !important;
 }
 .signup_page {
   width: auto;
@@ -117,7 +117,7 @@ body{
   width: 100%;
   min-height: 100vh;
 }
-.login_page  .container {
+.login_page .container {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -133,15 +133,13 @@ body{
 .login_page h1 {
   font-size: 96px;
   font-weight: 400;
-text-align: left;
-width: 100%;
-text-shadow: 5px 5px 5px rgba(0 ,0 ,0 ,0.2);
+  text-align: left;
+  width: 100%;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 
   color: #fff;
   margin: 0;
 }
-
-
 
 .login_page .link a {
   border-color: #0f9d58;
@@ -194,18 +192,18 @@ text-shadow: 5px 5px 5px rgba(0 ,0 ,0 ,0.2);
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: rgb(245,245,245);
+  background: rgb(245, 245, 245);
   border-radius: 8px;
 }
-.form-container h1{
+.form-container h1 {
   color: #333;
   text-align: center;
   font-size: 45px;
   margin-bottom: 10px;
-  text-shadow: 5px 5px 5px rgba(0 ,0 ,0 ,0.2);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 /* change done */
-.login_page form .form-row{
+.login_page form .form-row {
   display: flex;
   width: 450px;
   color: #333;
@@ -221,22 +219,19 @@ text-shadow: 5px 5px 5px rgba(0 ,0 ,0 ,0.2);
   color: #f5222d;
   text-align: center;
 }
-.login_page form input
-{
+.login_page form input {
   padding: 10px;
 
   border: none;
   width: 250px;
   margin-bottom: 20px;
   border-radius: 2px;
-  background: #D9D9D9;
-  color:#8c8c8c;
-
+  background: #d9d9d9;
+  color: #8c8c8c;
 }
-.login_page form input:placeholder-shown{
+.login_page form input:placeholder-shown {
   color: #fff;
 }
-
 
 .login_page form input::placeholder {
   text-transform: uppercase;
@@ -247,14 +242,14 @@ text-shadow: 5px 5px 5px rgba(0 ,0 ,0 ,0.2);
   border-radius: 4px;
   color: #fff;
   border: none;
-  background: #B03F3F;
+  background: #b03f3f;
 }
 .login_page .field_errors {
   color: #f5222d;
   top: 25%;
   position: absolute;
   list-style: none;
-left: 36%;
+  left: 36%;
   font-size: 14px;
   line-height: 16px;
   width: 250px;
@@ -311,4 +306,44 @@ left: 36%;
 }
 .auto-generated form ul {
   margin-bottom: 0;
+}
+
+@media (max-width: 918px) {
+  .login_page {
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+  }
+ 
+}
+@media (max-width: 767px) {
+  .login_page .container {
+    font-size: 18px;
+  }
+  .login_page form .form-container {
+    width: 100%;
+    padding: 5px 10px;
+    height: auto;
+  }
+  .login_page form {
+    width: 90%;
+    height: auto;
+  }
+  .login_page form .form-row {
+    width: 100%;
+    padding: 4px;
+  }
+  .login_page form input {
+    width: 50%;
+  }
+
+  .login_page h1 {
+  font-size: 50px;
+  width: auto;
+  }
+  .login_page .container {
+    margin-bottom: 10px;
+    width: 70%;
+    text-align: justify;
+  }
 }
