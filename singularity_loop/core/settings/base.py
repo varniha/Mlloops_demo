@@ -14,6 +14,18 @@ import re
 import logging
 import json
 
+# OTP Authentication
+
+
+
+MAIL_USERNAME = 'mlloopsotp@gmail.com'
+MAIL_PASSWORD = 'danudtuqksnpscuf'
+
+SMTP_SERVER = 'smtp.gmail.com'
+
+
+
+
 # for printing messages before main logging config applied
 if not logging.getLogger().hasHandlers():
     logging.basicConfig(level=logging.DEBUG, format='%(message)s')

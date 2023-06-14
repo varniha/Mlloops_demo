@@ -17,6 +17,70 @@ from organizations.models import Organization
 from organizations.forms import OrganizationSignupForm
 
 
+
+import time
+from django.http import HttpResponse
+from django.shortcuts import render
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import smtplib
+from django.conf import settings
+import random
+
+# OTP
+
+secret_key = b'12345678901234567890'
+now = int(time.time())
+actual_otp = ""
+
+
+def generate_otp():
+    return str(random.randint(100000, 999999))
+
+
+def send_otp_email(email, otp):
+    subject = 'OTP Verification'
+    recipient_list = [email]
+
+    body = f'Your OTP is: {otp}'
+
+    msg = MIMEMultipart()
+    msg['From'] = settings.MAIL_USERNAME
+    msg['To'] = ', '.join(recipient_list)
+    msg['Subject'] = subject
+    msg.attach(MIMEText(body, 'plain'))
+
+    smtp_server = smtplib.SMTP_SSL(settings.SMTP_SERVER, 465)
+    smtp_server.ehlo()
+    smtp_server.login(settings.MAIL_USERNAME, settings.MAIL_PASSWORD)
+    text = msg.as_string()
+    smtp_server.sendmail(settings.MAIL_USERNAME, recipient_list, text)
+    smtp_server.quit()
+
+def otp_view(request):
+    global actual_otp
+     # Declare the variable as global
+    print(request.method)
+    if request.method == 'POST':
+         email = request.POST.get('email')
+         actual_otp = generate_otp()
+         send_otp_email(email, actual_otp)
+         return render(request, 'users/verify_otp.html', {'email': email})
+    return HttpResponse("Invalid request method.")
+    # return HttpResponse("Invalid request method.")
+def verify_otp(request):
+    global actual_otp  # Declare the variable as global
+
+    if request.method == 'POST':
+        entered_otp = request.POST.get('otp')
+        print(actual_otp)
+        # Compare entered_otp with the actual OTP generated and sent to the email
+        if entered_otp == actual_otp:
+            return HttpResponse("OTP verification successful.")
+        else:
+            return HttpResponse("OTP verification failed.")
+    return HttpResponse("Invalid request method.")
+
 logger = logging.getLogger()
 
 
@@ -35,10 +99,14 @@ def logout(request):
 def user_signup(request):
     """ Sign up page
     """
+
+    # global actual_otp  # Declare the variable as global
+
     user = request.user
-    next_page = request.GET.get('next')
+    # next_page = request.GET.get('next')
     token = request.GET.get('token')
-    next_page = next_page if next_page else reverse('projects:project-index')
+    # next_page = next_page if next_page else reverse('projects:project-index')
+    next_page = "otp_view"
     user_form = forms.UserSignupForm()
     organization_form = OrganizationSignupForm()
 
@@ -59,13 +127,15 @@ def user_signup(request):
             redirect_response = proceed_registration(request, user_form, organization_form, next_page)
             if redirect_response:
                 return redirect_response
-
+               
     return render(request, 'users/user_signup.html', {
         'user_form': user_form,
         'organization_form': organization_form,
         'next': next_page,
         'token': token,
     })
+from django.shortcuts import redirect
+
 
 
 @enforce_csrf_checks
@@ -122,3 +192,9 @@ def user_account(request):
         'user_profile_form': form,
         'token': token
     })
+
+
+
+
+
+

@@ -8,7 +8,7 @@ from django.views.static import serve
 from rest_framework import routers
 
 from users import views, api
-
+from .views import otp_view
 router = routers.DefaultRouter()
 router.register(r'users', api.UserAPI, basename='user')
 
@@ -20,6 +20,8 @@ urlpatterns = [
     path('user/signup/', views.user_signup, name='user-signup'),
     path('user/account/', views.user_account, name='user-account'),
     url(r'^logout/?$', views.logout, name='logout'),
+    path('user/verify_otp/', views.verify_otp, name='verify_otp'),
+    path('user/otp/',otp_view, name='otp'),
 
     # avatars
     re_path(r'^data/' + settings.AVATAR_PATH + '/(?P<path>.*)$', serve,

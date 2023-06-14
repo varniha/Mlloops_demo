@@ -1,0 +1,33 @@
+{% extends 'users/user_base.html' %}
+
+{% block user_content %}
+  <h2>OTP Verification</h2>
+  <p>Enter the OTP you received:</p>
+
+  <form id="otp-form" action="{% url 'verify_otp' %}" method="post">
+    {% csrf_token %}
+    <div>
+      <input type="text" class="ls-input" name="otp" id="otp" placeholder="OTP">
+      {% if form.errors.otp %}
+        <ul class="field_errors">
+          {% for error in form.errors.otp %}
+            <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    {% if form.non_field_errors %}
+      {% for error in form.non_field_errors %}
+        <p class="error">
+          {{ error }}
+        </p>
+      {% endfor %}
+    {% endif %}
+
+    <p><button type="submit" aria-label="submit" class="ls-button ls-button_look_primary">Verify OTP</button></p>
+  </form>
+  
+  <p><a href="{% url 'project-index' %}">Go to Project</a></p>  <!-- Add this line to link to the project page -->
+
+{% endblock %}
