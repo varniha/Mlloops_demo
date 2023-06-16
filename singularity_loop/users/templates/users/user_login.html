@@ -1,64 +1,66 @@
-{% extends 'users/user_base.html' %}
+{% extends 'users/user_base.html' %} {% block user_content %}
 
-{% block user_content %}
-
-  <form
-    id="login-form"
-    action="{% url 'user-login' %}{% if next %}?next={{ next }}{% endif %}"
-    method="post"
-    class="conatiner"
-  >
+<form
+  id="login-form"
+  action="{% url 'user-login' %}{% if next %}?next={{ next }}{% endif %}"
+  method="post"
+  class="conatiner"
+>
   {% csrf_token %}
 
+  <div class="form-container">
+    {% csrf_token %}
+    <h1 class="display-4">Login</h1>
 
-    <div class="form-container">
-      {% csrf_token %}
-  <h1>Login</h1>
-
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input
-          type="text"
-          class="form-input"
-          name="email"
-          id="email"
-          value="{{ form.data.email }}"
-          placeholder="{% trans 'Email' %}"
-        />
-      </div>
-      <div class="form-row">
-        <label for="email">Password</label>
-
-        <input
-          type="password"
-          class="form-input"
-          name="password"
-          id="password"
-          placeholder="{% trans 'Password' %}"
-        />
-      </div>
-        <button
-          type="submit"
-          aria-label="{% trans 'Log In' %}"
-          class="form-button"
-        >
-          {% trans 'Log In' %}
-        </button>
-      {% if form.non_field_errors %} 
-      {% for error in form.non_field_errors %}
-      <p class="error">{{ error }}</p>
-      {% endfor %} 
-      {% endif %}
-      <div class="form-row">
-        <p>
-          {% trans 'Don\'t have an account?' %}
-          <a
-            href="{% url 'user-signup' %}{% if next %}?next={{ next }}{% endif %}"
-            >{% trans 'Create Account' %}</a
-          >
-        </p>
-      </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input
+        type="text"
+        class="form-input"
+        name="email"
+        id="email"
+        value="{{ form.data.email }}"
+        placeholder="{% trans 'Email' %}"
+      />
     </div>
-  </form>
+    <div class="form-row">
+      <label for="email">Password</label>
+
+      <input
+        type="password"
+        class="form-input"
+        name="password"
+        id="password"
+        placeholder="{% trans 'Password' %}"
+      />
+    </div>
+  
+      <button
+        type="submit"
+        aria-label="{% trans 'Log In' %}"
+        class="form-button"
+      >
+        {% trans 'Log In' %}
+      </button>
+
+    {% if form.non_field_errors %} {% for error in form.non_field_errors %}
+    <p class="error">{{ error }}</p>
+    {% endfor %} {% endif %}
+
+    <a href="{% url 'forgot-password' %}{% if next %}?{{next}}{% endif %}"
+    style="margin-top: 15px;"
+    >Forgot password?</a
+    >
+    <div class="form-row">
+      <p>
+        {% trans 'Don\'t have an account?' %}
+        <a
+          href="{% url 'user-signup' %}{% if next %}?next={{ next }}{% endif %}"
+          >{% trans 'Create Account' %}</a
+        >
+      </p>
+    </div>
+  </div>
+</form>
 
 {% endblock %}

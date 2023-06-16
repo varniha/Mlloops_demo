@@ -1,7 +1,7 @@
 {% extends 'users/user_base.html' %}
 {% block user_content %}
 
-<form id="otp-form" action="{% url 'verify_otp' %}" method="post">
+<form id="otp-form" action="{% url 'verify_otp_forgot' %}" method="post">
   {% csrf_token %}
 
   <div class="otp-container">

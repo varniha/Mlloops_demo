@@ -4,7 +4,7 @@
 
 {% block user_content %}
 
-  <form id="signup-form" action="{% url 'otp' %}?{% if next %}&next={{ next }}{% endif %}{% if token %}&token={{ token }}{% endif %}" method="POST">
+  <form id="signup-form" action="{% url 'user-signup' %}?{% if next %}&next={{ next }}{% endif %}{% if token %}&token={{ token }}{% endif %}" method="POST">
     {% csrf_token %}
     <div class="form-container">
  <h1>SIGN UP</h1>

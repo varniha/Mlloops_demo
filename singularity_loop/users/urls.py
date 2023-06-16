@@ -21,7 +21,10 @@ urlpatterns = [
     path('user/account/', views.user_account, name='user-account'),
     url(r'^logout/?$', views.logout, name='logout'),
     path('user/verify_otp/', views.verify_otp, name='verify_otp'),
-    path('user/otp/',otp_view, name='otp'),
+    path('otp/',otp_view, name='otp'),
+    path('forgot/', views.forgot_password, name='forgot-password'),
+
+    # Other URL patterns in your project
 
     # avatars
     re_path(r'^data/' + settings.AVATAR_PATH + '/(?P<path>.*)$', serve,

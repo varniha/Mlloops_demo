@@ -52,7 +52,7 @@ def save_user(request, next_page, user_form):
     """
     user = user_form.save()
     user.username = user.email.split('@')[0]
-    
+    email = user.email
     user.save()
 
     if Organization.objects.exists():
@@ -62,10 +62,13 @@ def save_user(request, next_page, user_form):
         org = Organization.create_organization(created_by=user, title='Label Studio')
     user.active_organization = org
     user.save(update_fields=['active_organization'])
-
     redirect_url = next_page if next_page else reverse('projects:project-index')
+     # Append the email as a query parameter to the redirect URL
+    redirect_url_with_email = f"{redirect_url}?email={email}"
+
     auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-    return redirect(redirect_url)
+    print(redirect_url_with_email)
+    return redirect(redirect_url_with_email)
 
 
 def proceed_registration(request, user_form, organization_form, next_page):

@@ -314,7 +314,6 @@ body {
     padding: 0;
     justify-content: center;
   }
- 
 }
 @media (max-width: 767px) {
   .login_page .container {
@@ -338,12 +337,26 @@ body {
   }
 
   .login_page h1 {
-  font-size: 50px;
-  width: auto;
+    font-size: 50px;
+    width: auto;
   }
   .login_page .container {
     margin-bottom: 10px;
     width: 70%;
     text-align: justify;
   }
+}
+
+.otp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  background: #fafafa;
+  flex-direction: column;
+  border-radius: 2px;
+  padding: 20px 0;
+}
+.otp-container h2{
+  font-size: 30px;
 }

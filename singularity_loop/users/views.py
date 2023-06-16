@@ -17,7 +17,7 @@ from organizations.models import Organization
 from organizations.forms import OrganizationSignupForm
 
 
-
+from django.contrib import messages
 import time
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -26,6 +26,9 @@ from email.mime.text import MIMEText
 import smtplib
 from django.conf import settings
 import random
+from django.shortcuts import render
+
+
 
 # OTP
 
@@ -57,29 +60,51 @@ def send_otp_email(email, otp):
     smtp_server.sendmail(settings.MAIL_USERNAME, recipient_list, text)
     smtp_server.quit()
 
+def forgot_password(request):
+    next_page = "/otp"
+    # email = request.POST.get('email')
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        next_page_url= f"{next_page}?email={email}"
+        print(next_page_url)
+        return redirect(next_page_url)
+    return render(request, 'users/forgot_password.html', {
+        'next': next_page,
+    })
+
+# ----------------------------------------------------------------
 def otp_view(request):
     global actual_otp
-     # Declare the variable as global
     print(request.method)
-    if request.method == 'POST':
-         email = request.POST.get('email')
-         actual_otp = generate_otp()
-         send_otp_email(email, actual_otp)
-         return render(request, 'users/verify_otp.html', {'email': email})
+    
+    if request.method == 'GET':
+        email = request.GET.get('email')
+        if email:
+            email = request.GET.get('email')
+            actual_otp = generate_otp()
+            send_otp_email(email, actual_otp)
+            return render(request, 'users/verify_otp.html', {'email': email})
+        else:
+            return HttpResponse("Email parameters not valid") 
     return HttpResponse("Invalid request method.")
-    # return HttpResponse("Invalid request method.")
 def verify_otp(request):
-    global actual_otp  # Declare the variable as global
-
+    global actual_otp
+    
+    next_page = "/projects"
+    next_page = next_page if next_page else reverse('projects:project-index')
+  
     if request.method == 'POST':
         entered_otp = request.POST.get('otp')
-        print(actual_otp)
-        # Compare entered_otp with the actual OTP generated and sent to the email
         if entered_otp == actual_otp:
-            return HttpResponse("OTP verification successful.")
+            # OTP verification successful
+            print(next_page)
+            return redirect(next_page)
         else:
-            return HttpResponse("OTP verification failed.")
-    return HttpResponse("Invalid request method.")
+            # OTP verification failed
+            messages.error(request, "OTP verification failed.")
+            return redirect('verify_otp')
+    
+    return render(request, 'users/verify_otp.html')
 
 logger = logging.getLogger()
 
@@ -95,25 +120,25 @@ def logout(request):
     return redirect('/')
 
 
+from django.contrib import messages
+from django.core.exceptions import PermissionDenied
+
 @enforce_csrf_checks
 def user_signup(request):
-    """ Sign up page
-    """
-
-    # global actual_otp  # Declare the variable as global
-
     user = request.user
-    # next_page = request.GET.get('next')
     token = request.GET.get('token')
-    # next_page = next_page if next_page else reverse('projects:project-index')
-    next_page = "otp_view"
+    # next_page = request.GET.get('next')
+    
+    next_page = "/otp"
+    next_page = next_page if next_page else reverse('projects:project-index')
+    
     user_form = forms.UserSignupForm()
     organization_form = OrganizationSignupForm()
-
+    
     if user.is_authenticated:
         return redirect(next_page)
 
-    # make a new user
+        # make a new user
     if request.method == 'POST':
         organization = Organization.objects.first()
         if settings.DISABLE_SIGNUP_WITHOUT_LINK is True:
@@ -122,20 +147,19 @@ def user_signup(request):
 
         user_form = forms.UserSignupForm(request.POST)
         organization_form = OrganizationSignupForm(request.POST)
-
+        # email = user_form.cleaned_data['email']
         if user_form.is_valid():
             redirect_response = proceed_registration(request, user_form, organization_form, next_page)
             if redirect_response:
                 return redirect_response
-               
+       
+
     return render(request, 'users/user_signup.html', {
         'user_form': user_form,
         'organization_form': organization_form,
         'next': next_page,
         'token': token,
     })
-from django.shortcuts import redirect
-
 
 
 @enforce_csrf_checks
@@ -143,9 +167,11 @@ def user_login(request):
     """ Login page
     """
     user = request.user
-    
+    global signupnext
     next_page = request.GET.get('next')
+    signupnext = next_page
     next_page = next_page if next_page else reverse('projects:project-index')
+    # signupnext = 
     login_form = load_func(settings.USER_LOGIN_FORM)
     form = login_form()
 
