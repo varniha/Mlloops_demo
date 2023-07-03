@@ -23,6 +23,7 @@ urlpatterns = [
     path('user/verify_otp/', views.verify_otp, name='verify_otp'),
     path('otp/',otp_view, name='otp'),
     path('forgot/', views.forgot_password, name='forgot-password'),
+    path('createpass/', views.createpass, name='create-pass'),
 
     # Other URL patterns in your project
 

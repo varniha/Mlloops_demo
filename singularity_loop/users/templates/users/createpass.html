@@ -1,12 +1,20 @@
 {% extends 'users/user_base.html' %}
 {% block user_content %}
 
-<form id="otp-form" action="{% url 'verify_otp' %}?{% if login %}&login={{ login }}{% endif %}{% if email %}&email={{ email }}{% endif %}" method="post">
+<form id="otp-form" action="{% url 'create-pass' %}" method="post">
   {% csrf_token %}
 
   <div class="otp-container">
-    <h2 class="display-4">OTP Verification</h2>
-    <input type="text" class="ls-input" name="otp" id="otp" placeholder="OTP" />
+    <h2 class="display-4">Create Password</h2>
+    <input type="password" class="ls-input" name="new_password" id="new_password" placeholder="New Password" />
+    {% if form.errors.otp %}
+    <ul class="field_errors">
+      {% for error in form.errors.otp %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <input type="password" class="ls-input" name="confirm_password" id="confirm_password" placeholder="Re-Enter New Password" />
     {% if form.errors.otp %}
     <ul class="field_errors">
       {% for error in form.errors.otp %}
@@ -15,7 +23,7 @@
     </ul>
     {% endif %}
     <button type="submit" aria-label="submit" class="ls-button ls-button_look_primary">
-      Verify OTP
+      Change
     </button>
   </div>
 

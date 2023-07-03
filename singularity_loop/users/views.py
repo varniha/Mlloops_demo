@@ -1,6 +1,7 @@
 """This file and its contents are licensed under the Apache License 2.0. Please see the included NOTICE for copyright information and LICENSE for a copy of the license.
 """
 import logging
+from users.models import User
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, reverse
@@ -45,13 +46,22 @@ def send_otp_email(email, otp):
     subject = 'OTP Verification'
     recipient_list = [email]
 
-    body = f'Your OTP is: {otp}'
+    body = f'''
+    <html>
+      <body>
+        <p>We wanted to let you know that your MLloops password was reset.</p>
+        <p><strong>Your Security Code is: {otp}</strong></p>
+        <p>Please use the above OTP to verify your account.</p>
+      </body>
+    </html>
+    '''
 
-    msg = MIMEMultipart()
+    msg = MIMEMultipart('alternative')
     msg['From'] = settings.MAIL_USERNAME
     msg['To'] = ', '.join(recipient_list)
     msg['Subject'] = subject
-    msg.attach(MIMEText(body, 'plain'))
+
+    msg.attach(MIMEText(body, 'html'))
 
     smtp_server = smtplib.SMTP_SSL(settings.SMTP_SERVER, 465)
     smtp_server.ehlo()
@@ -59,18 +69,55 @@ def send_otp_email(email, otp):
     text = msg.as_string()
     smtp_server.sendmail(settings.MAIL_USERNAME, recipient_list, text)
     smtp_server.quit()
-
 def forgot_password(request):
     next_page = "/otp"
+    login="login"
     # email = request.POST.get('email')
     if request.method == 'POST':
         email = request.POST.get('email')
-        next_page_url= f"{next_page}?email={email}"
+        next_page_url= f"{next_page}?email={email}&login={login}"
         print(next_page_url)
         return redirect(next_page_url)
     return render(request, 'users/forgot_password.html', {
         'next': next_page,
     })
+# ----------------------------------------------------------------------------
+
+
+
+def createpass(request):
+    global user 
+    if request.method == 'GET':
+        email = request.GET.get("email")
+        if email:
+            username = email.split("@")[0]
+            user = User.objects.get(username=username)  # Retrieve the user object
+            print("username",user)
+
+    if request.method == 'POST':
+        new_password = request.POST.get('new_password')
+        confirm_password = request.POST.get('confirm_password')
+        print(new_password,confirm_password)
+        if new_password == confirm_password :
+            if len(new_password) >= 8 and len(new_password) <= 12:
+                if user:
+                # Set the new password for the user
+                    user.set_password(new_password)
+                    user.save()
+
+                # messages.success(request, 'Password updated successfully.')
+                    return redirect('/user/login')
+                else:
+                    messages.error(request, 'User not found.')
+            else:
+                messages.error(request, "Password must be between 8 and 12 characters.")
+
+        else:
+            messages.error(request, "Password doesn't Match.")
+            # return redirect("createpass")
+            
+    return render(request, 'users/createpass.html',{"user":user})
+
 
 # ----------------------------------------------------------------
 def otp_view(request):
@@ -79,28 +126,34 @@ def otp_view(request):
     
     if request.method == 'GET':
         email = request.GET.get('email')
+        login = request.GET.get('login')
+        print(login)
         if email:
-            email = request.GET.get('email')
+            # email = request.GET.get('email')
             actual_otp = generate_otp()
             send_otp_email(email, actual_otp)
-            return render(request, 'users/verify_otp.html', {'email': email})
+            return render(request, 'users/verify_otp.html', {"email":email,'login':login})
         else:
             return HttpResponse("Email parameters not valid") 
     return HttpResponse("Invalid request method.")
 def verify_otp(request):
     global actual_otp
-    
+    login = request.GET.get('login')
+    email = request.GET.get('email')
     next_page = "/projects"
     next_page = next_page if next_page else reverse('projects:project-index')
-  
+    
     if request.method == 'POST':
         entered_otp = request.POST.get('otp')
         if entered_otp == actual_otp:
-            # OTP verification successful
-            print(next_page)
-            return redirect(next_page)
+            if login == 'login':
+                # Redirect to createpass view with email parameter
+                redirect_url = f"/createpass?email={email}"
+                return redirect(redirect_url)
+            else:
+                # Redirect to the next page
+                return redirect(next_page)
         else:
-            # OTP verification failed
             messages.error(request, "OTP verification failed.")
             return redirect('verify_otp')
     
