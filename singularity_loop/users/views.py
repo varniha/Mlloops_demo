@@ -1,6 +1,7 @@
 """This file and its contents are licensed under the Apache License 2.0. Please see the included NOTICE for copyright information and LICENSE for a copy of the license.
 """
 import logging
+import re
 from users.models import User
 
 from django.contrib.auth.decorators import login_required
@@ -9,7 +10,7 @@ from django.contrib import auth
 from django.conf import settings
 from django.core.exceptions import PermissionDenied
 from rest_framework.authtoken.models import Token
-
+from django.core.mail import EmailMessage
 from users import forms
 from core.utils.common import load_func
 from core.middleware import enforce_csrf_checks
@@ -55,7 +56,6 @@ def send_otp_email(email, otp):
       </body>
     </html>
     '''
-
     msg = MIMEMultipart('alternative')
     msg['From'] = settings.MAIL_USERNAME
     msg['To'] = ', '.join(recipient_list)
@@ -83,10 +83,33 @@ def forgot_password(request):
     })
 # ----------------------------------------------------------------------------
 
+def success_mail(email):
+    subject = 'Password Updated'
+    recipient_list = [email]
+    body = f'''
+    <html>
+      <body>
+        <p>We wanted to let you know that your MLloops password has been updated successfully!!</p>
+      </body>
+    </html>
+    '''
+    msg = MIMEMultipart('alternative')
+    msg['From'] = settings.MAIL_USERNAME
+    msg['To'] = ', '.join(recipient_list)
+    msg['Subject'] = subject
 
+    msg.attach(MIMEText(body, 'html'))
+
+    smtp_server = smtplib.SMTP_SSL(settings.SMTP_SERVER, 465)
+    smtp_server.ehlo()
+    smtp_server.login(settings.MAIL_USERNAME, settings.MAIL_PASSWORD)
+    text = msg.as_string()
+    smtp_server.sendmail(settings.MAIL_USERNAME, recipient_list, text)
+    smtp_server.quit()
 
 def createpass(request):
-    global user 
+    global user, email
+    
     if request.method == 'GET':
         email = request.GET.get("email")
         if email:
@@ -99,25 +122,32 @@ def createpass(request):
         confirm_password = request.POST.get('confirm_password')
         print(new_password,confirm_password)
         if new_password == confirm_password :
-            if len(new_password) >= 8 and len(new_password) <= 12:
+            SpecialChar=['$','@','#','*','.']
+            # if len(new_password) >= 8 and len(new_password) <= 12:
+            if len(new_password) < 8 and len(new_password) > 12:
+                messages.error(request, "Password must be between 8 and 12 characters.")
+            elif re.search('[0-9]',new_password) is None:
+                messages.error(request, "Make sure your password has a number in it")
+            elif re.search('[A-Z]',new_password) is None: 
+                messages.error(request, "Make sure your password has a capital letter in it")
+            elif re.search('[a-z]',new_password) is None: 
+                messages.error(request, "Make sure your password has a small letter in it")
+            elif not any(char in SpecialChar for char in new_password):
+                messages.error(request,"the password should have at least one of the symbols $@#.*")
+            else:
                 if user:
-                # Set the new password for the user
                     user.set_password(new_password)
                     user.save()
-
-                # messages.success(request, 'Password updated successfully.')
+                    success_mail(email)
+                    # messages.success(request, 'Password updated successfully.')
                     return redirect('/user/login')
                 else:
                     messages.error(request, 'User not found.')
-            else:
-                messages.error(request, "Password must be between 8 and 12 characters.")
-
         else:
             messages.error(request, "Password doesn't Match.")
             # return redirect("createpass")
-            
-    return render(request, 'users/createpass.html',{"user":user})
 
+    return render(request, 'users/createpass.html',{"user":user})
 
 # ----------------------------------------------------------------
 def otp_view(request):
