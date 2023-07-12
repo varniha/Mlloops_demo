@@ -31,12 +31,12 @@ import random
 from django.shortcuts import render
 
 
-
 # OTP
 
 secret_key = b'12345678901234567890'
 now = int(time.time())
 actual_otp = ""
+otp_expiry_duration = 40
 
 
 def generate_otp():
@@ -49,10 +49,44 @@ def send_otp_email(email, otp):
 
     body = f'''
     <html>
+      <head>
+        <style>
+          /* Define your CSS styles here */
+          body {{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+              Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+              sans-serif;
+          }}
+          .container {{
+            max-width: 600px;
+            margin: 0 auto;
+            color:  #34414a;
+            
+            padding: 20px;
+            background-color: #e57171;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          }}
+          .clr{{
+            color: #34414a!important;
+            }}
+          .otp {{
+            font-size:24px
+          }}
+          .security {{
+            padding: 10px;
+            color:  #34414a;
+            border-radius: 2px;
+            background-color: #fafafa;
+          }}
+        </style>
+      </head>
       <body>
-        <p>We wanted to let you know that your MLloops password was reset.</p>
-        <p><strong>Your Security Code is: {otp}</strong></p>
-        <p>Please use the above OTP to verify your account.</p>
+        <div class="container">
+          <p class="clr">We wanted to let you know that your MLloops password was reset.</p>
+          <p class="security">Your Security Code is: <span class="otp">{otp}</span></p>
+          <p class="clr">Please use the above OTP to verify your account.</p>
+        </div>
       </body>
     </html>
     '''
@@ -69,13 +103,15 @@ def send_otp_email(email, otp):
     text = msg.as_string()
     smtp_server.sendmail(settings.MAIL_USERNAME, recipient_list, text)
     smtp_server.quit()
+
+
 def forgot_password(request):
     next_page = "/otp"
-    login="login"
+    login = "login"
     # email = request.POST.get('email')
     if request.method == 'POST':
         email = request.POST.get('email')
-        next_page_url= f"{next_page}?email={email}&login={login}"
+        next_page_url = f"{next_page}?email={email}&login={login}"
         print(next_page_url)
         return redirect(next_page_url)
     return render(request, 'users/forgot_password.html', {
@@ -83,13 +119,28 @@ def forgot_password(request):
     })
 # ----------------------------------------------------------------------------
 
+
 def success_mail(email):
     subject = 'Password Updated'
     recipient_list = [email]
     body = f'''
     <html>
+        <style>
+        .container {{
+            max-width: 600px;
+            margin: 0 auto;
+            color:  #34414a;
+            
+            padding: 20px;
+            background-color: #e57171;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          }}
+        </style>
       <body>
-        <p>We wanted to let you know that your MLloops password has been updated successfully!!</p>
+        <div class="container">
+            <p>We wanted to let you know that your MLloops password has been updated successfully!!</p>
+        <div>
       </body>
     </html>
     '''
@@ -107,33 +158,40 @@ def success_mail(email):
     smtp_server.sendmail(settings.MAIL_USERNAME, recipient_list, text)
     smtp_server.quit()
 
+
 def createpass(request):
     global user, email
-    
+
     if request.method == 'GET':
         email = request.GET.get("email")
         if email:
             username = email.split("@")[0]
-            user = User.objects.get(username=username)  # Retrieve the user object
-            print("username",user)
+            # Retrieve the user object
+            user = User.objects.get(username=username)
+            print("username", user)
 
     if request.method == 'POST':
         new_password = request.POST.get('new_password')
         confirm_password = request.POST.get('confirm_password')
-        print(new_password,confirm_password)
-        if new_password == confirm_password :
-            SpecialChar=['$','@','#','*','.']
+        print(new_password, confirm_password)
+        if new_password == confirm_password:
+            SpecialChar = ['$', '@', '#', '*', '.']
             # if len(new_password) >= 8 and len(new_password) <= 12:
             if len(new_password) < 8 and len(new_password) > 12:
-                messages.error(request, "Password must be between 8 and 12 characters.")
-            elif re.search('[0-9]',new_password) is None:
-                messages.error(request, "Make sure your password has a number in it")
-            elif re.search('[A-Z]',new_password) is None: 
-                messages.error(request, "Make sure your password has a capital letter in it")
-            elif re.search('[a-z]',new_password) is None: 
-                messages.error(request, "Make sure your password has a small letter in it")
+                messages.error(
+                    request, "Password must be between 8 and 12 characters.")
+            elif re.search('[0-9]', new_password) is None:
+                messages.error(
+                    request, "Make sure your password has a number in it")
+            elif re.search('[A-Z]', new_password) is None:
+                messages.error(
+                    request, "Make sure your password has a capital letter in it")
+            elif re.search('[a-z]', new_password) is None:
+                messages.error(
+                    request, "Make sure your password has a small letter in it")
             elif not any(char in SpecialChar for char in new_password):
-                messages.error(request,"the password should have at least one of the symbols $@#.*")
+                messages.error(
+                    request, "the password should have at least one of the symbols $@#.*")
             else:
                 if user:
                     user.set_password(new_password)
@@ -147,47 +205,58 @@ def createpass(request):
             messages.error(request, "Password doesn't Match.")
             # return redirect("createpass")
 
-    return render(request, 'users/createpass.html',{"user":user})
+    return render(request, 'users/createpass.html', {"user": user})
 
 # ----------------------------------------------------------------
+
+
 def otp_view(request):
-    global actual_otp
-    print(request.method)
-    
+    global actual_otp, now
+
     if request.method == 'GET':
         email = request.GET.get('email')
         login = request.GET.get('login')
-        print(login)
         if email:
-            # email = request.GET.get('email')
             actual_otp = generate_otp()
             send_otp_email(email, actual_otp)
-            return render(request, 'users/verify_otp.html', {"email":email,'login':login})
+            now = int(time.time())  # Update the current time
+
+            return render(request, 'users/verify_otp.html', {"email": email, 'login': login})
         else:
-            return HttpResponse("Email parameters not valid") 
+            return HttpResponse("Email parameters not valid")
+
     return HttpResponse("Invalid request method.")
+
+
 def verify_otp(request):
-    global actual_otp
+    global actual_otp, now
+
     login = request.GET.get('login')
     email = request.GET.get('email')
     next_page = "/projects"
     next_page = next_page if next_page else reverse('projects:project-index')
-    
+
     if request.method == 'POST':
         entered_otp = request.POST.get('otp')
+
+        # Check if the OTP is expired
+        if int(time.time()) - now > otp_expiry_duration:
+            messages.error(
+                request, "OTP has expired. Please generate a new OTP.")
+            return redirect(f'/otp?email={email}')
+
         if entered_otp == actual_otp:
             if login == 'login':
-                # Redirect to createpass view with email parameter
                 redirect_url = f"/createpass?email={email}"
                 return redirect(redirect_url)
             else:
-                # Redirect to the next page
                 return redirect(next_page)
         else:
             messages.error(request, "OTP verification failed.")
             return redirect('verify_otp')
-    
+
     return render(request, 'users/verify_otp.html')
+
 
 logger = logging.getLogger()
 
@@ -203,21 +272,18 @@ def logout(request):
     return redirect('/')
 
 
-from django.contrib import messages
-from django.core.exceptions import PermissionDenied
-
 @enforce_csrf_checks
 def user_signup(request):
     user = request.user
     token = request.GET.get('token')
     # next_page = request.GET.get('next')
-    
+
     next_page = "/otp"
     next_page = next_page if next_page else reverse('projects:project-index')
-    
+
     user_form = forms.UserSignupForm()
     organization_form = OrganizationSignupForm()
-    
+
     if user.is_authenticated:
         return redirect(next_page)
 
@@ -225,17 +291,17 @@ def user_signup(request):
     if request.method == 'POST':
         organization = Organization.objects.first()
         if settings.DISABLE_SIGNUP_WITHOUT_LINK is True:
-            if not(token and organization and token == organization.token):
+            if not (token and organization and token == organization.token):
                 raise PermissionDenied()
 
         user_form = forms.UserSignupForm(request.POST)
         organization_form = OrganizationSignupForm(request.POST)
         # email = user_form.cleaned_data['email']
         if user_form.is_valid():
-            redirect_response = proceed_registration(request, user_form, organization_form, next_page)
+            redirect_response = proceed_registration(
+                request, user_form, organization_form, next_page)
             if redirect_response:
                 return redirect_response
-       
 
     return render(request, 'users/user_signup.html', {
         'user_form': user_form,
@@ -254,7 +320,7 @@ def user_login(request):
     next_page = request.GET.get('next')
     signupnext = next_page
     next_page = next_page if next_page else reverse('projects:project-index')
-    # signupnext = 
+    # signupnext =
     login_form = load_func(settings.USER_LOGIN_FORM)
     form = login_form()
 
@@ -265,7 +331,8 @@ def user_login(request):
         form = login_form(request.POST)
         if form.is_valid():
             user = form.cleaned_data['user']
-            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            auth.login(request, user,
+                       backend='django.contrib.auth.backends.ModelBackend')
 
             # user is organization member
             org_pk = Organization.find_by_user(user).pk
@@ -301,9 +368,3 @@ def user_account(request):
         'user_profile_form': form,
         'token': token
     })
-
-
-
-
-
-
