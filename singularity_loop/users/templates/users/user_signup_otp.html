@@ -6,7 +6,7 @@
     <form id="signup-form" action="{% url 'signup' %}?{% if next %}&next={{ next }}{% endif %}{% if token %}&token={{ token }}{% endif %}" method="POST">
     {% csrf_token %}
     <div>
-      <input type="text" class="ls-input" name="otp" id="otp" placeholder="OTP" value="{{ form.data.email }}">
+      <input type="text" class="ls-input" name="otp" id="otp" placeholder="SECURITY CODE" value="{{ form.data.email }}">
       {% if user_form.errors.otp %}
         <ul class="field_errors">
           {% for error in user_form.errors.otp %}
