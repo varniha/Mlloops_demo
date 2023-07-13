@@ -1,8 +1,6 @@
-
-
 {% extends 'users/user_base.html' %}
-
 {% block user_content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
   <form id="signup-form" action="{% url 'user-signup' %}?{% if next %}&next={{ next }}{% endif %}{% if token %}&token={{ token }}{% endif %}" method="POST">
     {% csrf_token %}
@@ -44,6 +42,7 @@
       <div class="form-row">
         <label for="password">Password</label>
         <input type="password" class="ls-input" name="password" id="password" placeholder="Enter the Password">
+        <!-- <i class="fas fa-eye show" style="margin-top: 10px; margin-right: 20px; margin-left: -160px; cursor: pointer; color: grey;"></i> -->
         {% if user_form.errors.password %}
           <ul class="field_errors">
             {% for error in user_form.errors.password %}
@@ -54,7 +53,8 @@
         </div>
         <div class="form-row">
           <label for="confirm_password">Confirm Password</label>
-          <input type="password" class="ls-input" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
+          <input type="password" class="ls-input" name="confirm_password" id="confirmPw" placeholder="Confirm Password">
+          <i class="fas fa-eye show" style="margin-top: 10px; margin-right: 20px; margin-left: -90px; cursor: pointer; color:grey;"></i>
           {% if user_form.errors.confirm_password %}
             <ul class="field_errors">
               {% for error in user_form.errors.confirm_password %}
@@ -75,4 +75,29 @@
    
   </form>
 
+  <script>
+    const pwShow = document.querySelector(".show"),
+    password = document.querySelector('#password'),
+    confirmPw = document.querySelector('#confirmPw');
+
+  
+    pwShow.addEventListener('click', () => {
+      // toggle the type attribute
+      if((password.type === "password") && (confirmPw.type === "password"))
+      {
+        password.type = "text";
+        confirmPw.type = "text";
+        pwShow.classList.replace("fa-eye", "fa-eye-slash")
+      }
+      else
+      {
+        password.type = "password";
+        confirmPw.type = "password";
+        pwShow.classList.replace("fa-eye-slash", "fa-eye")
+      }
+      // toggle the eye slash icon
+  });
+
+  </script>
+  
 {% endblock %}
