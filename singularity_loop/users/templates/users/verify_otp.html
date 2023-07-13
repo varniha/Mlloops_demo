@@ -5,8 +5,8 @@
   {% csrf_token %}
 
   <div class="otp-container">
-    <h2 class="display-4">Verify Security Code</h2>
-    <input type="text" class="ls-input" name="otp" id="otp" placeholder="OTP" />
+    <h2 class="display-4">Security Code</h2>
+    <input type="text" class="ls-input" name="otp" id="otp" placeholder="SECURITY CODE" />
     {% if form.errors.otp %}
     <ul class="field_errors">
       {% for error in form.errors.otp %}
@@ -15,7 +15,7 @@
     </ul>
     {% endif %}
     <button type="submit" aria-label="submit" class="ls-button ls-button_look_primary">
-      Verify OTP
+      Verify
     </button>
   </div>
 
