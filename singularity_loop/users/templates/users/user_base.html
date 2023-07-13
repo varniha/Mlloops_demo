@@ -8,7 +8,7 @@
 {% endblock %} {% block content %}
 <div class="login_page">
   <div class="container">
-    <h1>MLloOps</h1>
+    <a href="{% url 'user-login' %}{% if next %}?{{next}}{% endif %}"><h1> MLloOps </h1></a>
     A Human-Machine Loop for Accelerating Data-Driven Machine Learning
     Workflows.
   </div>
