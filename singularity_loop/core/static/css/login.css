@@ -360,3 +360,9 @@ body {
 .otp-container h2{
   font-size: 30px;
 }
+
+/* email alert */
+
+.alert-txt{
+  color: black!important;
+}

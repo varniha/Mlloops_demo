@@ -36,7 +36,7 @@ from django.shortcuts import render
 secret_key = b'12345678901234567890'
 now = int(time.time())
 actual_otp = ""
-otp_expiry_duration = 40
+otp_expiry_duration = 600
 
 
 def generate_otp():

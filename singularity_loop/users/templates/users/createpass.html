@@ -1,12 +1,14 @@
 {% extends 'users/user_base.html' %}
-{% block user_content %}
 
+{% block user_content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <form id="otp-form" action="{% url 'create-pass' %}" method="post">
   {% csrf_token %}
 
   <div class="otp-container">
     <h2 class="display-4">Create Password</h2>
-    <input type="password" class="ls-input" name="new_password" id="new_password" placeholder="New Password" />
+    <input type="password" class="ls-input" name="new_password" id="password" placeholder="New Password" >
+  
     {% if form.errors.otp %}
     <ul class="field_errors">
       {% for error in form.errors.otp %}
@@ -14,7 +16,8 @@
       {% endfor %}
     </ul>
     {% endif %}
-    <input type="password" class="ls-input" name="confirm_password" id="confirm_password" placeholder="Re-Enter New Password" />
+    <input type="password" class="ls-input" name="confirm_password" id="confirmPw" placeholder="Confirm Password" >
+    <i class="fas fa-eye show" style="padding: 10px 10px 10px 10px; margin-top: -60px; margin-bottom:40px; margin-left: 200px; cursor: pointer; color:grey;"></i>
     {% if form.errors.otp %}
     <ul class="field_errors">
       {% for error in form.errors.otp %}
@@ -36,4 +39,28 @@
   </p>
 </form>
 
+<script>
+  const pwShow = document.querySelector(".show"),
+  password = document.querySelector('#password'),
+  confirmPw = document.querySelector('#confirmPw');
+
+
+  pwShow.addEventListener('click', () => {
+    // toggle the type attribute
+    if((password.type === "password") && (confirmPw.type === "password"))
+    {
+      password.type = "text";
+      confirmPw.type = "text";
+      pwShow.classList.replace("fa-eye", "fa-eye-slash")
+    }
+    else
+    {
+      password.type = "password";
+      confirmPw.type = "password";
+      pwShow.classList.replace("fa-eye-slash", "fa-eye")
+    }
+    // toggle the eye slash icon
+});
+
+</script>
 {% endblock %}
