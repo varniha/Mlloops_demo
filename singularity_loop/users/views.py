@@ -44,7 +44,7 @@ def generate_otp():
 
 
 def send_otp_email(email, otp):
-    subject = 'OTP Verification'
+    subject = 'MLLOOPS Password Reset'
     recipient_list = [email]
 
     body = f'''
@@ -60,32 +60,36 @@ def send_otp_email(email, otp):
           .container {{
             max-width: 600px;
             margin: 0 auto;
-            color:  #34414a;
+            color:  #fafafa;
             
             padding: 20px;
-            background-color: #e57171;
+            background-color: #333;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
           }}
           .clr{{
-            color: #34414a!important;
+            color: #fafafa!important;
             }}
           .otp {{
             font-size:24px
           }}
           .security {{
             padding: 10px;
-            color:  #34414a;
+            color:  #fafafa;
             border-radius: 2px;
-            background-color: #fafafa;
+            background-color: #e57171!important;
+          }}
+          .valid{{
+            color: #fafafa;
           }}
         </style>
       </head>
       <body>
         <div class="container">
-          <p class="clr">We wanted to let you know that your MLloops password was reset.</p>
+          <p class="clr">We have recieved a password reset request for your MLLOOPS account.</p>
           <p class="security">Your Security Code is: <span class="otp">{otp}</span></p>
-          <p class="clr">Please use the above OTP to verify your account.</p>
+          <p class="clr">Please use the above CODE to change your password.</p>
+          <b class="valid"> *The security code will be valid for 10 minutes </b>
         </div>
       </body>
     </html>
@@ -121,25 +125,40 @@ def forgot_password(request):
 
 
 def success_mail(email):
-    subject = 'Password Updated'
+    subject = 'Password Updated Successfully!'
     recipient_list = [email]
     body = f'''
-    <html>
+<html>
+      <head>
         <style>
-        .container {{
+          /* Define your CSS styles here */
+          body {{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+              Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+              sans-serif;
+          }}
+          .container {{
             max-width: 600px;
             margin: 0 auto;
-            color:  #34414a;
+            color:  #fafafa;
             
             padding: 20px;
-            background-color: #e57171;
+            background-color: #333;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
           }}
+          .welcome{{
+            color: #fafafa!important;
+            }}
+          .update{{
+            color: #fafafa!important;
+          }}
         </style>
+      </head>
       <body>
         <div class="container">
-            <p>We wanted to let you know that your MLloops password has been updated successfully!!</p>
+            <p class="update">We wanted to let you know that your MLloops password has been updated successfully!!</p>
+            <p class="welcome">Welcome to MLLOOPS!<p>
         <div>
       </body>
     </html>

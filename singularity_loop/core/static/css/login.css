@@ -360,3 +360,8 @@ body {
 .otp-container h2{
   font-size: 30px;
 }
+
+.alert-txt{
+  color: red!important;
+  font-size: 12px;
+}
