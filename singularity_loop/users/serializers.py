@@ -6,7 +6,6 @@ from django.conf import settings
 from .models import User
 from core.utils.common import load_func
 
-
 class BaseUserSerializer(serializers.ModelSerializer):
     # short form for user presentation
     initials = serializers.SerializerMethodField(default='?', read_only=True)

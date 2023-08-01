@@ -22,7 +22,7 @@ export const MenuLayout = ({ children, ...routeProps }) => {
         MLmonitorsettings,
         StorageSettings,
         WebhookPage,
-        DangerZone,
+        // DangerZone,
       ]}
       path={routeProps.match.url}
       children={children}
@@ -44,7 +44,7 @@ export const SettingsPage = {
     MLmonitorsettings,
     StorageSettings,
     WebhookPage,
-    DangerZone,
+    // DangerZone,
     
   },
 };

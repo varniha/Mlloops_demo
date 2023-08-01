@@ -50376,6 +50376,9 @@
                   }),
                 ],
               }),
+              (0, yi.jsx)(mu, {
+                path: "/danger-zone",
+              })
             ],
           }),
         });
@@ -51635,7 +51638,7 @@
         exact: !0,
         layout: ({ children: e, ...t }) =>
           (0, yi.jsx)(ps, {
-            menuItems: [wu,Mz, ku, Wu, Lu, Mp, Md, Mm, mu],
+            menuItems: [wu,Mz, ku, Wu, Lu, Mp, Md, Mm],
             path: t.match.url,
             children: e,
           }),

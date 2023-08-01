@@ -364,5 +364,6 @@ body {
 /* email alert */
 
 .alert-txt{
-  color: black!important;
+  color: red!important;
+  font-size: 12px;
 }

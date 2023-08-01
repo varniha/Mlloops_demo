@@ -98083,7 +98083,7 @@
 							},
 							complete: function(e, t) {
 								if ("throw" === e.type) throw e.arg;
-								return "break" === e.type || "continue" === e.type ? this.next = e.arg : "return" === e.type ? (this.rval = this.arg = e.arg, this.method = "return", this."normal" === e.type && t && (this.next = t), g
+								return "break" === e.type || "continue" === e.type ? this.next = e.arg : "return" === e.type ? (this.rval = this.arg = e.arg, this.method = "return", this.normal === e.type && t && (this.next = t), g
 							},
 							finish: function(e) {
 								for (var t = this.tryEntries.length - 1; t >= 0; --t) {

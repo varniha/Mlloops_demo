@@ -4,6 +4,8 @@ import { Form, Input, TextArea } from '../../components/Form';
 import { RadioGroup } from '../../components/Form/Elements/RadioGroup/RadioGroup';
 import { ProjectContext } from '../../providers/ProjectProvider';
 import { Block } from '../../utils/bem';
+import { DangerZone } from './DangerZone';
+
 
 export const GeneralSettings = () => {
   const {project, fetchProject} = useContext(ProjectContext);
@@ -83,6 +85,8 @@ export const GeneralSettings = () => {
           <Button type="submit" look="primary" style={{width: 120}}>Save</Button>
         </Form.Actions>
       </Form>
+
+  <DangerZone />
     </div>
   );
 };
@@ -90,3 +94,5 @@ export const GeneralSettings = () => {
 GeneralSettings.menuItem = "General";
 GeneralSettings.path = "/";
 GeneralSettings.exact = true;
+DangerZone.title = "Danger Zone";
+DangerZone.path = "/danger-zone";
