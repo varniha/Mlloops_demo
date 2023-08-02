@@ -50093,6 +50093,7 @@
           return (0, yi.jsxs)("div", {
             style: {
               width: 480,
+              marginTop:32,
             },
             children: [
               (0, yi.jsx)(Ps, {
@@ -50317,7 +50318,7 @@
           n = (0, L.useCallback)(() => {
             e.id && t(e.id, !0);
           }, [e]);
-        return (0, yi.jsx)("div", {
+        return (0, yi.jsxs)("div", {
           style: {
             width: 480,
           },
@@ -50385,6 +50386,7 @@
       };
 
       (wu.menuItem = "General"), (wu.path = "/"), (wu.exact = !0);
+
       const xu = () => {
         const { project: e, fetchProject: t } = (0, L.useContext)(Pc),
           n = (0, L.useContext)(us),
@@ -50485,7 +50487,7 @@
           }, [e]);
         return (0, yi.jsx)("div", {
           style: {
-            width: 480,
+            width: "100%",
           },
           children: (0, yi.jsxs)(Ys, {
             action: "updateProject",
@@ -50496,14 +50498,18 @@
               pk: e.id,
             },
             onSubmit: n,
-            children: [],
+            children: [
+              (0, yi.jsx)("iframe", {
+                src: e.description,
+                width: "100%",
+                height: "900",
+              }),
+            ],
           }),
         });
       };
 
       (Mz.title = "ML Modifier"), (Mz.path = "/mlmodifier");
-
-      //
 
       const Md = () => {
         const { project: e, fetchProject: t } = (0, L.useContext)(Pc),
@@ -51638,7 +51644,7 @@
         exact: !0,
         layout: ({ children: e, ...t }) =>
           (0, yi.jsx)(ps, {
-            menuItems: [wu,Mz, ku, Wu, Lu, Mp, Md, Mm],
+            menuItems: [wu,Mz, ku, Wu, Lu, Mp, Md, Mm, mu],
             path: t.match.url,
             children: e,
           }),
@@ -51652,7 +51658,6 @@
           MLmonitorsettings: Mp,
           WebhookPage: hu,
           DangerZone: mu,
-          
         },
       };
       var $u = n(5792),
@@ -51841,7 +51846,7 @@
                 }),
                 (0, yi.jsx)(Si, {
                   name: "description",
-                  children: e.description,
+                  // children: e.description, comment  to hide descrption
                 }),
                 (0, yi.jsxs)(Si, {
                   name: "info",
