@@ -51988,6 +51988,7 @@
                 look: "primary",
                 size: "compact",
                 icon: (0, yi.jsx)(Hr, {}),
+                children: "New Project",
               })
             : null);
 
