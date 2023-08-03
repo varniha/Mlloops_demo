@@ -1,7 +1,7 @@
 .dm-button {
-    --button-color: #000;
+    --button-color: rgba(255,255,255);
     align-items: center;
-    background-color: #fff;
+    background-color: #e57171;
     border: none;
     border-radius: 5px;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .15);
@@ -21,16 +21,17 @@
 
 .dm-button svg {
     max-height: 100%;
-    color: #b03f3f;
+    color: #fff !important;
 }
 
 .dm-button:disabled,
 .dm-button[disabled],
 .dm-button_disabled,
 .dm-button_waiting {
-    --button-color: rgba(0, 0, 0, 0.5);
-    background-color: #f7c3c3;
+    --button-color: rgba(255,255,255);
+    background-color: #e57171;
     pointer-events: none
+
 }
 
 .dm-button:hover {
@@ -106,7 +107,7 @@
 
 .dm-button_look_primary {
     --button-color: #fff;
-    background-color: #f7c3c3;
+    background-color: #e57171;
     box-shadow: none;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1)
 }
@@ -1898,7 +1899,7 @@
     grid-auto-flow: column
 }
 
-.dm-space_direction_vertical {
+._direction_vertical {
     grid-auto-flow: row;
     grid-auto-rows: max-content;
     justify-content: center
@@ -2620,7 +2621,7 @@ input.dm-form-input[type=range] {
     transform: scale(1.05)
 }
 
-.dm-radio-group {
+/* .dm-radio-group {
     --radius: 8px;
     --height: 40px;
     --padding: 4px;
@@ -2632,7 +2633,7 @@ input.dm-form-input[type=range] {
     box-shadow: inset 0 1px 0 rgba(0, 0, 0, .05), inset 0 0 0 1px rgba(0, 0, 0, .05);
     height: var(--height);
     padding: var(--padding)
-}
+} */
 
 .dm-radio-group__buttons {
     display: grid;
@@ -3740,7 +3741,6 @@ input.dm-form-input[type=range] {
 .dm-root {
     background-color: #f0f0f0;
     box-sizing: border-box;
-    font-family: Palatino Linotype;
     height: 100%
 }
 
