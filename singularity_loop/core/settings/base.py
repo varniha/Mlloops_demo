@@ -92,8 +92,8 @@ DATABASES_ALL = {
     DJANGO_DB_POSTGRESQL: {
         'ENGINE': 'django.db.backends.postgresql',
         'USER': get_env('POSTGRE_USER', 'postgres'),
-        'PASSWORD': get_env('POSTGRE_PASSWORD', 'varniha'),
-        'NAME': get_env('POSTGRE_NAME', 'postgresql'),
+        'PASSWORD': get_env('POSTGRE_PASSWORD', '12345'),
+        'NAME': get_env('POSTGRE_NAME', 'RBG'),
         'HOST': get_env('POSTGRE_HOST', 'localhost'),
         'PORT': int(get_env('POSTGRE_PORT', '5432')),
     },
