@@ -48949,6 +48949,8 @@
           (0, yi.jsx)(Dc, {
             children: (0, yi.jsx)(tu, {}),
           });
+
+      // import button functionality    
       (nu.path = "/import"), (nu.modal = !0);
       const { Block: ru, Elem: iu } = ki(),
         ou = () => {
@@ -49159,6 +49161,8 @@
               }),
             ],
           });
+          //export button functionality
+
       (ou.path = "/export"), (ou.modal = !0);
       const su = {
           gateway: "/api/dm",
@@ -49267,6 +49271,8 @@
                     })
                   );
                 }),
+
+                // import and export buttons
                 h.on("importClicked", () => {
                   r.push(
                     lu("/data/import", {
@@ -51721,7 +51727,7 @@
                 onClick: e,
                 look: "primary",
                 icon: (0, yi.jsx)(Hr, {}),
-                children: "New Project",
+                // children: "New Project",
               }),
             ],
           }),
@@ -51993,7 +51999,7 @@
                 look: "primary",
                 size: "compact",
                 icon: (0, yi.jsx)(Hr, {}),
-                children: "New Project",
+                
               })
             : null);
 
