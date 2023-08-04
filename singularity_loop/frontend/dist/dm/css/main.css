@@ -30,7 +30,7 @@
 .dm-button_waiting {
     --button-color: rgba(255,255,255);
     background-color: #e57171;
-    pointer-events: none
+    pointer-events: none;
 
 }
 
@@ -44,7 +44,7 @@
 }
 
 .dm-button:focus {
-    box-shadow: 0 0 0 6px rgba(0, 153, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .15), inset 0 0 0 1px rgba(0, 153, 255, .2);
+    box-shadow: 0 0 0 2px rgba(245, 246, 247, 0.993), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .15), inset 0 0 0 1px rgba(0, 153, 255, .2);
     outline: none
 }
 
@@ -119,7 +119,7 @@
 
 .dm-button_look_primary:hover {
     background: linear-gradient(0, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), #eb9595;
-    box-shadow: 0 2px 4px rgba(0, 153, 255, .3), inset 0 -1px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 4px rgb(243, 245, 247), inset 0 -1px 0 rgba(0, 0, 0, .1);
     color: var(--button-color)
 }
 
@@ -130,7 +130,7 @@
 }
 
 .dm-button_look_primary:focus {
-    box-shadow: 0 0 0 6px rgba(0, 153, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .1)
+    box-shadow: 0 0 0 2px rgb(243, 245, 247), inset 0 -1px 0 rgba(0, 0, 0, .1)
 }
 
 .dm-button_look_danger {
@@ -157,7 +157,8 @@
 .dm-button_size_medium {
     font-size: 14px;
     height: 32px;
-    line-height: 20px
+    line-height: 20px;
+    box-shadow: inset 0 1px 0 rgb(249, 244, 244), inset 0 0 0 1px rgba(0, 0, 0, .2);
 }
 
 .dm-button_size_small {
@@ -2695,7 +2696,8 @@ input.dm-form-input[type=range] {
 
 .dm-tabs {
     align-items: stretch;
-    box-shadow: inset 0 -1px 0 #d9d9d9;
+    background-color: #e57171 !important;
+    box-shadow: inset 0 -1px 0 #ffffff;
     display: flex;
     height: 36px;
     justify-content: space-between
@@ -2721,7 +2723,7 @@ input.dm-form-input[type=range] {
 
 .dm-tabs__item_active {
     background-color: #fff;
-    color: #000;
+    color: #fff;
     cursor: default
 }
 
@@ -2745,7 +2747,9 @@ input.dm-form-input[type=range] {
     align-items: center;
     display: flex;
     height: 36px;
+    box-shadow: inset 0 -1px 0 #ffffff;
     overflow: hidden;
+    background-color: #e57171!important;
     padding-left: 16px;
     padding-right: 4px;
     text-overflow: ellipsis
@@ -3745,7 +3749,7 @@ input.dm-form-input[type=range] {
 }
 
 .dm-tab-panel {
-    background-color: #fff;
+    background-color: #e57171;
     display: flex;
     justify-content: space-between;
     padding: 12px 16px
