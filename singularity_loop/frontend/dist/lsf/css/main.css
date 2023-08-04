@@ -32349,7 +32349,7 @@
    display: flex;
    justify-content: space-between;
    width: 100%;
-   color: transparent;
+   color: rgba(0, 0, 0);
  }
  .lsf-view-controls__label span {
    align-items: center;
