@@ -49426,40 +49426,40 @@
             r && r.id
               ? (0, yi.jsxs)(Li, {
                   size: "small",
-                  children: [
-                    r.expert_instruction &&
-                      "explorer" !== i &&
-                      (0, yi.jsx)(Ni, {
-                        size: "compact",
-                        onClick: () => {
-                          Gi({
-                            title: "Instructions",
-                            body: () =>
-                              (0, yi.jsx)("div", {
-                                dangerouslySetInnerHTML: {
-                                  __html: r.expert_instruction,
-                                },
-                              }),
-                          });
-                        },
-                        children: "Instructions",
-                      }),
-                    Object.entries({
-                      "/settings": "Settings",
-                    }).map(([e, t]) =>
-                      (0, yi.jsx)(
-                        Ni,
-                        {
-                          tag: ko,
-                          size: "compact",
-                          to: `/projects/${r.id}${e}`,
-                          "data-external": !0,
-                          children: t,
-                        },
-                        e
-                      )
-                    ),
-                  ],
+                //   children: [
+                //     r.expert_instruction &&
+                //       "explorer" !== i &&
+                //       (0, yi.jsx)(Ni, {
+                //         size: "compact",
+                //         onClick: () => {
+                //           Gi({
+                //             title: "Instructions",
+                //             body: () =>
+                //               (0, yi.jsx)("div", {
+                //                 dangerouslySetInnerHTML: {
+                //                   __html: r.expert_instruction,
+                //                 },
+                //               }),
+                //           });
+                //         },
+                //         children: "Instructions",
+                //       }),
+                //     Object.entries({
+                //       "/settings": "Settings",
+                //     }).map(([e, t]) =>
+                //       (0, yi.jsx)(
+                //         Ni,
+                //         {
+                //           tag: ko,
+                //           size: "compact",
+                //           to: `/projects/${r.id}${e}`,
+                //           "data-external": !0,
+                //           children: t,
+                //         },
+                //         e
+                //       )
+                //     ),
+                //   ],
                 })
               : null
           );
@@ -51650,7 +51650,7 @@
         exact: !0,
         layout: ({ children: e, ...t }) =>
           (0, yi.jsx)(ps, {
-            menuItems: [wu,Mz, ku, Wu, Lu, Mp, Md, Mm, mu],
+            menuItems: [wu,Mz, ku, Wu, Lu, Mp, Md, Mm],
             path: t.match.url,
             children: e,
           }),

@@ -16070,22 +16070,22 @@
             _c = {
               "view-toggle": ({ size: e }) =>
                 (0, Ri.jsx)(Zc, { size: e, style: Xc }),
-              columns: ({ size: e }) =>
-                (0, Ri.jsx)(_i, {
-                  wrapper: _i.Checkbox,
-                  trailingIcon: (0, Ri.jsx)($i, { icon: di }),
-                  title: "Columns",
-                  size: e,
-                  style: Xc,
-                }),
-              filters: ({ size: e }) => (0, Ri.jsx)(Ru, { size: e, style: Xc }),
-              ordering: ({ size: e }) =>
-                (0, Ri.jsx)(PA, { size: e, style: Xc }),
-              "grid-size": ({ size: e }) => (0, Ri.jsx)(OA, { size: e }),
-              refresh: ({ size: e }) => (0, Ri.jsx)(qc, { size: e }),
-              "loading-possum": () => (0, Ri.jsx)(LA, {}),
-              "label-button": ({ size: e }) => (0, Ri.jsx)(FA, { size: e }),
-              actions: ({ size: e }) => (0, Ri.jsx)(jA, { size: e, style: Xc }),
+              // columns: ({ size: e }) =>
+              //   (0, Ri.jsx)(_i, {
+              //     wrapper: _i.Checkbox,
+              //     trailingIcon: (0, Ri.jsx)($i, { icon: di }),
+              //     title: "Columns",
+              //     size: e,
+              //     style: Xc,
+              //   }),
+              // filters: ({ size: e }) => (0, Ri.jsx)(Ru, { size: e, style: Xc }),
+              // ordering: ({ size: e }) =>
+              //   (0, Ri.jsx)(PA, { size: e, style: Xc }),
+              // "grid-size": ({ size: e }) => (0, Ri.jsx)(OA, { size: e }),
+              // refresh: ({ size: e }) => (0, Ri.jsx)(qc, { size: e }),
+              // "loading-possum": () => (0, Ri.jsx)(LA, {}),
+              // "label-button": ({ size: e }) => (0, Ri.jsx)(FA, { size: e }),
+              // actions: ({ size: e }) => (0, Ri.jsx)(jA, { size: e, style: Xc }),
               "error-box": () => (0, Ri.jsx)(Wi, {}),
               "import-button": ({ size: e }) =>
                 (0, Ri.jsx)(Tu, {
