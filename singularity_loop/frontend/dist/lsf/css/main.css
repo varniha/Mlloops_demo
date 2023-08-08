@@ -33,7 +33,6 @@
    -ms-text-size-adjust: 100%;
    -ms-overflow-style: scrollbar;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   font-family: Palatino Linotype;
    line-height: 1.15;
  }
  @-ms-viewport {
@@ -2218,7 +2217,6 @@
  }
  .ant-select-multiple .ant-select-selection-search-input,
  .ant-select-multiple .ant-select-selection-search-mirror {
-   font-family: Palatino Linotype;
    height: 24px;
    line-height: 24px;
    transition: all 0.3s;
@@ -20334,7 +20332,6 @@
    border: 1px solid #d9d9d9;
    border-radius: 2px;
    cursor: pointer;
-   font-family: Palatino Linotype;
    list-style: none;
    min-width: 32px;
    outline: 0;
@@ -20469,7 +20466,6 @@
    color: rgba(0, 0, 0, 0.85);
    cursor: pointer;
    display: inline-block;
-   font-family: Palatino Linotype;
    height: 32px;
    line-height: 32px;
    list-style: none;
@@ -22817,7 +22813,7 @@
  }
  .ant-statistic-content {
    color: rgba(0, 0, 0, 0.85);
-   font-family: Palatino Linotype;
+   
    font-size: 24px;
  }
  .ant-statistic-content-value {
@@ -22888,7 +22884,7 @@
  .ant-steps-item-icon {
    border: 1px solid rgba(0, 0, 0, 0.25);
    border-radius: 32px;
-   font-family: Palatino Linotype;
+   
    font-size: 16px;
    height: 32px;
    line-height: 32px;
@@ -29307,7 +29303,6 @@
  }
  .lsf-timeline {
    background-color: #fff;
-   font-family: Palatino Linotype;
    -webkit-user-select: none;
    -moz-user-select: none;
    -ms-user-select: none;
