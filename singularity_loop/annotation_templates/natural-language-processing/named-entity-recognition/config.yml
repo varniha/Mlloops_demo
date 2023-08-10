@@ -1,8 +1,8 @@
-title: Recognition
+title: Text Recognition
 type: community
 group: Text Analytics
 order: 2
-image: /static/templates/named-entity.png
+image: /static/templates/Text-Recognition.jpg
 details: <h1>Extract named entities from text</h1>
 config: |
   <View>

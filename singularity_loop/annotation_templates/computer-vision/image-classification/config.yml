@@ -1,8 +1,8 @@
-title: Classification
+title: Vision Classification
 type: community
 group: Vision Analytics
 order: 1
-image: /static/templates/image-classify.png
+image: /static/templates/Vision-classification.jpg
 details: <h1>Classify the image</h1>
 config: |
   <View>

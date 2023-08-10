@@ -2,7 +2,7 @@ title: Detection
 type: community
 group: Vision Analytics
 order: 2
-image: /static/templates/object-detection.png
+image: /static/templates/Vision-detection.jpg
 details: <h1>Draw a bounding box around the object</h1>
 config: |
   <View>

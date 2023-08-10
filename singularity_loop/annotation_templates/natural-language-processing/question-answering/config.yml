@@ -1,8 +1,8 @@
-title: Q&A
+title: Text Q&A
 type: community
 group: Text Analytics
 order: 4
-image: /static/templates/question-answer.png
+image: /static/templates/Text-QA.jpg
 details: <h1>Select an answer from text</h1>
 config: |
   <View>

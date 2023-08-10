@@ -1,8 +1,8 @@
-title: Segmentation
+title: Vision Segmentation
 type: community
 group: Vision Analytics
 order: 3
-image: /static/templates/semantic-segmentation-with-polygons.png
+image: /static/templates/Vision-segmentation.jpg
 details: <h1>Draw a polygon around object</h1>
 config: |
   <View>

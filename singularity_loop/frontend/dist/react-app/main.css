@@ -1059,8 +1059,8 @@
 
 .ls-userpic {
 	align-items: center;
-    background: #b03f3f;
-	color: #dededf;
+    background: #fff;
+	color: #e57171;
     border-radius: 100%;
     display: flex;
     font-size: 15px;
@@ -1082,7 +1082,7 @@
 }
 
 .ls-userpic__username {
-	color: white;
+	color: #e57171;
 	display: block;
 	line-height: 22px;
 	opacity: 100

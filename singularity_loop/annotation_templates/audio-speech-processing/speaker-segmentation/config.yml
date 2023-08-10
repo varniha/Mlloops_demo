@@ -1,8 +1,8 @@
-title: Segmentation
+title: Voice Segmentation
 type: community
 group: Voice Analytics
 order: 3
-image: /static/templates/speaker-segment.png
+image: /static/templates/Voice-segmentation.png
 details: <h1>Perform speaker segmentation / diarization task</h1>
 config: |
   <View>

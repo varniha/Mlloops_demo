@@ -1,8 +1,8 @@
-title: Classification
+title: Text Classification
 type: community
 group: Text Analytics
 order: 1
-image: /static/templates/text-class.png
+image: /static/templates/Text-classification.jpg
 details: <h1>Classify text document</h1>
 config: |
   <View>
