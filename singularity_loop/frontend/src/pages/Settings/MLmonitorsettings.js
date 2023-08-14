@@ -34,6 +34,12 @@ export const MLmonitorsettings = () => {
             labelProps={{large: true}}
           />
 
+          <TextArea
+            name= "description2"
+            label ="URL2"
+            labelProps = {{large:true}}         
+          />
+
           <RadioGroup name="color" label="Color" size="large" labelProps={{size: "large"}}>
             {colors.map(color => (
               <RadioGroup.Button key={color} value={color}>
@@ -43,12 +49,13 @@ export const MLmonitorsettings = () => {
           </RadioGroup>
 
           <RadioGroup label="Task Sampling" labelProps={{size: "large"}} name="sampling" simple>
-            {samplings.map(({value, label, description}) => (
+            {samplings.map(({value, label, description, description2}) => (
               <RadioGroup.Button
                 key={value}
                 value={`${value} sampling`}
                 label={`${label} sampling`}
                 description={description}
+                description2={description2}
               />
             ))}
           </RadioGroup>
@@ -65,4 +72,4 @@ export const MLmonitorsettings = () => {
   );
 };
 MLmonitorsettings.title = "ML Monitor";
-MLmonitorsettings.path = "/mlmonitor";
+MLmonitorsettings.path = "/ml-Monitor";

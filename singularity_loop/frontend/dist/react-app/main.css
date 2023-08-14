@@ -1,7 +1,7 @@
 .ls-button {
 	--button-color: #efb1b1;
 	align-items: center;
-	background-color: #b03f3f;
+	background-color: #e57171;
 	border: none;
 	border-radius: 5px;
 	color: white;
@@ -649,12 +649,12 @@
 }
 
 .ls-main-menu__item:not(.ls-main-menu__item_active):hover {
-	background-color: #f2c1c1;
+	background-color: #f7f7f7;
 }
 
 .ls-main-menu__item_active {
-	background-color: #e57171;
-	color: #000000;
+	background-color: #f7f7f7;
+    color: #e57171;
 }
 
 .ls-main-menu__item_active:not(.ls-sidebar__pin) {

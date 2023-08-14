@@ -13382,6 +13382,7 @@
                           `${e.filter.id}-${n}`
                         )
                       )
+
                     : (0, Ri.jsx)(Gi, {
                         name: "empty",
                         children: "No filters applied",
@@ -15480,16 +15481,19 @@
           function ZA(e, t) {
             return hn.createElement(
               "svg",
-              UA(
-                {
-                  width: 20,
-                  height: 20,
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ref: t,
-                },
-                e
-              ),
+
+          // Three columns - icons removed
+
+              // UA(
+              //   {
+              //     width: 20,
+              //     height: 20,
+              //     fill: "none",
+              //     xmlns: "http://www.w3.org/2000/svg",
+              //     ref: t,
+              //   },
+              //   e
+              // ),
               NA,
               HA,
               JA,
@@ -15569,16 +15573,17 @@
           function nc(e, t) {
             return hn.createElement(
               "svg",
-              _A(
-                {
-                  width: 20,
-                  height: 20,
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ref: t,
-                },
-                e
-              ),
+              // _A(
+              //   {
+              //     width: 20,
+              //     height: 20,
+              //     fill: "none",
+              //     xmlns: "http://www.w3.org/2000/svg",
+              //     ref: t,
+              //   },
+              //   e
+              // ),
+              
               $A,
               ec,
               tc
@@ -15679,16 +15684,16 @@
           function fc(e, t) {
             return hn.createElement(
               "svg",
-              dc(
-                {
-                  width: 20,
-                  height: 20,
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ref: t,
-                },
-                e
-              ),
+              // dc(
+              //   {
+              //     width: 20,
+              //     height: 20,
+              //     fill: "none",
+              //     xmlns: "http://www.w3.org/2000/svg",
+              //     ref: t,
+              //   },
+              //   e
+              // ),
               pc,
               gc
             );
@@ -16015,6 +16020,7 @@
                   onChange: r,
                   disabled: t,
                 }),
+                
                 n,
               ],
             });
@@ -16027,22 +16033,24 @@
                   value: e.type,
                   onChange: (t) => e.setType(t.target.value),
                   ...n,
-                //   children: [
-                //     (0, Ri.jsx)(Wc.Button, {
-                //       value: "list",
-                //       children: (0, Ri.jsx)(es, {
-                //         title: "List view",
-                //         children: (0, Ri.jsx)("span", { children: "List" }),
-                //       }),
-                //     }),
-                //     (0, Ri.jsx)(Wc.Button, {
-                //       value: "",
-                //       children: (0, Ri.jsx)(es, {
-                //         title: "Grid view",
-                //         children: (0, Ri.jsx)("span", { children: "" }),
-                //       }),
-                //     }),
-                //   ],
+               
+                // list and grid removed
+                  // children: [
+                    // (0, Ri.jsx)(Wc.Button, {
+                    //   value: "list",
+                    //   children: (0, Ri.jsx)(es, {
+                    //     title: "List view",
+                    //     children: (0, Ri.jsx)("span", { children: "List" }),
+                    //   }),
+                    // }),
+                    // (0, Ri.jsx)(Wc.Button, {
+                    //   value: "",
+                    //   children: (0, Ri.jsx)(es, {
+                    //     title: "Grid view",
+                    //     children: (0, Ri.jsx)("span", { children: "" }),
+                    //   }),
+                    // }),
+                  // ],
                 })
               )
             ),
@@ -20199,6 +20207,9 @@
                 }
               )
             ),
+
+          // Three columns
+
             tg = (e) => {
               const {
                   original: t,
@@ -21796,13 +21807,13 @@
                 ),
                 Q = (0, hn.useMemo)(
                   () => [
-                    v("total_annotations", 60, "center"),
-                    v("cancelled_annotations", 60, "center"),
-                    v("total_predictions", 60, "center"),
-                    v("completed_at", 180, "space-between", !0),
-                    v("reviews_accepted", 60, "center"),
-                    v("reviews_rejected", 60, "center"),
-                    v("ground_truth", 60, "center"),
+                    v("total_annotations", 1, "center"),
+                    v("cancelled_annotations", 1, "center"),
+                    v("total_predictions", 1, "center"),
+                    v("completed_at", 200, "space-between", !0),
+                    v("reviews_accepted", 180, "center"),
+                    v("reviews_rejected", 180, "center"),
+                    v("ground_truth", 180, "center"),
                     {
                       resolver: (e) => "Number" === e.type,
                       style: (e) =>

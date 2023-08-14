@@ -81,7 +81,7 @@ const ProjectCard = ({ project }) => {
               <Elem name="total">
                 {project.num_tasks_with_annotations} / {project.task_number}
               </Elem>
-              <Elem name="detail">
+              {/* <Elem name="detail">
                 <Elem name="detail-item" mod={{ type: "completed" }}>
                   <Elem tag={LsCheck} name="icon"/>
                   {project.total_annotations_number}
@@ -94,7 +94,7 @@ const ProjectCard = ({ project }) => {
                   <Elem tag={LsBulb} name="icon"/>
                   {project.total_predictions_number}
                 </Elem>
-              </Elem>
+              </Elem> */}
             </Elem>
           </Elem>
         </Elem>

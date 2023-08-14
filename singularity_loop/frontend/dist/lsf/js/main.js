@@ -8809,7 +8809,7 @@
 							width: 14,
 							height: 16,
 							fill: "none",
-							xmlns: "http://www.w3.org/2000/svg",
+							xmlns: "",
 							ref: t
 						}, e), Hc || (Hc = p.createElement("path", {
 							fillRule: "evenodd",

@@ -39,7 +39,7 @@ This release also includes other important improvements.
 - Added a dedicated [`<Video>` tag](/tags/video.html) and a [`<Number>` tag](/tags/number.html). 
 - Added a `hint` parameter for the [`<Label>` tag](/tags/label.html) so that you can provide additional guidance to annotators. <!--HTX-1933--> 
 
-### Import and export improvements
+###  improvements
 
 - Remove annotations from a synced S3 bucket when an annotation is deleted. <!--HTX-2084--> 
 - Manually sync annotations to a target storage bucket. <!--HTX-1944--> 

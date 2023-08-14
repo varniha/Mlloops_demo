@@ -12,7 +12,7 @@ import { useImportPage } from './Import/useImportPage';
 import { useDraftProject } from './utils/useDraftProject';
 
 
-const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, setDescription, show = true }) => !show ? null :(
+const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, setDescription, description2, setDescription2, show = true }) => !show ? null :(
   <form className={cn("project-name")} onSubmit={e => { e.preventDefault(); onSubmit(); }}>
     <div className="field field--wide">
       <label htmlFor="project_name">Project Name</label>
@@ -30,6 +30,17 @@ const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, 
         onChange={e => setDescription(e.target.value)}
       />
     </div>
+    <div className="field field--wide">
+      <label htmlFor="project_description2">URL2</label>
+      <textarea
+        name="url2"
+        id="url2"
+        placeholder="Mention the URL here"
+        rows="4"
+        value={description2}
+        onChange={e => setDescription2(e.target.value)}
+      />
+    </div>
   </form>
 );
 
@@ -44,6 +55,7 @@ export const CreateProject = ({ onClose }) => {
   const [name, setName] = React.useState("");
   const [error, setError] = React.useState();
   const [description, setDescription] = React.useState("");
+  const [description2, setDescription2] = React.useState("");
   const [config, setConfig] = React.useState("<View></View>");
 
   React.useEffect(() => { setError(null); }, [name]);
@@ -65,8 +77,9 @@ export const CreateProject = ({ onClose }) => {
   const projectBody = React.useMemo(() => ({
     title: name,
     description,
+    description2,
     label_config: config,
-  }), [name, description, config]);
+  }), [name, description,description2, config]);
 
   const onCreate = React.useCallback(async () => {
     const imported = await finishUpload();
@@ -79,12 +92,15 @@ export const CreateProject = ({ onClose }) => {
       },
       body: projectBody,
     });
+
     setWaitingStatus(false);
 
     if (response !== null) {
       history.push(`/projects/${response.id}/data`);
     }
-  }, [project, projectBody, finishUpload]);
+  }, [project, projectBody, finishUpload],
+
+);
 
   const onSaveName = async () => {
     if (error) return;
@@ -133,6 +149,8 @@ export const CreateProject = ({ onClose }) => {
           onSubmit={onCreate}
           description={description}
           setDescription={setDescription}
+          description2={description2}
+          setDescription2={setDescription2}
           show={step === "name"}
         />
         <ImportPage project={project} show={step === "import"} {...pageProps} />

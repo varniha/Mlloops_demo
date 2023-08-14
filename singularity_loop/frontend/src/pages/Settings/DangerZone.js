@@ -47,7 +47,8 @@ export const DangerZone = () => {
     });
   };
 
-  const buttons = useMemo(() => [{
+  const buttons = useMemo(() => [
+  {
     type: 'annotations',
     disabled: true, //&& !project.total_annotations_number,
     label: `Delete ${project.total_annotations_number} Annotations`,

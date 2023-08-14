@@ -39458,7 +39458,7 @@
         d: "M13.8199 22H10.1799C9.71003 22 9.30347 21.673 9.20292 21.214L8.79592 19.33C8.25297 19.0921 7.73814 18.7946 7.26092 18.443L5.42392 19.028C4.97592 19.1709 4.48891 18.9823 4.25392 18.575L2.42992 15.424C2.19751 15.0165 2.27758 14.5025 2.62292 14.185L4.04792 12.885C3.98312 12.2961 3.98312 11.7019 4.04792 11.113L2.62292 9.816C2.27707 9.49837 2.19697 8.98372 2.42992 8.576L4.24992 5.423C4.48491 5.0157 4.97192 4.82714 5.41992 4.97L7.25692 5.555C7.50098 5.37416 7.75505 5.20722 8.01792 5.055C8.27026 4.91269 8.52995 4.78385 8.79592 4.669L9.20392 2.787C9.30399 2.32797 9.71011 2.00049 10.1799 2H13.8199C14.2897 2.00049 14.6958 2.32797 14.7959 2.787L15.2079 4.67C15.4887 4.79352 15.7622 4.93308 16.0269 5.088C16.2742 5.23078 16.5132 5.38736 16.7429 5.557L18.5809 4.972C19.0286 4.82967 19.515 5.01816 19.7499 5.425L21.5699 8.578C21.8023 8.98548 21.7223 9.49951 21.3769 9.817L19.9519 11.117C20.0167 11.7059 20.0167 12.3001 19.9519 12.889L21.3769 14.189C21.7223 14.5065 21.8023 15.0205 21.5699 15.428L19.7499 18.581C19.515 18.9878 19.0286 19.1763 18.5809 19.034L16.7429 18.449C16.5103 18.6203 16.2687 18.7789 16.0189 18.924C15.7567 19.0759 15.4863 19.2131 15.2089 19.335L14.7959 21.214C14.6954 21.6726 14.2894 21.9996 13.8199 22ZM11.9959 8C9.78678 8 7.99592 9.79086 7.99592 12C7.99592 14.2091 9.78678 16 11.9959 16C14.2051 16 15.9959 14.2091 15.9959 12C15.9959 9.79086 14.2051 8 11.9959 8Z",
         fill: "black",
       });
-
+    // New Project #1 settings icon
       function rr(e, t) {
         return L.createElement(
           "svg",
@@ -44578,6 +44578,7 @@
           defaultOpened: t,
           defaultPinned: n,
           children: r,
+          projects: set,
           onSidebarToggle: i,
           onSidebarPin: o,
         }) => {
@@ -44634,9 +44635,11 @@
               }),
               [h]
             );
+           
           return (
             (0, L.useEffect)(() => {
               var e, t;
+
               f ||
                 null == a ||
                 null === (t = a.current) ||
@@ -44646,7 +44649,9 @@
                 null === (e = s.current) ||
                 void 0 === e ||
                 e.close();
+                
             }, [l]),
+            
             (0, yi.jsxs)("div", {
               className: b,
               children: [
@@ -44654,6 +44659,7 @@
                   (0, yi.jsxs)("div", {
                     className: v,
                     children: [
+
                       (0, yi.jsxs)("div", {
                         className: g,
                         children: [
@@ -44662,6 +44668,18 @@
                               left: !0,
                             }),
                           }),
+
+                        // settings icon on header
+
+                          (0, yi.jsx)(jo.Trigger, {
+                            children: (0, yi.jsx)(Ni, {
+                              size: "large",
+                              type: "text",
+                              href: `/projects/${e.id}/settings`,
+                              icon: (0, yi.jsx)(ir, {}),
+                            }),
+                          }),
+                        
                           (0, yi.jsx)(ds, {
                             className: w.mod({
                               right: !0,
@@ -44669,6 +44687,7 @@
                           }),
                         ],
                       }),
+                  
                       (0, yi.jsx)(jo.Trigger, {
                         ref: s,
                         align: "right",
@@ -44737,6 +44756,7 @@
                             width: 240,
                           },
                           children: (0, yi.jsxs)(Mo, {
+                            
                             children: [
                               (0, yi.jsx)(Mo.Item, {
                                 label: "Projects",
@@ -48402,6 +48422,9 @@
           onSubmit: r,
           error: i,
           description: o,
+          // description2=z, setDescription2j
+          description2: z,
+          setDescription2: j,
           setDescription: a,
           show: s = !0,
         }) =>
@@ -48445,11 +48468,12 @@
                         id: "url1",
                         placeholder: "Mention the URL here",
                         rows: "4",
+                        // o to description
                         value: o,
                         onChange: (e) => a(e.target.value),
                       }),
                       (0, yi.jsx)("label", {
-                        htmlFor: "project_description",
+                        htmlFor: "project_description2",
                         children: "URL2",
                       }),
                       (0, yi.jsx)("input", {
@@ -48457,8 +48481,9 @@
                         id: "url2",
                         placeholder: "Mention the URL here",
                         rows: "4",
-                        value: o,
-                        onChange: (e) => a(e.target.value),
+                        // z to description2
+                        value: z,
+                        onChange: (e) => j(e.target.value),
                       }),
                     ],
                   }),
@@ -48490,18 +48515,16 @@
                   });
                   s && n(s);
                 }, []);
-              return (
-                L.useEffect(() => {
-                  r();
-                }, []),
-                t
-              );
-            })(),
+            }
+        )
+        (),
             a = fe(),
             s = ro(),
             [l, u] = L.useState(""),
             [c, d] = L.useState(),
             [f, p] = L.useState(""),
+            //[description2,setdescription2]
+            [q, j] = L.useState(""),
             [h, m] = L.useState("<View></View>");
           L.useEffect(() => {
             d(null);
@@ -48533,11 +48556,13 @@
           L.useEffect(() => o && !l && u(o.title), [o]);
           const S = L.useMemo(
               () => ({
+                // description2 = q
                 title: l,
                 description: f,
+                description2: q,
                 label_config: h,
               }),
-              [l, f, h]
+              [l, f, q, h]
             ),
             C = L.useCallback(async () => {
               if (!(await b())) return;
@@ -48627,6 +48652,9 @@
                   },
                   onSubmit: C,
                   description: f,
+                  description2: q,
+                  //setDescription2 = j
+                  setDescription2: j,
                   setDescription: p,
                   show: "name" === t,
                 }),
@@ -49134,6 +49162,12 @@
                             name: "description",
                             children: e.description,
                           }),
+                        //description2  
+                        e.description2 && 
+                        (0, yi.jsx)(iu, {
+                          name: "description2",
+                          children: e.description2,
+                        })
                       ],
                     },
                     e.name
@@ -49161,7 +49195,7 @@
               }),
             ],
           });
-          //export button functionality
+    //export button functionality
 
       (ou.path = "/export"), (ou.modal = !0);
       const su = {
@@ -49426,40 +49460,46 @@
             r && r.id
               ? (0, yi.jsxs)(Li, {
                   size: "small",
-                //   children: [
-                //     r.expert_instruction &&
-                //       "explorer" !== i &&
-                //       (0, yi.jsx)(Ni, {
-                //         size: "compact",
-                //         onClick: () => {
-                //           Gi({
-                //             title: "Instructions",
-                //             body: () =>
-                //               (0, yi.jsx)("div", {
-                //                 dangerouslySetInnerHTML: {
-                //                   __html: r.expert_instruction,
-                //                 },
-                //               }),
-                //           });
-                //         },
-                //         children: "Instructions",
-                //       }),
-                //     Object.entries({
-                //       "/settings": "Settings",
-                //     }).map(([e, t]) =>
-                //       (0, yi.jsx)(
-                //         Ni,
-                //         {
-                //           tag: ko,
-                //           size: "compact",
-                //           to: `/projects/${r.id}${e}`,
-                //           "data-external": !0,
-                //           children: t,
-                //         },
-                //         e
-                //       )
-                //     ),
-                //   ],
+
+            // Removed settings icon from bottom 
+
+                  children: [
+                    r.expert_instruction &&
+                      "explorer" !== i &&
+                      (0, yi.jsx)(Ni, {
+                        size: "compact",
+
+                        // onClick: () => {
+                        //   Gi({
+                        //     title: "Instructions",
+                        //     body: () =>
+                        //       (0, yi.jsx)("div", {
+                        //         dangerouslySetInnerHTML: {
+                        //           __html: r.expert_instruction,
+                        //         },
+                        //       }),
+                        //   });
+                        // },
+
+                        children: "Instructions",
+                      }),
+                    // Object.entries({
+                    //   "/settings": "Settings",
+                    // }).map(([e, t]) =>
+                    //   (0, yi.jsx)(
+                    //     Ni,
+                    //     // path to settings tab
+                    //     {
+                    //       tag: ko,
+                    //       size: "compact",
+                    //       to: `/projects/${r.id}${e}`,
+                    //       "data-external": !0,
+                    //       children: t,
+                    //     },
+                    //     e
+                    //   )
+                    // ),
+                  ],
                 })
               : null
           );
@@ -50236,6 +50276,7 @@
                     setValue: p,
                     isSimple: !0 === o,
                   },
+
                   children: (0, yi.jsxs)(gu, {
                     name: "radio-group",
                     mod: {
@@ -50256,6 +50297,7 @@
                       }),
                     ],
                   }),
+
                 }),
             });
           return e
@@ -50435,6 +50477,7 @@
       };
       (xu.title = "Instructions"), (xu.path = "/instruction");
 
+      // ML Monitor
       const Mp = () => {
         const { project: e, fetchProject: t } = (0, L.useContext)(Pc),
           n = (0, L.useCallback)(() => {
@@ -50442,7 +50485,7 @@
           }, [e]);
         return (0, yi.jsx)("div", {
           style: {
-            width: 480,
+            width: "100%",
           },
           children: (0, yi.jsxs)(Ys, {
             action: "updateProject",
@@ -50453,7 +50496,13 @@
               pk: e.id,
             },
             onSubmit: n,
-            children: [],
+            children: [
+              (0, yi.jsx)("iframe", {
+                src: e.description2,
+                width: "100%",
+                height: "900",
+              }),
+            ],
           }),
         });
       };
@@ -51777,6 +51826,8 @@
                           onClick: (e) => {
                             e.stopPropagation(), e.preventDefault();
                           },
+
+                        // New project #1 settings icon 
                           children: (0, yi.jsx)(jo.Trigger, {
                             children: (0, yi.jsx)(Ni, {
                               size: "small",
@@ -51785,6 +51836,8 @@
                               icon: (0, yi.jsx)(ir, {}),
                             }),
                           }),
+                          
+                        // settings icon
                         }),
                       ],
                     }),
